@@ -1,12 +1,8 @@
 const AboutSection = () => {
   return (
-    <section
-      id="about"
-      aria-labelledby="about-header"
-      className="border-brand-red border-2 p-4"
-    >
+    <section id="about" aria-labelledby="about-header" className="border-2 p-4">
       <div>
-        <img src="" alt="" />
+        <img src={"/"} alt="" />
       </div>
       <div>
         <header>
