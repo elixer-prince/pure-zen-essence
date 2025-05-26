@@ -26,7 +26,6 @@ const ProductSection = () => {
             title={product.title}
             description={product.description}
             imageUrl={product.imageUrl}
-            category={product.category}
             sizes={product.sizes}
           />
         ))}

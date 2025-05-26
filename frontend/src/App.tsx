@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import type { Product } from "./products.ts";
 import products from "./products.ts";
 
-// ROUTES
 import HomePage from "./pages/HomePage";
 import DashboardPage from "./pages/DashboardPage";
 

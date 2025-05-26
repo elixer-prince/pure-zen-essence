@@ -53,14 +53,17 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <div className="mt-3 cursor-pointer lg:hidden" onClick={toggleNavbar}>
+        <div className="cursor-pointer lg:hidden" onClick={toggleNavbar}>
           <div
-            className="flex items-center gap-2 text-2xl font-extrabold"
+            className="mr-1.5 flex items-center gap-2 text-2xl font-extrabold"
             ref={navbarOpenRef}
           >
             <span className="hidden text-lg sm:block">MENU</span> <FaBars />
           </div>
-          <div className="-mr-1.5 hidden text-4xl" ref={navbarCloseRef}>
+          <div
+            className="hidden text-4xl transition-colors duration-500 hover:text-red-400"
+            ref={navbarCloseRef}
+          >
             <IoClose />
           </div>
         </div>
