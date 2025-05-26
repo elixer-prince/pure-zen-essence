@@ -1,6 +1,10 @@
 const AboutSection = () => {
   return (
-    <section id="about" aria-labelledby="about-header" className="border-2 p-4">
+    <section
+      id="about"
+      aria-labelledby="about-header"
+      className="scroll-mt-24 p-4"
+    >
       <div>
         <img src={"/"} alt="" />
       </div>

@@ -1,11 +1,15 @@
+import { useContext } from "react";
 import ProductCard from "./ProductCard";
+import { ProductsContext } from "../App";
 
 const ProductSection = () => {
+  const products = useContext(ProductsContext);
+
   return (
     <section
       id="products"
       aria-labelledby="products-header"
-      className="grid scroll-mt-20 gap-4 p-4"
+      className="scroll-mt-24 gap-4 border-2 p-4"
     >
       <header>
         <h2
@@ -15,11 +19,17 @@ const ProductSection = () => {
           OUR PRODUCTS
         </h2>
       </header>
-      <div className="grid grid-cols-1 gap-4 bg-red-500">
-        <ProductCard title="Coconut Oil" description="" />
-        <ProductCard title="Coconut Oil" description="" />
-        <ProductCard title="Coconut Oil" description="" />
-        <ProductCard title="Beard Oil" description="" />
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {products.map((product) => (
+          <ProductCard
+            key={product.id}
+            title={product.title}
+            description={product.description}
+            imageUrl={product.imageUrl}
+            category={product.category}
+            sizes={product.sizes}
+          />
+        ))}
       </div>
     </section>
   );

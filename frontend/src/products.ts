@@ -1,8 +1,8 @@
 // Dummy data until we have a backend database
 
-type Product = {
+export type Product = {
   id: number;
-  name: string;
+  title: string;
   description: string;
   imageUrl: string;
   category: string;
@@ -12,10 +12,10 @@ type Product = {
   }[];
 };
 
-export const products: Product[] = [
+const products: Product[] = [
   {
     id: 1,
-    name: "Product 1",
+    title: "Coconut Oil",
     description: "Description for Product 1",
     imageUrl: "https://via.placeholder.com/150",
     category: "Category 1",
@@ -27,11 +27,12 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    name: "Product 2",
+    title: "Product 2",
     description: "Description for Product 2",
     imageUrl: "https://via.placeholder.com/150",
     category: "Category 1",
     sizes: [],
   },
-  // Add more products here
 ];
+
+export default products;

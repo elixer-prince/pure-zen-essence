@@ -1,7 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --brand-green: #8dc92f;
-  --brand-blue: #16a5a8;
-  --brand-darkblue: #000000;
+  --color-brand-green: #8dc92f;
+  --color-brand-blue: #16a5a8;
+  --color-brand-darkblue: #0b1b2a;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
