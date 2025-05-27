@@ -5,17 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run build:frontend",
-    "build:frontend": "tsc -b && vite build",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  "build": {
-    "outDir": "dist",
-    "assetsDir": "assets",
-    "emptyOutDir": true
-  },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.7",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
