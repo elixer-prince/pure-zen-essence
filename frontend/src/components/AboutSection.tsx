@@ -24,10 +24,26 @@ const AboutSection = () => {
           </h2>
         </header>
         <div>
-          <h3>Our Mission</h3>
+          <h3 className="mt-8 mb-4 text-center text-4xl font-bold">
+            Our Mission
+          </h3>
+          <p>
+            As a family-owned business, we are committed to cultivating
+            high-quality products with care, integrity, and profound respect for
+            the land. Through our hard work and shared values, we strive to
+            nourish our community while safeguarding our legacy for future
+            generations.
+          </p>
         </div>
         <div>
-          <h3>Our Vision</h3>
+          <h3 className="mt-8 mb-4 text-center text-4xl font-bold">
+            Our Vision
+          </h3>
+          <p>
+            Our vision is to be a trusted family business that nurtures enduring
+            relationships, champions sustainable farming practices, and makes a
+            meaningful impact on both our community and the environment.
+          </p>
         </div>
       </div>
     </section>

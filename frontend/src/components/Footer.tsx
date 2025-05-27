@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="bg-black p-8 text-center text-white">
-      <ul>
+      <ul className="flex justify-center gap-4 text-lg">
         <li>
           <a href="">Instagram</a>
         </li>
@@ -9,7 +9,7 @@ const Footer = () => {
           <a href="">TikTok</a>
         </li>
       </ul>
-      <p>Copyright &copy; 2025 Pure Zen Essence</p>
+      <p className="mt-4 text-sm">Copyright &copy; 2025 Pure Zen Essence</p>
     </footer>
   );
 };
