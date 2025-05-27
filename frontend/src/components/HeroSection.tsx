@@ -2,10 +2,10 @@ import { FaWhatsapp, FaArrowDown } from "react-icons/fa6";
 
 const HeroSection = () => {
   return (
-    <header className="mt-24 grid min-h-[calc(100dvh-6rem)] grid-cols-1 items-center gap-8 bg-[url('./src/assets/')] bg-cover bg-fixed bg-center bg-no-repeat px-8 py-24 md:grid-cols-4 md:py-8">
+    <header className="mt-24 grid h-[calc(100dvh-6rem)] grid-cols-1 items-center gap-8 bg-[url('./src/assets/')] bg-cover bg-fixed bg-center bg-no-repeat px-8 py-24 md:grid-cols-4 md:py-8">
       {/* Left Container */}
       <section className="col-span-2 flex flex-col items-center gap-16">
-        <div className="flex flex-col items-center gap-8 text-center">
+        <div className="-mt-24 flex flex-col items-center gap-8 text-center">
           <h1 className="text-5xl font-black">
             Have you ever wanted to look{" "}
             <span className="from-brand-green to-brand-blue bg-linear-to-r bg-clip-text text-transparent transition-colors duration-500">
