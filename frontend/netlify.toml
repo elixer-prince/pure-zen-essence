@@ -1,8 +1,6 @@
 [build]
   command = "npm run build:frontend"
   publish = "dist"
-  base = ""
-  functions = "netlify/functions"
 
 [[redirects]]
   from = "/*"
@@ -18,9 +16,6 @@
   for = "/assets/*"
     [headers.values]
       Cache-Control = "public, max-age=31536000, immutable"
-
-# Security headers
-[headers]
   for = "/*"
     [headers.values]
       X-Frame-Options = "SAMEORIGIN"
@@ -28,3 +23,18 @@
       X-XSS-Protection = "1; mode=block"
       Referrer-Policy = "strict-origin-when-cross-origin"
       Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Environment variables
+[build.environment]
+  NODE_VERSION = "18"
+
+# Build settings
+[build.settings]
+  ignore = ["node_modules", ".git", "dist"]
+  cleanup = true
+
+# Form handling
+[site]
+  name = "pure-zen-essence"
+  description = "Pure Zen Essence Frontend"
+  author = "elixer-prince"
