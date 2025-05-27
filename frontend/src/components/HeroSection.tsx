@@ -37,7 +37,7 @@ const HeroSection = () => {
         </div>
       </section>
       {/* Right Container */}
-      <div className="col-span-2 flex h-full items-center justify-center border-2 border-amber-500">
+      <div className="col-span-2 hidden h-full items-center justify-center border-2 border-amber-500 md:flex">
         <img src="" alt="Image of a beautiful woman should go here..." />
       </div>
     </header>
