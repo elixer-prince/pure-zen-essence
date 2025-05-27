@@ -27,29 +27,18 @@ const Navbar = () => {
       closeButtonRef.current &&
       navbarLinksRef.current
     ) {
-      const navbarClasses = [
-        "h-full",
-        "h-24",
-        "from-black",
-        "to-brand-darkblue",
-        "from-black/90",
-        "to-brand-darkblue/90",
-      ];
-      const toggleClasses = ["hidden"];
-      const navbarLinksClasses = ["hidden", "flex"];
+      navbarRef.current.classList.toggle("h-full");
+      navbarRef.current.classList.toggle("h-24");
+      navbarRef.current.classList.toggle("from-black");
+      navbarRef.current.classList.toggle("to-brand-darkblue");
+      navbarRef.current.classList.toggle("from-black/90");
+      navbarRef.current.classList.toggle("to-brand-darkblue/90");
 
-      navbarClasses.forEach((className) =>
-        navbarRef.current?.classList.toggle(className),
-      );
+      toggleButtonRef.current.classList.toggle("hidden");
+      closeButtonRef.current.classList.toggle("hidden");
 
-      toggleClasses.forEach((className) => {
-        toggleButtonRef.current?.classList.toggle(className);
-        closeButtonRef.current?.classList.toggle(className);
-      });
-
-      navbarLinksClasses.forEach((className) =>
-        navbarRef.current?.classList.toggle(className),
-      );
+      navbarLinksRef.current.classList.toggle("hidden");
+      navbarLinksRef.current.classList.toggle("flex");
 
       document.body.classList.toggle("overflow-hidden");
     }
