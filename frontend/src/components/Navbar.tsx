@@ -1,8 +1,10 @@
 import { useRef } from "react";
-import { FaBars } from "react-icons/fa6";
-import { IoClose } from "react-icons/io5";
+// Components
 import NavbarLogo from "./NavbarLogo";
 import NavbarLinks from "./NavbarLinks";
+// Icons
+import { FaBars } from "react-icons/fa6";
+import { IoClose } from "react-icons/io5";
 
 const Navbar = () => {
   const navbarRef = useRef<HTMLElement>(null);
