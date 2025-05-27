@@ -8,7 +8,7 @@ const AboutSection = () => {
       {/* Left Container */}
       <div>
         <img
-          className="absolute top-0 left-1/2 flex aspect-square min-h-[calc(100dvh-6rem] w-[12rem] max-w-[100%] -translate-x-1/2 -translate-y-[50%] items-center justify-center rounded-full border-4 border-white md:static"
+          className="absolute top-0 left-1/2 flex aspect-square min-h-[calc(100dvh-6rem] w-[12rem] max-w-[100%] -translate-x-1/2 -translate-y-[50%] items-center justify-center rounded-full border-4 border-white md:static md:translate-0"
           src="https://images.unsplash.com/photo-1536147210925-5cb7a7a4f9fe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JlZW4lMjBwbGFudHxlbnwwfHwwfHx8MA%3D%3D"
           alt="Image goes here..."
         />
