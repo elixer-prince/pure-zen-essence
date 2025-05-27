@@ -19,12 +19,13 @@ const Navbar = () => {
       navbarRef.current.classList.toggle("h-24");
       toggleButtonRef.current.classList.toggle("hidden");
       closeButtonRef.current.classList.toggle("hidden");
+      document.body.classList.toggle("overflow-hidden");
     }
   };
 
   return (
     <nav
-      className="to-brand-darkblue fixed top-0 right-0 left-0 z-10 h-24 bg-linear-to-r from-black p-4 text-white transition-all duration-300 lg:h-24"
+      className="to-brand-darkblue/90 fixed top-0 right-0 left-0 z-10 h-24 bg-linear-to-r from-black/90 p-4 text-white backdrop-blur-sm transition-all duration-300 lg:h-24"
       ref={navbarRef}
     >
       <div className="flex items-center justify-between">
@@ -34,7 +35,7 @@ const Navbar = () => {
         </div>
         <div className="cursor-pointer lg:hidden" onClick={toggleNavbar}>
           <div
-            className="mr-1.5 flex items-center gap-2 text-2xl font-extrabold"
+            className="hover:text-brand-green mr-1.5 flex items-center gap-2 text-2xl font-extrabold transition-colors duration-250"
             ref={toggleButtonRef}
           >
             <span className="hidden text-lg sm:block">MENU</span>
