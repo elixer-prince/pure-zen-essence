@@ -7,27 +7,39 @@ import { FaBars } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 
 const Navbar = () => {
+  const sections = [
+    { id: "#", name: "HOME" },
+    { id: "#about", name: "ABOUT US" },
+    { id: "#products", name: "OUR PRODUCTS" },
+    { id: "#testimonials", name: "TESTIMONIALS" },
+    { id: "#faqs", name: "FAQS" },
+  ];
+
   const navbarRef = useRef<HTMLElement>(null);
   const toggleButtonRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLDivElement>(null);
+  const navbarLinksRef = useRef<HTMLUListElement>(null);
 
   const toggleNavbar = () => {
     if (
       navbarRef.current &&
       toggleButtonRef.current &&
-      closeButtonRef.current
+      closeButtonRef.current &&
+      navbarLinksRef.current
     ) {
       navbarRef.current.classList.toggle("h-full");
       navbarRef.current.classList.toggle("h-24");
       toggleButtonRef.current.classList.toggle("hidden");
       closeButtonRef.current.classList.toggle("hidden");
       document.body.classList.toggle("overflow-hidden");
+      navbarLinksRef.current.classList.toggle("hidden");
+      navbarLinksRef.current.classList.toggle("flex");
     }
   };
 
   return (
     <nav
-      className="to-brand-darkblue/90 fixed top-0 right-0 left-0 z-10 h-24 bg-linear-to-r from-black/90 p-4 text-white backdrop-blur-sm transition-all duration-300 lg:h-24"
+      className="to-brand-darkblue/90 fixed top-0 right-0 left-0 z-10 h-24 overflow-hidden bg-linear-to-r from-black/90 p-4 text-white backdrop-blur-sm transition-all duration-300 lg:h-24"
       ref={navbarRef}
     >
       {/* Navbar Main Container */}
@@ -35,7 +47,7 @@ const Navbar = () => {
         {/* Left Container */}
         <div className="flex items-center gap-8">
           <NavbarLogo />
-          <NavbarLinks />
+          <NavbarLinks sections={sections} />
         </div>
         {/* Right Container */}
         <div className="cursor-pointer lg:hidden" onClick={toggleNavbar}>
@@ -54,6 +66,18 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      <ul className="mt-16 hidden flex-col gap-8" ref={navbarLinksRef}>
+        {sections.map(({ id, name }) => (
+          <li
+            key={id}
+            className="hover:text-brand-green text-center text-2xl font-black transition-colors"
+          >
+            <a href={id} onClick={toggleNavbar}>
+              {name}
+            </a>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 };

@@ -1,12 +1,8 @@
-const NavbarLinks = () => {
-  const sections = [
-    { id: "#", name: "HOME" },
-    { id: "#about", name: "ABOUT US" },
-    { id: "#products", name: "OUR PRODUCTS" },
-    { id: "#testimonials", name: "TESTIMONIALS" },
-    { id: "#faqs", name: "FAQS" },
-  ];
-
+const NavbarLinks = ({
+  sections,
+}: {
+  sections: { id: string; name: string }[];
+}) => {
   return (
     <ul className="hidden items-center overflow-hidden rounded-md border-2 border-white font-bold lg:flex">
       {sections.map(({ id, name }) => (
