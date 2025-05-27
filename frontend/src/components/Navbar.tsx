@@ -29,6 +29,10 @@ const Navbar = () => {
     ) {
       navbarRef.current.classList.toggle("h-full");
       navbarRef.current.classList.toggle("h-24");
+      navbarRef.current.classList.toggle("from-black");
+      navbarRef.current.classList.toggle("to-brand-darkblue");
+      navbarRef.current.classList.toggle("from-black/90");
+      navbarRef.current.classList.toggle("to-brand-darkblue/90");
       toggleButtonRef.current.classList.toggle("hidden");
       closeButtonRef.current.classList.toggle("hidden");
       document.body.classList.toggle("overflow-hidden");
@@ -39,7 +43,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="to-brand-darkblue/90 fixed top-0 right-0 left-0 z-10 h-24 overflow-hidden bg-linear-to-r from-black/90 p-4 text-white backdrop-blur-sm transition-all duration-300 lg:h-24"
+      className="to-brand-darkblue fixed top-0 right-0 left-0 z-10 h-24 overflow-hidden bg-gradient-to-r from-black p-4 text-white backdrop-blur-sm transition-all duration-500 lg:h-24"
       ref={navbarRef}
     >
       {/* Navbar Main Container */}
@@ -66,7 +70,11 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <ul className="mt-16 hidden flex-col gap-8" ref={navbarLinksRef}>
+      {/* Mobile Navbar Links */}
+      <ul
+        className="mt-16 hidden flex-col gap-8 transition-all duration-500"
+        ref={navbarLinksRef}
+      >
         {sections.map(({ id, name }) => (
           <li
             key={id}

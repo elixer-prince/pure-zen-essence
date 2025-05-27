@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="border-2 border-amber-400">
+    <footer className="bg-black p-8 text-center text-white">
       <ul>
         <li>
           <a href="">Instagram</a>
@@ -9,7 +9,7 @@ const Footer = () => {
           <a href="">TikTok</a>
         </li>
       </ul>
-      <p>&copy; 2025 Pure Zen Essence</p>
+      <p>Copyright &copy; 2025 Pure Zen Essence</p>
     </footer>
   );
 };
