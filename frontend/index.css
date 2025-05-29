@@ -11,3 +11,7 @@
     scroll-behavior: smooth;
   }
 }
+
+* {
+  /* outline: 2px solid orange; */
+}
