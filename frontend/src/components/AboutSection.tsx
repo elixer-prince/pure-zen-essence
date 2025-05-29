@@ -1,20 +1,19 @@
+import AboutImage from "./AboutImage";
+
 const AboutSection = () => {
   return (
+    // ABOUT SECTION
     <section
       id="about"
       aria-labelledby="about-header"
-      className="relative grid scroll-mt-24 grid-cols-1 gap-16 bg-linear-to-r from-neutral-950 to-neutral-900 p-16 pt-12 text-white md:grid-cols-2"
+      className="relative grid scroll-mt-24 grid-cols-1 bg-linear-to-r from-black to-neutral-950 p-12 pt-28 text-white md:grid-cols-2"
     >
-      {/* Left Container */}
-      <div>
-        <img
-          className="absolute top-0 left-1/2 flex aspect-square min-h-[calc(100dvh-6rem] w-[12rem] max-w-[100%] -translate-x-1/2 -translate-y-[50%] items-center justify-center rounded-full border-4 border-white md:static md:translate-0"
-          src="https://images.unsplash.com/photo-1536147210925-5cb7a7a4f9fe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JlZW4lMjBwbGFudHxlbnwwfHwwfHx8MA%3D%3D"
-          alt="Image goes here..."
-        />
+      {/* Left Image Container */}
+      <div className="absolute top-0 left-1/2 aspect-square min-h-[calc(100dvh-6rem] w-[12rem] max-w-[100%] -translate-x-1/2 -translate-y-[50%] overflow-hidden rounded-full border-4 border-white md:static md:w-1/2 md:translate-0">
+        <AboutImage />
       </div>
-      {/* Right Container */}
-      <div>
+      {/* Right Text Container */}
+      <div className="p-4">
         <header>
           <h2
             id="about-header"
