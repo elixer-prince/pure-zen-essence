@@ -22,21 +22,26 @@ const Navbar = () => {
 
   const toggleNavbar = () => {
     if (
+      // Ensure the references are present
       navbarRef.current &&
       toggleButtonRef.current &&
       closeButtonRef.current &&
       navbarLinksRef.current
     ) {
+      // Toggle the navbar expansion
       navbarRef.current.classList.toggle("h-full");
       navbarRef.current.classList.toggle("h-24");
+      // Toggle the navbar blur effect
       navbarRef.current.classList.toggle("from-black");
       navbarRef.current.classList.toggle("to-brand-darkblue");
       navbarRef.current.classList.toggle("from-black/90");
       navbarRef.current.classList.toggle("to-brand-darkblue/90");
 
+      // Toggle the icon shown
       toggleButtonRef.current.classList.toggle("hidden");
       closeButtonRef.current.classList.toggle("hidden");
 
+      // Toggle links visibility
       navbarLinksRef.current.classList.toggle("hidden");
       navbarLinksRef.current.classList.toggle("flex");
 
@@ -45,8 +50,9 @@ const Navbar = () => {
   };
 
   return (
+    // NAVBAR
     <nav
-      className="to-brand-darkblue fixed top-0 right-0 left-0 z-10 h-24 overflow-hidden bg-gradient-to-r from-black p-4 text-white backdrop-blur-sm transition-all duration-500 lg:h-24"
+      className="to-brand-darkblue fixed top-0 right-0 left-0 z-10 h-24 bg-gradient-to-r from-black p-4 text-white backdrop-blur-sm transition-all duration-500"
       ref={navbarRef}
     >
       {/* Navbar Main Container */}
