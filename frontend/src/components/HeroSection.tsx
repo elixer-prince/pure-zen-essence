@@ -4,11 +4,11 @@ import PlaceholderImage from "../assets/landscape-placeholder.svg";
 const HeroSection = () => {
   return (
     // HERO SECTION
-    <header className="mt-28 flex h-fit w-256 max-w-screen items-center gap-16 p-4 pb-30 sm:pt-16 md:py-30">
+    <header className="mt-28 flex h-fit w-276 max-w-screen items-center gap-16 p-4 pb-30 sm:pt-16 md:px-8 md:py-30 md:pb-44">
       {/* Left Container */}
       <section className="flex flex-col items-center gap-16 pt-[1px]">
         {/* Text Container */}
-        <div className="flex flex-col gap-8 text-center">
+        <div className="flex flex-col gap-8 border text-center md:-mt-16">
           <h1 className="text-5xl font-black md:text-6xl">
             Have you ever wanted to look{" "}
             <span className="from-brand-green to-brand-blue bg-linear-to-r bg-clip-text text-transparent transition-colors duration-500">
@@ -26,13 +26,13 @@ const HeroSection = () => {
         </div>
         <div className="flex gap-4 font-bold text-white">
           <a
-            className="to-brand-darkblue flex items-center gap-1 rounded-xl bg-linear-to-r from-black p-4 text-lg"
+            className="to-brand-darkblue flex items-center gap-1 rounded-xl bg-linear-to-r from-black p-4 text-lg md:p-8 md:text-2xl"
             href="#about"
           >
             Learn More <FaArrowDown className="hidden text-xl sm:block" />
           </a>
           <a
-            className="to-brand-blue from-brand-green flex items-center gap-1 rounded-xl bg-linear-to-r p-4 text-lg"
+            className="to-brand-blue from-brand-green flex items-center gap-1 rounded-xl bg-linear-to-r p-4 text-lg md:px-8 md:py-4 md:text-2xl lg:px-8 lg:py-4"
             href="#contact"
           >
             Contact Us <FaWhatsapp className="hidden text-2xl sm:block" />
