@@ -47,16 +47,16 @@ const ProductCard = ({
 
   return (
     // Card Container
-    <article className="h-112 perspective-midrange">
+    <article className="h-124 perspective-midrange">
       {/* Card */}
       <div
         className={`${isFlipped && "rotate-y-180"} relative h-full transition-transform duration-500 select-none transform-3d hover:-translate-y-4`}
         ref={cardRef}
       >
         {/* Card Front */}
-        <div className="border-brand-green absolute flex h-full w-full flex-col overflow-hidden rounded-tl-[4rem] rounded-br-[4rem] border-2 bg-white backface-hidden">
+        <div className="border-brand-green border-bl-md absolute flex h-full w-full flex-col overflow-hidden rounded-tl-[4rem] rounded-br-[4rem] border-3 bg-white bg-linear-to-br shadow-md backface-hidden">
           <a
-            className="h-52 overflow-hidden"
+            className="h-56 overflow-hidden"
             href={imageUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -69,12 +69,12 @@ const ProductCard = ({
           </a>
           <div className="h-56 p-4">
             <div>
-              <h3 className="text-3xl font-black">{title}</h3>
-              <p className="mt-2 text-sm">{description}</p>
+              <h3 className="text-4xl font-black">{title}</h3>
+              <p className="mt-2 text-lg">{description}</p>
             </div>
             <div>
               <button
-                className="from-brand-green to-brand-blue mt-8 flex cursor-pointer items-center gap-1 rounded-lg bg-linear-to-r px-6 py-3 font-bold text-white backface-hidden"
+                className="to-brand-green from-brand-darkblue mt-8 flex cursor-pointer items-center gap-1 rounded-xl bg-linear-to-r px-6 py-4 font-black text-white backface-hidden"
                 onClick={flipCard}
               >
                 More Info <MdArrowOutward className="text-2xl" />

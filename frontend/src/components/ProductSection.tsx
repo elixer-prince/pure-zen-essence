@@ -9,12 +9,12 @@ const ProductSection = () => {
     <section
       id="products"
       aria-labelledby="products-header"
-      className="scroll-mt-24 gap-4 border-2 p-4"
+      className="scroll-mt-24 gap-4 bg-neutral-100 px-4 py-8"
     >
-      <header>
+      <header className="flex justify-center">
         <h2
           id="products-header"
-          className="text-center text-3xl font-extrabold"
+          className="border-b-brand-blue my-8 inline-block border-b-8 pb-2 text-4xl font-black"
         >
           OUR PRODUCTS
         </h2>
