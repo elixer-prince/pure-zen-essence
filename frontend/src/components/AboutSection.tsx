@@ -6,14 +6,14 @@ const AboutSection = () => {
     <section
       id="about"
       aria-labelledby="about-header"
-      className="relative grid scroll-mt-24 grid-cols-1 bg-linear-to-r from-black to-neutral-950 p-12 pt-28 text-white md:grid-cols-2"
+      className="relative flex scroll-mt-24 flex-col items-center justify-center gap-8 bg-linear-to-r from-black to-neutral-950 px-4 pt-28 pb-12 text-white sm:px-8 md:flex-row lg:pt-12"
     >
       {/* Left Image Container */}
-      <div className="absolute top-0 left-1/2 aspect-square min-h-[calc(100dvh-6rem] w-[12rem] max-w-[100%] -translate-x-1/2 -translate-y-[50%] overflow-hidden rounded-full border-4 border-white md:static md:w-1/2 md:translate-0">
+      <div className="absolute top-0 left-1/2 aspect-square min-h-[calc(100dvh-6rem] w-[6rem] flex-1/2 -translate-x-1/2 -translate-y-[50%] overflow-hidden rounded-full border-4 border-white lg:static lg:w-1/2 lg:translate-0">
         <AboutImage />
       </div>
       {/* Right Text Container */}
-      <div className="p-4">
+      <div className="flex-2/3 p-4">
         <header>
           <h2
             id="about-header"
