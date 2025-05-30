@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-black p-8 text-center text-white">
+    <footer className="bg-black px-8 py-16 text-center text-white">
       <ul className="flex justify-center gap-4 text-lg">
         <li>
           <a href="">Instagram</a>
@@ -9,7 +9,7 @@ const Footer = () => {
           <a href="">TikTok</a>
         </li>
       </ul>
-      <p className="mt-4 text-sm">Copyright &copy; 2025 Pure Zen Essence</p>
+      <p className="mt-8 text-sm">Copyright &copy; 2025 Pure Zen Essence</p>
     </footer>
   );
 };
