@@ -11,7 +11,7 @@ const ContactSection = () => {
       <header>
         <h2
           id="contact-header"
-          className="pb-4 text-center text-3xl font-black sm:text-4xl"
+          className="pb-8 text-center text-3xl font-black sm:text-4xl"
         >
           CONTACT US
         </h2>
