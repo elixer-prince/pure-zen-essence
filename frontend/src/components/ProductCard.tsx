@@ -47,7 +47,7 @@ const ProductCard = ({
 
   return (
     // Card Container
-    <article className="h-124 perspective-midrange">
+    <article className="h-128 perspective-midrange">
       {/* Card */}
       <div
         className={`${isFlipped && "rotate-y-180"} relative h-full transition-transform duration-500 select-none transform-3d hover:-translate-y-4`}
@@ -74,10 +74,10 @@ const ProductCard = ({
             </div>
             <div>
               <button
-                className="to-brand-green from-brand-darkblue mt-8 flex cursor-pointer items-center gap-1 rounded-xl bg-linear-to-r px-6 py-4 font-black text-white backface-hidden"
+                className="to-brand-green from-brand-darkblue mt-8 flex cursor-pointer items-center gap-1 rounded-xl bg-linear-to-r px-6 py-4 text-lg font-black text-white backface-hidden"
                 onClick={flipCard}
               >
-                More Info <MdArrowOutward className="text-2xl" />
+                More Info <MdArrowOutward className="text-3xl" />
               </button>
             </div>
           </div>
