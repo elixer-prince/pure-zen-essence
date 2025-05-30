@@ -4,7 +4,7 @@ const NavbarLinks = ({
   sections: { id: string; name: string }[];
 }) => {
   return (
-    <ul className="hidden items-center overflow-hidden rounded-md border-2 border-white font-bold lg:flex">
+    <ul className="hidden items-center overflow-hidden rounded-md border-3 border-white font-bold lg:flex">
       {sections.map(({ id, name }) => (
         <li key={id}>
           <a
