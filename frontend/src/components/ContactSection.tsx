@@ -11,12 +11,12 @@ const ContactSection = () => {
       <header>
         <h2
           id="contact-header"
-          className="pb-8 text-center text-3xl font-black sm:text-4xl"
+          className="pb-8 text-center text-4xl font-black sm:text-5xl md:text-6xl"
         >
           CONTACT US
         </h2>
       </header>
-      <div className="flex flex-col gap-4 md:gap-8 lg:flex-row">
+      <div className="flex flex-col gap-4 md:flex-row md:gap-8">
         <form className="mb-4 flex h-full w-full flex-1 flex-col items-center justify-center gap-4 self-center px-4 sm:px-8">
           <input
             className="w-full rounded-md border-3 px-4 py-2 text-base sm:text-lg"
