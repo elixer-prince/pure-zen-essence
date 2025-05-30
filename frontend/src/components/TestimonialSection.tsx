@@ -5,7 +5,7 @@ const TestimonialSection = () => {
     <section
       id="testimonials"
       aria-labelledby="testimonials-header"
-      className="scroll-mt-24 px-4 py-8"
+      className="from-brand-green to-brand-green/50 scroll-mt-24 bg-linear-to-r px-4 py-8"
     >
       <header>
         <h2
