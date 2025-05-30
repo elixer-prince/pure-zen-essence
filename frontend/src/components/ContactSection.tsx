@@ -6,7 +6,7 @@ const ContactSection = () => {
     <section
       id="contact"
       aria-labelledby="contact-header"
-      className="px-4 py-10 sm:px-16"
+      className="px-4 py-16 sm:px-16"
     >
       <header>
         <h2
@@ -44,7 +44,7 @@ const ContactSection = () => {
         </form>
         <div className="mt-8 flex flex-1 items-center justify-center">
           <img
-            className="border-brand-green -mt-8 w-80 max-w-full rounded-md border-6"
+            className="border-brand-blue -mt-8 w-80 max-w-full rounded-lg border-4 shadow-lg"
             src={WhatsappQrCode}
             alt="Whatsapp QR Code"
           />
