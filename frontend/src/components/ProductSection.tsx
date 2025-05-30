@@ -14,7 +14,7 @@ const ProductSection = () => {
       <header className="flex justify-center">
         <h2
           id="products-header"
-          className="border-b-brand-blue my-8 inline-block border-b-8 pb-2 text-4xl font-black"
+          className="border-b-brand-blue my-8 inline-block border-b-8 pb-2 text-4xl font-black md:text-5xl"
         >
           OUR PRODUCTS
         </h2>
