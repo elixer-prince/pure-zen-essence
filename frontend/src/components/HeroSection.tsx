@@ -1,9 +1,10 @@
 import { FaWhatsapp, FaArrowDown } from "react-icons/fa6";
+import PlaceholderImage from "../assets/landscape-placeholder.svg";
 
 const HeroSection = () => {
   return (
     // HERO SECTION
-    <header className="mt-24 flex h-fit w-256 items-center gap-16 p-4 pb-30 sm:pt-16 md:py-30">
+    <header className="mt-28 flex h-fit w-256 max-w-screen items-center gap-16 p-4 pb-30 sm:pt-16 md:py-30">
       {/* Left Container */}
       <section className="flex flex-col items-center gap-16 pt-[1px]">
         {/* Text Container */}
@@ -41,7 +42,7 @@ const HeroSection = () => {
       {/* Right Container */}
       <div className="col-span-2 hidden h-full items-center justify-center lg:flex">
         <img
-          src={null}
+          src={PlaceholderImage}
           alt="Image of a beautiful woman should go here..."
         />{" "}
       </div>
