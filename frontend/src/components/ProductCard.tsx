@@ -54,9 +54,9 @@ const ProductCard = ({
         ref={cardRef}
       >
         {/* Card Front */}
-        <div className="border-brand-green border-bl-md absolute flex h-full w-full flex-col overflow-hidden rounded-tl-[4rem] rounded-br-[4rem] border-3 bg-white bg-linear-to-br shadow-md backface-hidden">
+        <div className="border-brand-green absolute flex h-full w-full flex-col overflow-hidden rounded-tl-[4rem] rounded-tr-md rounded-br-[4rem] rounded-bl-md border-2 bg-white bg-linear-to-br shadow-md backface-hidden">
           <a
-            className="h-56 overflow-hidden"
+            className="h-120 overflow-hidden"
             href={imageUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -67,10 +67,14 @@ const ProductCard = ({
               alt=""
             />
           </a>
-          <div className="h-56 p-4">
-            <div>
-              <h3 className="text-4xl font-black">{title}</h3>
-              <p className="mt-2 text-lg">{description}</p>
+          <div className="flex h-full flex-col justify-between p-4">
+            <div className="h-full">
+              <h3 className="flex h-20 items-center text-4xl font-black">
+                {title}
+              </h3>
+              <p className="mt-2 text-lg font-semibold text-neutral-600">
+                {description}
+              </p>
             </div>
             <div>
               <button
@@ -85,7 +89,7 @@ const ProductCard = ({
         {/* Card Back */}
         <div className="border-brand-green absolute h-full w-full rotate-y-180 rounded-tr-[4rem] rounded-bl-[4rem] border-2 bg-white px-8 py-4 backface-hidden">
           <IoCloseCircle
-            className="text-brand-green absolute top-4 right-6 cursor-pointer rounded-full bg-white text-5xl transition-transform duration-500 hover:scale-105"
+            className="text-brand-green absolute top-4 right-6 cursor-pointer rounded-full bg-white text-5xl shadow-md transition-transform duration-500 hover:scale-110"
             onClick={flipCard}
           />
           <div>
