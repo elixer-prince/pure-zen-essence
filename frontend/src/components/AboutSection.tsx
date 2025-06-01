@@ -9,7 +9,7 @@ const AboutSection = () => {
       className="relative flex scroll-mt-24 flex-col items-center justify-center gap-8 bg-linear-to-r from-black to-neutral-950 px-4 pt-28 pb-12 text-white sm:px-8 md:flex-row md:pt-36 lg:pt-12"
     >
       {/* Left Image Container */}
-      <div className="absolute top-0 left-1/2 aspect-square min-h-[calc(100dvh-6rem] w-[12rem] flex-1/2 -translate-x-1/2 -translate-y-[50%] overflow-hidden rounded-full border-4 border-white md:w-[16rem] lg:static lg:w-1/2 lg:translate-0">
+      <div className="absolute top-0 left-1/2 aspect-square min-h-[calc(100dvh-6rem] w-[12rem] flex-1/2 -translate-x-1/2 -translate-y-[50%] overflow-hidden rounded-full border-4 md:w-[8rem] lg:static lg:w-1/2 lg:translate-0">
         <AboutImage />
       </div>
       {/* Right Text Container */}
@@ -17,13 +17,13 @@ const AboutSection = () => {
         <header>
           <h2
             id="about-header"
-            className="border-brand-green border-b-8 pb-4 text-center text-4xl font-black md:text-6xl"
+            className="border-brand-green border-b-8 pb-4 text-center text-4xl font-black md:text-5xl"
           >
             ABOUT <span className="hidden md:inline">US</span>
           </h2>
         </header>
         <div>
-          <h3 className="border-brand-blue mt-8 mb-4 border-l-8 pb-2 pl-4 text-4xl font-bold md:text-6xl">
+          <h3 className="border-brand-blue mt-8 mb-4 border-l-8 pb-2 pl-4 text-4xl font-bold md:text-5xl">
             Our Mission
           </h3>
           <p className="md:text-lg">
@@ -35,7 +35,7 @@ const AboutSection = () => {
           </p>
         </div>
         <div>
-          <h3 className="border-brand-blue mt-8 mb-4 border-l-8 pb-2 pl-4 text-4xl font-bold md:text-6xl">
+          <h3 className="border-brand-blue mt-8 mb-4 border-l-8 pb-2 pl-4 text-4xl font-bold md:text-5xl">
             Our Vision
           </h3>
           <p className="md:text-lg">
