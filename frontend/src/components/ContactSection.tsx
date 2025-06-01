@@ -20,7 +20,7 @@ const ContactSection = () => {
         <ContactForm />
         <a
           className="mt-4 flex flex-1 items-center justify-center sm:mt-8"
-          href={WhatsappQrCode}
+          href="https://wa.me/8767914187"
           target="_blank"
         >
           <img
