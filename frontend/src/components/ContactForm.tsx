@@ -3,7 +3,7 @@ import { FaPaperPlane } from "react-icons/fa6";
 const ContactForm = () => {
   return (
     <form
-      className="mb-4 flex h-full w-full flex-1 flex-col items-center justify-center gap-4 self-center px-4 sm:px-8"
+      className="mb-8 flex h-full w-full flex-1 flex-col items-center justify-center gap-4 self-center px-4 sm:px-8"
       action="https://formspree.io/f/xeokjzab"
       method="POST"
     >
