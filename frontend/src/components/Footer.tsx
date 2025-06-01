@@ -3,8 +3,8 @@ import { FaInstagram, FaTiktok } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-black px-4 py-16 text-center text-white sm:px-8">
-      <ul className="flex items-center justify-center gap-8 sm:gap-8">
-        <li>
+      <ul className="flex items-center justify-center gap-4 sm:gap-8 md:gap-8">
+        <li className="hover:ring-brand-green flex rounded-full p-4 transition-all duration-300 hover:ring-4">
           <a
             href="https://www.instagram.com/purezenessence/"
             target="_blank"
@@ -13,7 +13,7 @@ const Footer = () => {
             <FaInstagram className="hover:text-brand-green text-4xl transition-colors duration-300 sm:text-5xl" />
           </a>
         </li>
-        <li>
+        <li className="hover:ring-brand-green flex rounded-full p-4 transition-all duration-300 hover:ring-4">
           <a
             href="https://www.tiktok.com/@purezenessence"
             target="_blank"
@@ -23,9 +23,7 @@ const Footer = () => {
           </a>
         </li>
       </ul>
-      <p className="mt-8 sm:text-2xl lg:text-2xl">
-        Copyright &copy; 2025 Pure Zen Essence
-      </p>
+      <p className="mt-8 sm:text-lg">Copyright &copy; 2025 Pure Zen Essence</p>
     </footer>
   );
 };
