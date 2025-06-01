@@ -3,12 +3,12 @@ import { FaWhatsapp, FaArrowDown } from "react-icons/fa6";
 const HeroSection = () => {
   return (
     // HERO SECTION
-    <header className="mt-24 grid h-[100dvh] lg:grid-cols-4">
+    <header className="h-(calc(100dvh-96px) mt-24 grid px-4 py-16 md:pb-28 lg:grid-cols-12">
       {/* Left Container */}
-      <section className="flex flex-col items-center gap-16 border-8 pt-[1px]">
+      <section className="col-span-7 mb-8 flex flex-col items-center justify-center gap-8 p-4 px-2 pb-8 text-center sm:pb-8 md:px-8 md:pb-4 lg:col-span-8 lg:px-4 lg:pb-0">
         {/* Text Container */}
-        <div className="mt-8 flex flex-col content-center justify-center gap-8 px-4 text-center">
-          <h1 className="s text-5xl font-black md:text-6xl">
+        <div className="flex flex-col items-center gap-8">
+          <h1 className="text-5xl font-black md:text-6xl">
             Have you ever wanted to look{" "}
             <span className="from-brand-green to-brand-blue bg-linear-to-r bg-clip-text text-transparent transition-colors duration-500">
               NATURALLY
