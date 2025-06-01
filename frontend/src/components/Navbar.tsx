@@ -37,11 +37,11 @@ const Navbar = () => {
       navbarRef.current.classList.toggle("from-black/90");
       navbarRef.current.classList.toggle("to-brand-darkblue/90");
 
-      // Toggle the icon shown
+      // Toggle the icon being shown
       toggleButtonRef.current.classList.toggle("hidden");
       closeButtonRef.current.classList.toggle("hidden");
 
-      // Toggle links visibility
+      // Toggle Link Container visibility
       navbarLinksRef.current.classList.toggle("hidden");
       navbarLinksRef.current.classList.toggle("flex");
 
@@ -79,7 +79,10 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      {/* Mobile Navbar Links */}
+      {/* 
+          Mobile Navbar Links
+          Hidden by default, but shown when expanded
+      */}
       <ul
         className="mt-16 hidden flex-col gap-8 transition-all duration-500"
         ref={navbarLinksRef}

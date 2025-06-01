@@ -1,15 +1,14 @@
 import { FaWhatsapp, FaArrowDown } from "react-icons/fa6";
-import PlaceholderImage from "../assets/landscape-placeholder.svg";
 
 const HeroSection = () => {
   return (
     // HERO SECTION
-    <header className="mt-28 flex h-fit w-276 max-w-screen items-center gap-16 p-4 pb-30 sm:pt-16 md:px-8 md:py-30 md:pb-44">
+    <header className="mt-24 grid h-[100dvh] lg:grid-cols-4">
       {/* Left Container */}
-      <section className="flex flex-col items-center gap-16 pt-[1px]">
+      <section className="flex flex-col items-center gap-16 border-8 pt-[1px]">
         {/* Text Container */}
-        <div className="flex flex-col gap-8 border text-center md:-mt-16">
-          <h1 className="text-5xl font-black md:text-6xl">
+        <div className="mt-8 flex flex-col content-center justify-center gap-8 px-4 text-center">
+          <h1 className="s text-5xl font-black md:text-6xl">
             Have you ever wanted to look{" "}
             <span className="from-brand-green to-brand-blue bg-linear-to-r bg-clip-text text-transparent transition-colors duration-500">
               NATURALLY
@@ -24,15 +23,15 @@ const HeroSection = () => {
             is all you need!
           </p>
         </div>
-        <div className="flex gap-4 font-bold text-white">
+        <div className="flex items-center gap-4 font-bold text-white">
           <a
-            className="to-brand-darkblue flex items-center gap-1 rounded-xl bg-linear-to-r from-black p-4 text-lg md:p-8 md:text-2xl"
+            className="to-brand-darkblue flex items-center gap-1 rounded-xl bg-linear-to-r from-black p-4 text-lg md:py-4"
             href="#about"
           >
             Learn More <FaArrowDown className="hidden text-xl sm:block" />
           </a>
           <a
-            className="to-brand-blue from-brand-green flex items-center gap-1 rounded-xl bg-linear-to-r p-4 text-lg md:px-8 md:py-4 md:text-2xl lg:px-8 lg:py-4"
+            className="to-brand-blue from-brand-green flex items-center gap-1 rounded-xl bg-linear-to-r p-4 text-lg md:py-4"
             href="#contact"
           >
             Contact Us <FaWhatsapp className="hidden text-2xl sm:block" />
@@ -40,11 +39,12 @@ const HeroSection = () => {
         </div>
       </section>
       {/* Right Container */}
-      <div className="col-span-2 hidden h-full items-center justify-center lg:flex">
+      <div className="col-span-2 ml-32 hidden items-center justify-center border-8 border-amber-500">
         <img
-          src={PlaceholderImage}
+          className="hidden rounded-xl"
+          src="https://images.pexels.com/photos/20889986/pexels-photo-20889986/free-photo-of-kiss.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="Image of a beautiful woman should go here..."
-        />{" "}
+        />
       </div>
     </header>
   );
