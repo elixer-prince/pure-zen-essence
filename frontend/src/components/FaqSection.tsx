@@ -4,7 +4,7 @@ const FaqSection = () => {
   return (
     <section
       id="faqs"
-      className="bg-brand-blue scroll-mt-24 gap-4 px-24 py-16 pb-16"
+      className="bg-brand-blue scroll-mt-24 gap-4 border-2 border-dashed px-24 py-16 pb-16"
       aria-labelledby="faqs-header"
     >
       <header>
