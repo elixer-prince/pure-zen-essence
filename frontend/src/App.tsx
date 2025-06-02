@@ -13,7 +13,7 @@ const App = () => {
   return (
     <ProductsContext.Provider value={products}>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/pure-zen-essence/" element={<HomePage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>
