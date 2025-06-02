@@ -5,8 +5,8 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      aria-labelledby="contact-header"
       className="px-4 py-16 sm:px-8 sm:py-16 lg:px-16"
+      aria-labelledby="contact-header"
     >
       <header>
         <h2
@@ -24,7 +24,7 @@ const ContactSection = () => {
           target="_blank"
         >
           <img
-            className="border-brand-green -mt-4 w-64 max-w-full rounded-lg border-4 shadow-lg select-none sm:-mt-8 sm:w-80"
+            className="-mt-4 w-64 max-w-full rounded-lg border-4 shadow-lg select-none sm:-mt-8 sm:w-80"
             src={WhatsappQrCode}
             alt="Whatsapp QR Code"
           />
