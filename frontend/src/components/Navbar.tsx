@@ -52,7 +52,7 @@ const Navbar = () => {
   return (
     // NAVBAR
     <nav
-      className="to-brand-darkblue fixed top-0 right-0 left-0 z-10 h-24 bg-gradient-to-r from-black p-4 text-white shadow shadow-black backdrop-blur-sm transition-all duration-500"
+      className="to-brand-darkblue fixed top-0 right-0 -bottom-12 left-0 z-10 h-24 bg-gradient-to-r from-black p-4 text-white shadow shadow-black backdrop-blur-sm transition-all duration-500 select-none"
       ref={navbarRef}
     >
       {/* Navbar Main Container */}
