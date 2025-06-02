@@ -41,7 +41,7 @@ const ContactForm = () => {
       </div>
       <div className="w-full">
         <label
-          className="mb-2 inline-block text-lg font-bold"
+          className="mb-2 inline-block text-lg font-bold select-none"
           htmlFor="message"
         >
           Message
