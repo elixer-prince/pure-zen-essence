@@ -11,9 +11,9 @@ const ContactSection = () => {
       <header>
         <h2
           id="contact-header"
-          className="pb-8 text-center text-4xl font-black sm:text-5xl md:text-6xl"
+          className="pb-8 text-center text-4xl font-black select-none sm:text-5xl md:text-6xl"
         >
-          CONTACT US
+          Contact Us
         </h2>
       </header>
       <div className="flex flex-col gap-4 md:flex-row md:gap-8">
@@ -24,7 +24,7 @@ const ContactSection = () => {
           target="_blank"
         >
           <img
-            className="border-brand-darkblue -mt-4 w-64 max-w-full rounded-lg border-4 shadow-lg sm:-mt-8 sm:w-80"
+            className="border-brand-green -mt-4 w-64 max-w-full rounded-lg border-4 shadow-lg select-none sm:-mt-8 sm:w-80"
             src={WhatsappQrCode}
             alt="Whatsapp QR Code"
           />

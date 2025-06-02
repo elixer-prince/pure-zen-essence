@@ -23,7 +23,7 @@ const ContactForm = () => {
       />
       <textarea
         id="message"
-        className="w-full rounded-md border-3 px-4 py-2 text-base sm:text-lg"
+        className="w-full resize-none rounded-md border-3 px-4 py-2 text-base sm:text-lg"
         name="message"
         placeholder="Write your message here..."
         rows={4}
@@ -31,7 +31,7 @@ const ContactForm = () => {
       ></textarea>
       <button
         type="submit"
-        className="from-brand-green to-brand-blue mt-4 flex cursor-pointer items-center gap-2 rounded-lg bg-linear-to-r px-6 py-3 text-lg font-black text-white sm:px-8 sm:py-4 sm:text-xl md:self-start"
+        className="from-brand-green to-brand-blue mt-4 flex cursor-pointer items-center gap-2 rounded-lg bg-linear-to-r px-6 py-3 text-lg font-black text-white transition-all duration-300 select-none hover:scale-105 active:scale-95 sm:px-8 sm:py-4 sm:text-xl md:self-start"
       >
         Send Email <FaPaperPlane className="text-xl sm:text-2xl" />
       </button>
