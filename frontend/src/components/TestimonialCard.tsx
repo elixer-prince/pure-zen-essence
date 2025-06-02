@@ -1,6 +1,12 @@
 import PlaceholderImage from "../assets/landscape-placeholder.svg";
 
-const TestimonialCard = () => {
+const TestimonialCard = ({
+  name = "John Doe",
+  quote = "Testimonial quote",
+}: {
+  name?: string;
+  quote?: string;
+}) => {
   return (
     <article className="border-brand-darkblue flex h-full flex-col items-center gap-6 rounded-xl border-2 bg-white/10 p-8 shadow-lg transition-all duration-500 select-none hover:scale-105">
       <div className="border-brand-darkblue relative h-40 w-40 overflow-hidden rounded-full border-4">
@@ -11,14 +17,14 @@ const TestimonialCard = () => {
         />
       </div>
       <div className="flex flex-col items-center text-center">
-        <h3 className="text-2xl font-black sm:text-3xl">Testimonial Name</h3>
+        <h3 className="text-2xl font-black sm:text-3xl">{name}</h3>
         <p className="mt-4 text-base text-gray-400 sm:text-lg">
-          <span className="from-brand-green to-brand-blue bg-linear-to-r bg-clip-text text-transparent">
-            "
+          <span className="from-brand-green to-brand-blue bg-linear-to-r bg-clip-text text-8xl text-transparent">
+            &quot;
           </span>
-          Testimonial Description
-          <span className="from-brand-green to-brand-blue bg-linear-to-r bg-clip-text text-transparent">
-            "
+          {quote}
+          <span className="from-brand-green to-brand-blue bg-linear-to-r bg-clip-text text-8xl text-transparent">
+            &quot;
           </span>
         </p>
       </div>
