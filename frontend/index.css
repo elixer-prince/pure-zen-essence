@@ -4,7 +4,6 @@
   --color-brand-green: #8dc92f;
   --color-brand-blue: #16a5a8;
   --color-brand-darkblue: #0b1b2a;
-  --breakpoint-xs: 30rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
