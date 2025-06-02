@@ -8,7 +8,9 @@ const NavbarLogo = () => {
         src={BrandIcon}
         alt="Pure Zen Essence Logo"
       />
-      <span className="mt-2 text-2xl font-extrabold">Pure Zen Essence</span>
+      <span className="mt-2 text-2xl font-extrabold">
+        Pure Zen <span className="hidden sm:inline">Essence</span>
+      </span>
     </a>
   );
 };
