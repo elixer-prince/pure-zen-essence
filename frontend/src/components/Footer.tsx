@@ -2,7 +2,7 @@ import { FaInstagram, FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-black px-4 py-16 text-center text-white sm:px-8">
+    <footer className="bg-black px-4 py-16 text-center text-white select-none sm:px-8">
       <ul className="flex items-center justify-center gap-4 sm:gap-8 md:gap-8">
         <li className="hover:ring-brand-green flex rounded-full p-4 transition-all duration-300 hover:ring-4">
           <a
