@@ -1,13 +1,11 @@
-import { createContext } from "react";
 import { Routes, Route } from "react-router-dom";
-// Data
+// IMPORTED DATA
+import { ProductsContext } from "./context.tsx";
 import products from "./products.ts";
-// Pages
+// WEBSITE PAGES
 import HomePage from "./pages/HomePage";
 import DashboardPage from "./pages/DashboardPage";
 import LoginPage from "./pages/LoginPage.tsx";
-
-export const ProductsContext = createContext([{}]);
 
 const App = () => {
   return (

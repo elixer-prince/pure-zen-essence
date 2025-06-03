@@ -1,4 +1,4 @@
-// Dummy data until we have a backend database
+// Fake data until we have a backend database
 import ColdPressedCoconutOilImage from "./assets/products/cold-pressed-coconut-oil.jpeg";
 import CastorCoconutOilImage from "./assets/products/castor-coconut-oil.jpeg";
 import ColdPressedCastorOilImage from "./assets/products/cold-pressed-castor-oil.jpeg";
