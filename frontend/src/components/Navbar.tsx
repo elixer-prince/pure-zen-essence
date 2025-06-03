@@ -1,20 +1,18 @@
 import { useRef } from "react";
-// Components
-import NavbarLogo from "./NavbarLogo";
-import NavbarLinks from "./NavbarLinks";
-// Icons
+
+// REACT ICONS
 import { FaBars } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 
-const Navbar = () => {
-  const sections = [
-    { id: "#", name: "HOME" },
-    { id: "#about", name: "ABOUT US" },
-    { id: "#products", name: "OUR PRODUCTS" },
-    { id: "#testimonials", name: "TESTIMONIALS" },
-    { id: "#faqs", name: "FAQS" },
-  ];
+// COMPONENTS
+import NavbarLogo from "./NavbarLogo";
+import NavbarLinks from "./NavbarLinks";
 
+// DATA
+import sections from "./../homepage-sections";
+
+const Navbar = () => {
+  // REFERENCES
   const navbarRef = useRef<HTMLElement>(null);
   const toggleButtonRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLDivElement>(null);
