@@ -1,7 +1,9 @@
 import { Routes, Route } from "react-router-dom";
+
 // IMPORTED DATA
 import { ProductsContext } from "./context.tsx";
 import products from "./products.ts";
+
 // WEBSITE PAGES
 import HomePage from "./pages/HomePage";
 import DashboardPage from "./pages/DashboardPage";
