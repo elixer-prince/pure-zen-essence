@@ -11,7 +11,7 @@ import { IoCloseCircle } from "react-icons/io5";
 import ProductCategoryTag from "./ProductCategoryTag";
 
 type ProductProps = {
-  imageUrl?: string;
+  imageUrl: string;
   title: string;
   description?: string;
   sizes?: {
