@@ -1,23 +1,16 @@
 {
   "name": "pure-zen-essence",
+  "author": "Daniel Leith",
+  "description": "",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
+  "keywords": [],
+  "license": "ISC",
+  "homepage": "https://github.com/elixer-prince/pure-zen-essence#readme",
   "scripts": {
     "dev": "nodemon backend/server.js"
   },
-  "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/elixer-prince/pure-zen-essence.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/elixer-prince/pure-zen-essence/issues"
-  },
-  "homepage": "https://github.com/elixer-prince/pure-zen-essence#readme",
-  "description": "",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
