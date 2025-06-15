@@ -3,7 +3,7 @@ import { FaPaperPlane } from "react-icons/fa6";
 const ContactForm = () => {
   return (
     <form
-      className="mb-8 flex h-full w-full flex-1 flex-col items-center justify-center gap-6 self-center rounded-xl border-3 border-neutral-400 bg-white px-4 py-8 transition-shadow duration-300 hover:shadow-lg sm:px-8"
+      className="mb-8 flex h-full w-full flex-1 flex-col items-center justify-center gap-6 self-center rounded-xl border-3 border-neutral-400 bg-white/50 px-4 py-8 transition-shadow duration-300 hover:shadow-lg sm:px-8"
       action="https://formspree.io/f/xeokjzab"
       method="POST"
     >
@@ -16,7 +16,7 @@ const ContactForm = () => {
         </label>
         <input
           id="name"
-          className="w-full rounded-md border-3 px-4 py-2 text-base sm:text-lg"
+          className="w-full rounded-md border-3 bg-white px-4 py-2 text-base sm:text-lg"
           type="text"
           name="name"
           placeholder="John Doe"
@@ -32,7 +32,7 @@ const ContactForm = () => {
         </label>
         <input
           id="email"
-          className="w-full rounded-md border-3 px-4 py-2 text-base sm:text-lg"
+          className="w-full rounded-md border-3 bg-white px-4 py-2 text-base sm:text-lg"
           type="email"
           name="email"
           placeholder="johndoe@example.com"
@@ -48,7 +48,7 @@ const ContactForm = () => {
         </label>
         <textarea
           id="message"
-          className="w-full resize-none rounded-md border-3 px-4 py-2 text-base sm:text-lg"
+          className="w-full resize-none rounded-md border-3 bg-white px-4 py-2 text-base sm:text-lg"
           name="message"
           placeholder="Write your message here..."
           rows={4}
