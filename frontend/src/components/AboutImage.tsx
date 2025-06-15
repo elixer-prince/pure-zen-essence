@@ -1,4 +1,4 @@
-import AboutSectionImage from "./../assets/landscape-placeholder.svg";
+import AboutSectionImage from "./../assets/about-image.png";
 
 const AboutImage = () => {
   return (
