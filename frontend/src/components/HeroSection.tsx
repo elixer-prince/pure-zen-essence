@@ -3,7 +3,7 @@ import { FaWhatsapp, FaArrowDown } from "react-icons/fa6";
 const HeroSection = () => {
   return (
     // HERO SECTION
-    <header className="h-(calc(100dvh-96px) mt-24 grid px-4 py-16 md:pb-28 lg:grid-cols-12">
+    <header className="h-(calc(100dvh-96px) mt-24 grid pt-8 pb-16 md:pb-28 lg:grid-cols-12">
       {/* Left Container */}
       <section className="col-span-7 mb-8 flex flex-col items-center justify-center gap-16 p-4 px-2 pb-8 text-center sm:pb-8 md:px-8 md:pb-4 lg:col-span-8 lg:px-4 lg:pb-0">
         {/* Text Container */}
@@ -26,20 +26,20 @@ const HeroSection = () => {
         <div className="flex items-center gap-4 font-bold text-white">
           <a
             className="to-brand-darkblue flex items-center gap-1 rounded-xl bg-linear-to-r from-black p-4 text-lg transition-all select-none hover:scale-105 active:scale-95 md:py-4"
-            href="#about"
+            href="/#about"
           >
             Learn More <FaArrowDown className="hidden text-xl sm:block" />
           </a>
           <a
             className="to-brand-blue from-brand-green flex items-center gap-1 rounded-xl bg-linear-to-r p-4 text-lg transition-all select-none hover:scale-105 active:scale-95 md:py-4"
-            href="#contact"
+            href="/#contact"
           >
             Contact Us <FaWhatsapp className="hidden text-2xl sm:block" />
           </a>
         </div>
       </section>
       {/* Right Container */}
-      <div className="col-span-2 ml-32 hidden items-center justify-center border-8 border-amber-500">
+      <div className="col-span-2 ml-32 hidden items-center justify-center border border-amber-500 lg:block">
         <img
           className="hidden rounded-xl lg:block"
           src="https://images.pexels.com/photos/20889986/pexels-photo-20889986/free-photo-of-kiss.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
