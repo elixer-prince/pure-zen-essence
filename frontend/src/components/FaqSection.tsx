@@ -4,7 +4,7 @@ const FaqSection = () => {
   return (
     <section
       id="faqs"
-      className="bg-brand-blue scroll-mt-24 gap-4 p-24"
+      className="bg-brand-blue scroll-mt-24 gap-4 px-4 py-24"
       aria-labelledby="faqs-header"
     >
       <header>
@@ -12,7 +12,7 @@ const FaqSection = () => {
           id="faqs-header"
           className="pb-8 text-center text-4xl font-black text-white sm:text-5xl md:text-6xl"
         >
-          FAQs
+          FREQUENTLY ASKED QUESTIONS
         </h2>
       </header>
       <div className="grid gap-4 lg:grid-cols-2">
