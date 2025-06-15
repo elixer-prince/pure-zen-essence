@@ -8,7 +8,7 @@ const NavbarLogo = () => {
         src={BrandIcon}
         alt="Pure Zen Essence Logo"
       />
-      <span className="mt-2 text-2xl font-extrabold">
+      <span className="mt-2 text-2xl font-extrabold transition duration-300 hover:-translate-y-0.5">
         Pure Zen <span className="hidden sm:inline">Essence</span>
       </span>
     </a>
