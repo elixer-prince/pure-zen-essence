@@ -20,8 +20,8 @@
     @vite('resources/css/app.css')
   </head>
 
-  <body>
-    <x-navbar />
+  <body class="select-none">
+    <x-header />
 
     <main>
       {{ $slot }}
