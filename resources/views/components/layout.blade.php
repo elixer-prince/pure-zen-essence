@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en-JM">
+<html lang="en-JM" class="not-motion-reduce:scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="author" cotent="Daniel Leith" />
