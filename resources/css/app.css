@@ -5,6 +5,10 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
+:root {
+  --navbar-height: 6rem;
+}
+
 @theme {
   --color-brand-green-50: #f6fbea;
   --color-brand-green-100: #eaf6d1;
