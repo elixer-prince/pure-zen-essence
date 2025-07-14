@@ -1,4 +1,6 @@
-<nav class="flex items-center justify-between bg-black p-4 font-bold text-white select-none">
+<nav
+  class="fixed top-0 right-0 left-0 flex h-[var(--navbar-height)] items-center justify-between bg-black p-4 font-bold text-white"
+>
   <div class="flex items-center gap-8">
     <a class="flex items-center gap-2" href="/">
       <img class="w-12 animate-bounce" src="{{ asset('images/brand-icon.png') }}" alt="Brand Icon" />
@@ -18,12 +20,9 @@
 
   <div class="flex items-center gap-4">
     <a class="transition-colors duration-300 hover:text-white/75" href="/login">Login</a>
-    <a
-      class="bg-brand-green-500 hover:bg-brand-green-600 flex items-center gap-2 rounded-md px-4 py-2 transition-colors duration-500"
-      href="/signup"
-    >
+    <x-button class="bg-brand-green-500 hover:bg-brand-green-600" href="/signup">
       <i class="fa-solid fa-user"></i>
       Sign Up
-    </a>
+    </x-button>
   </div>
 </nav>
