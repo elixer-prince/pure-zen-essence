@@ -21,10 +21,6 @@
   </head>
 
   <body class="select-none">
-    <x-header />
-
-    <main>
-      {{ $slot }}
-    </main>
+    {{ $slot }}
   </body>
 </html>
