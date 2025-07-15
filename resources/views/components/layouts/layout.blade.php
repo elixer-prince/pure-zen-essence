@@ -17,10 +17,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     @vite('resources/css/app.css')
   </head>
 
-  <body class="select-none">
+  <body class="font-roboto select-none">
     {{ $slot }}
   </body>
 </html>

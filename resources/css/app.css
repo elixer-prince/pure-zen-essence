@@ -9,7 +9,8 @@
   --navbar-height: 6rem;
 }
 
-@theme {
+@theme {'Roboto', sans-serif
+  --font-roboto: 'Roboto', sans-serif;
   --color-brand-green-50: #f6fbea;
   --color-brand-green-100: #eaf6d1;
   --color-brand-green-200: #d6eea8;
