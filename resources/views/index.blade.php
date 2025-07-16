@@ -3,7 +3,7 @@
   {{-- TODO: Add a description --}}
   <x-slot name="pageDescription">...</x-slot>
 
-  <x-section id="about" class="relative bg-black pt-34 text-white" aria-labelledby="about-header">
+  <x-section id="about" class="relative flex-row gap-16 bg-black pt-34 text-white" aria-labelledby="about-header">
     <x-about-image />
 
     <div class="flex flex-2 flex-col items-center">
