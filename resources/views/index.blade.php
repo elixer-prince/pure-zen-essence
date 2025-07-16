@@ -23,18 +23,18 @@
     </div>
   </x-section>
 
-  <x-section id="products" aria-labelledby="products-header">
+  <x-section id="products" class="border-2 border-red-500" aria-labelledby="products-header">
     <x-section-header id="products-header" class="border-b-brand-green-500">Our Products</x-section-header>
 
-    <div class="grid w-full gap-10 lg:grid-cols-3">
+    <x-grid>
       <x-product-card title="Coconut Oil" description="coconut oil..." />
       <x-product-card title="Castor-Coconut Oil" description="coconut oil" />
       <x-product-card title="coconut oil" description="coconut oil" />
       <x-product-card title="Beard Oil" description="coconut oil" />
-    </div>
+    </x-grid>
   </x-section>
 
-  <x-section id="testimonials" aria-labelledby="testimonials-header">
+  <x-section id="testimonials" class="border-2 border-y-amber-500" aria-labelledby="testimonials-header">
     <x-section-header id="testimonials-header">Testimonials</x-section-header>
   </x-section>
 
