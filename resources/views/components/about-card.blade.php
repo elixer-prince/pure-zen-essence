@@ -1,5 +1,6 @@
 @php
-  $classes = 'border-brand-green-500 group rounded-lg border-l-6 bg-neutral-950 p-8';
+  $classes =
+    'border-brand-green-500 group rounded-lg border-l-6 bg-neutral-950 p-8 transition-transform duration-500 hover:-translate-y-1';
 @endphp
 
 <div {{ $attributes(['class' => $classes]) }}>
