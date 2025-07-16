@@ -3,26 +3,11 @@
   {{-- TODO: Add a description --}}
   <x-slot name="pageDescription">...</x-slot>
 
-  <section
-    id="about"
-    class="relative flex scroll-mt-[var(--navbar-height)] items-center justify-center gap-16 bg-black px-8 pt-34 pb-12 text-white sm:px-12 lg:py-16"
-    aria-labelledby="about-header"
-  >
-    <div
-      class="absolute top-0 left-1/2 flex aspect-square h-48 flex-1 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full border-3 transition-all duration-500 lg:static lg:h-full lg:translate-x-0 lg:-translate-y-0"
-    >
-      <img class="h-full w-full hover:scale-105" src="" alt="Owners Image" />
-    </div>
+  <x-section id="about" class="relative bg-black pt-34 text-white" aria-labelledby="about-header">
+    <x-about-image />
 
     <div class="flex flex-2 flex-col items-center">
-      <header>
-        <h2
-          id="about-header"
-          class="border-brand-blue-500 mb-8 w-fit rounded-lg border-b-8 pb-2 text-center text-4xl font-bold"
-        >
-          About Us
-        </h2>
-      </header>
+      <x-section-header id="about-header">About Us</x-section-header>
 
       <div class="flex flex-col items-center gap-8">
         <x-about-card heading="Our Vision">
@@ -36,5 +21,17 @@
         </x-about-card>
       </div>
     </div>
-  </section>
+  </x-section>
+
+  <x-section id="products" aria-labelledby="products-header">
+    <x-section-header id="products-header">Our Products</x-section-header>
+  </x-section>
+
+  <x-section id="testimonials" aria-labelledby="testimonials-header">
+    <x-section-header id="testimonials-header">Testimonials</x-section-header>
+  </x-section>
+
+  <x-section id="faqs" aria-labelledby="faqs-header">
+    <x-section-header id="faqs-header">FAQs</x-section-header>
+  </x-section>
 </x-layouts.normal>
