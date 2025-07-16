@@ -1,5 +1,5 @@
 @php
-  $classes = 'flex scroll-mt-[var(--navbar-height)] items-center justify-center gap-16 px-8 py-16 sm:px-12';
+  $classes = 'flex scroll-mt-[var(--navbar-height)] flex-col items-center justify-center px-8 py-16 sm:px-12';
 @endphp
 
 <section
