@@ -1,7 +1,19 @@
+@props(['type' => 'a'])
+
 @php
-  $classes = 'flex items-center gap-2 rounded-md px-4 py-2 font-bold text-white transition-colors duration-500';
+  $classes = 'flex w-fit items-center gap-2 rounded-md px-4 py-2 font-bold text-white transition-colors duration-500';
 @endphp
 
-<a {{ $attributes(['class' => $classes]) }}>
-  {{ $slot }}
-</a>
+@if ($type === 'a')
+  <a {{ $attributes(['class' => $classes, 'href' => $href ?? null]) }}>
+    {{ $slot }}
+  </a>
+@elseif ($type === 'button')
+  @php
+    $classes .= ' cursor-pointer';
+  @endphp
+
+  <button {{ $attributes(['class' => $classes]) }}>
+    {{ $slot }}
+  </button>
+@endif
