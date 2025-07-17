@@ -12,7 +12,7 @@
       </div>
       <div class="p-4">
         <h3 class="mb-3 text-2xl font-bold">{{ $title }}</h3>
-        <p class="mb-5 text-sm">{{ $description }}</p>
+        <p class="mb-5 text-sm">{{ $slot }}</p>
         <x-button class="bg-black text-sm" type="button">More Info</x-button>
       </div>
     </div>

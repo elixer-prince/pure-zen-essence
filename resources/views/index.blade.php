@@ -27,10 +27,12 @@
     <x-section-heading id="products-header" class="border-b-brand-green-500">Our Products</x-section-heading>
 
     <x-grid>
-      <x-product-card title="Coconut Oil" description="coconut oil..." />
-      <x-product-card title="Castor-Coconut Oil" description="coconut oil" />
-      <x-product-card title="coconut oil" description="coconut oil" />
-      <x-product-card title="Beard Oil" description="coconut oil" />
+      <x-product-card title="Coconut Oil">This is the [Coconut Oil] product description...</x-product-card>
+      <x-product-card title="Castor-Coconut Oil">
+        This is the [Castor-Coconut Oil] product description...
+      </x-product-card>
+      <x-product-card title="Cold-Pressed Castor oil">This is the [Coconut Oil] product description...</x-product-card>
+      <x-product-card title="Beard Oil">This is the [Beard Oil] product description...</x-product-card>
     </x-grid>
   </x-section>
 
