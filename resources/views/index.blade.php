@@ -7,7 +7,7 @@
     <x-about-image />
 
     <div class="flex flex-2 flex-col items-center">
-      <x-section-header id="about-header">About Us</x-section-header>
+      <x-section-heading id="about-header">About Us</x-section-heading>
 
       <div class="flex flex-col items-center gap-8">
         <x-about-card heading="Our Vision">
@@ -23,8 +23,8 @@
     </div>
   </x-section>
 
-  <x-section id="products" class="border-2 border-red-500" aria-labelledby="products-header">
-    <x-section-header id="products-header" class="border-b-brand-green-500">Our Products</x-section-header>
+  <x-section id="products" aria-labelledby="products-header">
+    <x-section-heading id="products-header" class="border-b-brand-green-500">Our Products</x-section-heading>
 
     <x-grid>
       <x-product-card title="Coconut Oil" description="coconut oil..." />
@@ -39,6 +39,6 @@
   </x-section>
 
   <x-section id="faqs" aria-labelledby="faqs-header">
-    <x-section-header id="faqs-header">FAQs</x-section-header>
+    <x-section-heading id="faqs-header">FAQs</x-section-heading>
   </x-section>
 </x-layouts.normal>
