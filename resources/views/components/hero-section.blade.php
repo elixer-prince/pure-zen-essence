@@ -19,5 +19,5 @@
     </div>
   </div>
 
-  <div class="hidden h-full flex-1 border md:block">Image of a beatiful woman...</div>
+  <div class="hidden h-full flex-1 md:block">Image of a beatiful woman...</div>
 </header>
