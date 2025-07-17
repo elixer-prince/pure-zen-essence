@@ -9,13 +9,13 @@
       </span>
     </a>
 
-    <div class="hidden items-center overflow-hidden rounded-md border-2 lg:flex">
-      <x-navbar-link href="#">HOME</x-navbar-link>
-      <x-navbar-link href="#about">ABOUT US</x-navbar-link>
-      <x-navbar-link href="#products">OUR PRODUCTS</x-navbar-link>
-      <x-navbar-link href="#testimonials">TESTIMONIALS</x-navbar-link>
-      <x-navbar-link href="#faqs">FAQs</x-navbar-link>
-    </div>
+    <ul class="hidden items-center overflow-hidden rounded-md border-2 lg:flex [&>li:first-child>a]:pl-4 [&>li:last-child>a]:pr-4">
+      <li><x-navbar-link href="#">HOME</x-navbar-link></li>
+      <li><x-navbar-link href="#about">ABOUT US</x-navbar-link></li>
+      <li><x-navbar-link href="#products">OUR PRODUCTS</x-navbar-link></li>
+      <li><x-navbar-link href="#testimonials">TESTIMONIALS</x-navbar-link></li>
+      <li><x-navbar-link href="#faqs">FAQs</x-navbar-link></li>
+    </ul>
   </div>
 
   <div class="flex items-center gap-4">
