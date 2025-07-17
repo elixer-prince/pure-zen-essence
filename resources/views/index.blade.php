@@ -36,8 +36,14 @@
     </x-grid>
   </x-section>
 
-  <x-section id="testimonials" class="border-2 border-y-amber-500" aria-labelledby="testimonials-header">
-    <x-section-header id="testimonials-header">Testimonials</x-section-header>
+  <x-section id="testimonials" aria-labelledby="testimonials-header">
+    <x-section-heading id="testimonials-header">Testimonials</x-section-heading>
+
+    <x-grid class="lg:grid-cols-2">
+      <x-testimonial-card></x-testimonial-card>
+      <x-testimonial-card></x-testimonial-card>
+      <x-testimonial-card></x-testimonial-card>
+    </x-grid>
   </x-section>
 
   <x-section id="faqs" aria-labelledby="faqs-header">
