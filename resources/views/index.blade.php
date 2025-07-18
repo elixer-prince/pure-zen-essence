@@ -3,7 +3,11 @@
   {{-- TODO: Add a description --}}
   <x-slot name="pageDescription">...</x-slot>
 
-  <x-section id="about" class="relative flex-row gap-16 bg-black pt-34 text-white" aria-labelledby="about-header">
+  <x-section
+    id="about"
+    class="relative flex-row gap-16 bg-black pt-34 text-white lg:pt-20"
+    aria-labelledby="about-header"
+  >
     <x-about-image />
 
     <div class="flex flex-2 flex-col items-center">
@@ -24,9 +28,9 @@
   </x-section>
 
   <x-section id="products" aria-labelledby="products-header">
-    <x-section-heading id="products-header" class="border-b-brand-green-500">Our Products</x-section-heading>
+    <x-section-heading id="products-header" class="border-b-neutral-500">Our Products</x-section-heading>
 
-    <x-grid>
+    <x-grid class="md:grid-cols-4">
       <x-product-card title="Coconut Oil">This is the [Coconut Oil] product description...</x-product-card>
       <x-product-card title="Castor-Coconut Oil">
         This is the [Castor-Coconut Oil] product description...
@@ -39,7 +43,7 @@
   <x-section id="testimonials" aria-labelledby="testimonials-header">
     <x-section-heading id="testimonials-header">Testimonials</x-section-heading>
 
-    <x-grid class="lg:grid-cols-2">
+    <x-grid class="md:grid-cols-2">
       <x-testimonial-card></x-testimonial-card>
       <x-testimonial-card></x-testimonial-card>
       <x-testimonial-card></x-testimonial-card>

@@ -46,3 +46,13 @@
   --color-brand-darkblue-900: #194061;
   --color-brand-darkblue-950: #0b1b2a;
 }
+
+/* Temporary for layout debugging and alignment tests */
+* {
+  /* @apply outline outline-red-500; */
+}
+
+img,
+video {
+  @apply grayscale-100;
+}

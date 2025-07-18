@@ -22,7 +22,7 @@
 
   <div class="flex items-center gap-4">
     <a class="transition-colors duration-300 hover:text-white/75" href="/login">Login</a>
-    <x-button class="bg-brand-green-500 hover:bg-brand-green-600" href="/signup">
+    <x-button class="hover:bg-neutral-600 bg-neutral-500" href="/signup">
       <i class="fa-solid fa-user"></i>
       Sign Up
     </x-button>

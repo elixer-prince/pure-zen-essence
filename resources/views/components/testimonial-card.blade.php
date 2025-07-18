@@ -1,6 +1,6 @@
-<div class="flex rounded-lg border border-pink-500">
+<div class="flex rounded-lg border border-neutral-500">
   <div>
-    <img src="" class="bg-red-300" alt="Testimonial Image" />
+    <img src="" class="bg-neutral-300" alt="Testimonial Image" />
   </div>
   <div class="p-8">
     <h3 class="mb-4 text-2xl font-bold">Testimonial Title</h3>
