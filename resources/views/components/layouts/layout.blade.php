@@ -26,7 +26,7 @@
     @vite('resources/css/app.css')
   </head>
 
-  <body class="font-roboto select-none">
+  <body class="font-roboto text-neutral-950 select-none">
     {{ $slot }}
   </body>
 </html>
