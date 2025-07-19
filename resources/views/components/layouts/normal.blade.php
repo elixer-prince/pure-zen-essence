@@ -7,4 +7,6 @@
   <main>
     {{ $slot }}
   </main>
+
+  <x-footer />
 </x-layouts.layout>
