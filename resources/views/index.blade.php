@@ -44,9 +44,24 @@
     <x-section-heading id="testimonials-header">Testimonials</x-section-heading>
 
     <x-grid class="md:grid-cols-2">
-      <x-testimonial-card></x-testimonial-card>
-      <x-testimonial-card></x-testimonial-card>
-      <x-testimonial-card></x-testimonial-card>
+            <div>
+                <x-cards.faq-card>
+                    <x-slot name="question">Is the world flat?</x-slot>
+                    <x-slot name="answer">Yes it is</x-slot>
+                </x-cards.faq-card>
+            </div>
+            <div>
+                <x-cards.faq-card>
+                    <x-slot name="question">Is the world flat?</x-slot>
+                    <x-slot name="answer">Yes it is</x-slot>
+                </x-cards.faq-card>
+            </div>
+            <div>
+                <x-cards.faq-card>
+                    <x-slot name="question">Is the world flat?</x-slot>
+                    <x-slot name="answer">Yes it is</x-slot>
+                </x-cards.faq-card>
+            </div>
     </x-grid>
   </x-section>
 
