@@ -32,12 +32,7 @@
 
         <x-grid class="sm:grid-cols-2 justify-center lg:grid-cols-3">
             @foreach ($products as $product)
-                <x-cards.product-card>
-                    <x-slot name="title">{{ $product->title }}</x-slot">
-                        <x-slot name="description">
-                            {{ $product->description }}
-                        </x-slot>
-                </x-cards.product-card>
+                <x-cards.product-card :$product />
             @endforeach
         </x-grid>
     </x-section>
