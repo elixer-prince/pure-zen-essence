@@ -30,13 +30,15 @@
   <x-section id="products" aria-labelledby="products-header">
     <x-section-heading id="products-header" class="border-b-neutral-500">Our Products</x-section-heading>
 
-    <x-grid class="md:grid-cols-4">
-      <x-product-card title="Coconut Oil">This is the [Coconut Oil] product description...</x-product-card>
-      <x-product-card title="Castor-Coconut Oil">
-        This is the [Castor-Coconut Oil] product description...
-      </x-product-card>
-      <x-product-card title="Cold-Pressed Castor oil">This is the [Coconut Oil] product description...</x-product-card>
-      <x-product-card title="Beard Oil">This is the [Beard Oil] product description...</x-product-card>
+        <x-grid class="sm:grid-cols-2 justify-center lg:grid-cols-3">
+            @foreach ($products as $product)
+                <x-cards.product-card>
+                    <x-slot name="title">{{ $product->title }}</x-slot">
+                        <x-slot name="description">
+                            {{ $product->description }}
+                        </x-slot>
+                </x-cards.product-card>
+            @endforeach
     </x-grid>
   </x-section>
 
