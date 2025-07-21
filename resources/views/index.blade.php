@@ -1,12 +1,12 @@
 <x-layouts.normal>
-    <x-slot name="pageTitle">
+    <x-slot:page-title>
         Pure Zen Essence | Beauty By Nature
-    </x-slot>
-    <x-slot name="pageDescription">
+    </x-slot:page-title>
+    <x-slot:page-description>
         Welcome to Pure Zen Essence, a family-owned natural products business proudly rooted in the heart of Wakefield
         Savannah, St. Catherine, Jamaica. Founded by the Carty family, our mission is to provide 100% Natural products
         that promote overall health and wellness.
-    </x-slot>
+    </x-slot:page-description>
 
     <x-section id="about" class="relative flex-row gap-16 bg-neutral-950 pt-34 lg:pt-20"
         aria-labelledby="about-header">
@@ -43,7 +43,7 @@
         </x-grid>
     </x-section>
 
-  <x-section id="testimonials" aria-labelledby="testimonials-header">
+    <x-section id="testimonials" aria-labelledby="testimonials-header">
         <x-section-heading id="testimonials-header">Testimonials</x-section-heading>
 
         <x-grid class="sm:grid-cols-2 lg:grid-cols-3">
@@ -83,7 +83,7 @@
     <x-section id="contact" aria-labelledby="contact-header">
         <x-forms.form class="w-160 max-w-full p-12 border-3 border-neutral-400 rounded-lg md:p-20">
             <x-section-heading id="contact-header" class="border-b-brand-blue-500 mx-auto">
-                <span>Contact Us</span>
+                <span>Contact <span class="hidden">Us</span></span>
                 <span class="hidden">Send us a message</span>
             </x-section-heading>
             <div>
