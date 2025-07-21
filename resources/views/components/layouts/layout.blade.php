@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="author" cotent="Daniel Leith" />
-    <meta name="description" cotent="{{ $pageDescription }}" />
+    <meta name="author" content="Daniel Leith" />
+    <meta name="description" content="{{ $pageDescription }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{{ $pageTitle }}</title>
@@ -22,7 +22,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body class="font-roboto h-screen text-neutral-950 select-none">
+<body class="font-roboto h-screen text-neutral-950">
     {{ $slot }}
 </body>
 
