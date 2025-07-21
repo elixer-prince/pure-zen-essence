@@ -1,58 +1,53 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
+@source "../../storage/framework/views/*.php";
+@source "../**/*.blade.php";
+@source "../**/*.js";
 
 :root {
-  --navbar-height: 6rem;
+    --navbar-height: 6rem;
 }
 
 @theme {
-  --font-roboto: 'Roboto', sans-serif;
-  --color-brand-green-50: #f6fbea;
-  --color-brand-green-100: #eaf6d1;
-  --color-brand-green-200: #d6eea8;
-  --color-brand-green-300: #bbe274;
-  --color-brand-green-400: #9fd249;
-  --color-brand-green-500: #8dc92f;
-  --color-brand-green-600: #63921e;
-  --color-brand-green-700: #4c701b;
-  --color-brand-green-800: #3e591b;
-  --color-brand-green-900: #354c1b;
-  --color-brand-green-950: #1a290a;
-  --color-brand-blue-50: #f0fdfc;
-  --color-brand-blue-100: #cdfaf6;
-  --color-brand-blue-200: #9bf4ef;
-  --color-brand-blue-300: #61e7e3;
-  --color-brand-blue-400: #31cfd0;
-  --color-brand-blue-500: #16a5a8;
-  --color-brand-blue-600: #108b91;
-  --color-brand-blue-700: #116f74;
-  --color-brand-blue-800: #13565c;
-  --color-brand-blue-900: #144a4d;
-  --color-brand-blue-950: #052a2e;
-  --color-brand-darkblue: #0b1b2a;
-  --color-brand-darkblue-50: #f2f8fd;
-  --color-brand-darkblue-100: #e4effa;
-  --color-brand-darkblue-200: #c3dff4;
-  --color-brand-darkblue-300: #8ec5eb;
-  --color-brand-darkblue-400: #52a7de;
-  --color-brand-darkblue-500: #2c8dcb;
-  --color-brand-darkblue-600: #1d6fac;
-  --color-brand-darkblue-700: #18598c;
-  --color-brand-darkblue-800: #184c74;
-  --color-brand-darkblue-900: #194061;
-  --color-brand-darkblue-950: #0b1b2a;
+    --font-roboto: "Roboto", sans-serif;
+    --color-brand-green-50: #f6fbea;
+    --color-brand-green-100: #eaf6d1;
+    --color-brand-green-200: #d6eea8;
+    --color-brand-green-300: #bbe274;
+    --color-brand-green-400: #9fd249;
+    --color-brand-green-500: #8dc92f;
+    --color-brand-green-600: #63921e;
+    --color-brand-green-700: #4c701b;
+    --color-brand-green-800: #3e591b;
+    --color-brand-green-900: #354c1b;
+    --color-brand-green-950: #1a290a;
+    --color-brand-blue-50: #f0fdfc;
+    --color-brand-blue-100: #cdfaf6;
+    --color-brand-blue-200: #9bf4ef;
+    --color-brand-blue-300: #61e7e3;
+    --color-brand-blue-400: #31cfd0;
+    --color-brand-blue-500: #16a5a8;
+    --color-brand-blue-600: #108b91;
+    --color-brand-blue-700: #116f74;
+    --color-brand-blue-800: #13565c;
+    --color-brand-blue-900: #144a4d;
+    --color-brand-blue-950: #052a2e;
+    --color-brand-darkblue: #0b1b2a;
+    --color-brand-darkblue-50: #f2f8fd;
+    --color-brand-darkblue-100: #e4effa;
+    --color-brand-darkblue-200: #c3dff4;
+    --color-brand-darkblue-300: #8ec5eb;
+    --color-brand-darkblue-400: #52a7de;
+    --color-brand-darkblue-500: #2c8dcb;
+    --color-brand-darkblue-600: #1d6fac;
+    --color-brand-darkblue-700: #18598c;
+    --color-brand-darkblue-800: #184c74;
+    --color-brand-darkblue-900: #194061;
+    --color-brand-darkblue-950: #0b1b2a;
 }
 
 /* Temporary for layout debugging and alignment tests */
 * {
-  /* @apply outline outline-red-500; */
-}
-
-img,
-video {
-  @apply grayscale-100;
+    /* @apply outline outline-red-500/50; */
 }
