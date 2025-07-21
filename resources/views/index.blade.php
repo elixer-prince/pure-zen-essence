@@ -50,7 +50,32 @@
     </x-grid>
   </x-section>
 
-  <x-section id="faqs" aria-labelledby="faqs-header">
-    <x-section-heading id="faqs-header">FAQs</x-section-heading>
+    <x-section id="contact" aria-labelledby="contact-header">
+        <x-forms.form class="w-160 max-w-full p-12 border-3 border-neutral-400 rounded-lg md:p-20">
+            <x-section-heading id="contact-header" class="border-b-brand-blue-500 mx-auto">
+                <span>Contact Us</span>
+                <span class="hidden">Send us a message</span>
+            </x-section-heading>
+            <div>
+                <x-forms.form-label for="name" />
+                <x-forms.form-input id="name" name="name" placeholder="Your Name" />
+            </div>
+            <div>
+                <x-forms.form-label for="email" />
+                <x-forms.form-input id="email" name="email" type="email" placeholder="Your Email" />
+            </div>
+            <div>
+                <x-forms.form-label for="message" />
+                <textarea id="message" name="messsage"
+                    class="w-full outline-none rounded-md border-2 border-neutral-400 resize-none px-4 py-3" name=""
+                    id="" rows="4" placeholder="Your Message..."></textarea>
+            </div>
+            <x-button class="bg-brand-green-500 mx-auto text-brand-green-50 hover:bg-brand-green-600" type="button">
+                Send Email
+                <span class="hidden">
+                    <i class="fa-regular fa-envelope"></i>
+                </span>
+            </x-button>
+        </x-forms.form>
   </x-section>
 </x-layouts.normal>
