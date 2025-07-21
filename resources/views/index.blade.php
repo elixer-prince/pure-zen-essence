@@ -43,6 +43,18 @@
   <x-section id="testimonials" aria-labelledby="testimonials-header">
     <x-section-heading id="testimonials-header">Testimonials</x-section-heading>
 
+        <x-grid class="sm:grid-cols-2 lg:grid-cols-3">
+            <x-cards.testimonial-card></x-cards.testimonial-card>
+            <x-cards.testimonial-card></x-cards.testimonial-card>
+            <x-cards.testimonial-card></x-cards.testimonial-card>
+            <x-cards.testimonial-card></x-cards.testimonial-card>
+        </x-grid>
+    </x-section>
+
+    <x-section id="faqs" class="bg-brand-darkblue-950" aria-labelledby="faqs-header">
+        <x-section-heading id="faqs-header"
+            class="border-b-brand-green-500 text-brand-darkblue-50">FAQs</x-section-heading>
+
     <x-grid class="md:grid-cols-2">
             <div>
                 <x-cards.faq-card>
