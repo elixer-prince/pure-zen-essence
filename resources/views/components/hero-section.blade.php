@@ -17,7 +17,7 @@
         </div>
 
         <div class="flex cta-content items-center gap-4">
-            <x-button class="border-2 hover:bg-neutral-800 bg-neutral-950 text-neutral-50" href="#about">
+            <x-button class="hover:bg-neutral-800 bg-neutral-950 text-neutral-50" href="#about">
                 Learn More
                 <span class="hidden sm:inline">
                     <i class="fa-solid fa-arrow-down"></i>
@@ -33,6 +33,6 @@
     </div>
 
     <div class="hidden overflow-hidden mr-20 max-w-90 lg:block rounded-lg h-full flex-1">
-        <img class="w-full h-full" src="https://picsum.photos/300/300" alt="A beautiful woman">
+        <img class="w-full h-full" src="{{ asset('images/placeholder-image.svg') }}" alt="A beautiful woman">
     </div>
 </header>
