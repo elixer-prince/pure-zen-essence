@@ -1,12 +1,12 @@
-<x-layouts.layout>
-  <x-slot name="pageTitle">{{ $pageTitle }}</x-slot>
-  <x-slot name="pageDescription">{{ $pageDescription }}</x-slot>
+<x-layouts.app>
+    <x-slot name="pageTitle">{{ $pageTitle }}</x-slot>
+    <x-slot name="pageDescription">{{ $pageDescription }}</x-slot>
 
-  <x-hero-section />
+    <x-hero-section />
 
-  <main>
-    {{ $slot }}
-  </main>
+    <main>
+        {{ $slot }}
+    </main>
 
-  <x-footer />
-</x-layouts.layout>
+    <x-footer />
+</x-layouts.app>
