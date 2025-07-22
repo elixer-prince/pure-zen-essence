@@ -1,5 +1,4 @@
 import "./bootstrap";
-
 import gsap from "gsap";
 
 gsap.from(".cta-content", {
