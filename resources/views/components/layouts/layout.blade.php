@@ -21,7 +21,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-roboto h-screen text-neutral-950">
+<body class="font-roboto selection:bg-brand-green-950 selection:text-white h-screen text-neutral-950">
     {{ $slot }}
 </body>
 
