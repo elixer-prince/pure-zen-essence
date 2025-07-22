@@ -38,7 +38,7 @@
 
         <x-grid class="sm:grid-cols-2 justify-center lg:grid-cols-3">
             @foreach ($products as $product)
-                <x-cards.product-card :$product />
+                <livewire:product-card :$product />
             @endforeach
         </x-grid>
     </x-section>
