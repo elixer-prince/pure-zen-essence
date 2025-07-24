@@ -13,22 +13,22 @@
         <x-about-image />
 
         <div class="flex flex-2 flex-col items-center">
-            <x-section-heading id="about-header" class="text-neutral-50 border-b-brand-blue-500">About
+            <x-section-heading id="about-header" class="text-neutral-50 border-b-brand-blue-500 mb-8">About
                 Us</x-section-heading>
 
             <div class="flex flex-col items-center gap-8">
-                <x-cards.about-card heading="Our Vision">
+                <x-cards.about heading="Our Vision">
                     Our vision is to be a trusted family business that nurtures enduring relationships, champions
                     sustainable
                     farming practices, and makes a meaningful impact on both our community and the environment.
-                </x-cards.about-card>
-                <x-cards.about-card heading="Our Mission">
+                </x-cards.about>
+                <x-cards.about heading="Our Mission">
                     As a family-owned business, we are committed to cultivating high-quality products with care,
                     integrity, and
                     profound respect for the land. Through our hard work and shared values, we strive to nourish our
                     community
                     while safeguarding our legacy for future generations.
-                </x-cards.about-card>
+                </x-cards.about>
             </div>
         </div>
     </x-section>
@@ -47,10 +47,10 @@
         <x-section-heading id="testimonials-header">Testimonials</x-section-heading>
 
         <x-grid class="sm:grid-cols-2 lg:grid-cols-3">
-            <x-cards.testimonial-card></x-cards.testimonial-card>
-            <x-cards.testimonial-card></x-cards.testimonial-card>
-            <x-cards.testimonial-card></x-cards.testimonial-card>
-            <x-cards.testimonial-card></x-cards.testimonial-card>
+            <x-cards.testimonial></x-cards.testimonial>
+            <x-cards.testimonial></x-cards.testimonial>
+            <x-cards.testimonial></x-cards.testimonial>
+            <x-cards.testimonial></x-cards.testimonial>
         </x-grid>
     </x-section>
 
@@ -60,22 +60,22 @@
 
         <x-grid class="md:grid-cols-2">
             <div>
-                <x-cards.faq-card>
+                <x-cards.faq>
                     <x-slot name="question">Is the world flat?</x-slot>
                     <x-slot name="answer">Yes it is</x-slot>
-                </x-cards.faq-card>
+                </x-cards.faq>
             </div>
             <div>
-                <x-cards.faq-card>
+                <x-cards.faq>
                     <x-slot name="question">Is the world flat?</x-slot>
                     <x-slot name="answer">Yes it is</x-slot>
-                </x-cards.faq-card>
+                </x-cards.faq>
             </div>
             <div>
-                <x-cards.faq-card>
+                <x-cards.faq>
                     <x-slot name="question">Is the world flat?</x-slot>
                     <x-slot name="answer">Yes it is</x-slot>
-                </x-cards.faq-card>
+                </x-cards.faq>
             </div>
         </x-grid>
     </x-section>
@@ -87,15 +87,15 @@
                 <span class="hidden">Send us a message</span>
             </x-section-heading>
             <div>
-                <x-forms.form-label for="name" />
-                <x-forms.form-input id="name" name="name" placeholder="Your Name" />
+                <x-forms.label for="name" />
+                <x-forms.input id="name" name="name" placeholder="Your Name" />
             </div>
             <div>
-                <x-forms.form-label for="email" />
-                <x-forms.form-input id="email" name="email" type="email" placeholder="Your Email" />
+                <x-forms.label for="email" />
+                <x-forms.input id="email" name="email" type="email" placeholder="Your Email" />
             </div>
             <div>
-                <x-forms.form-label for="message" />
+                <x-forms.label for="message" />
                 <textarea id="message" name="messsage"
                     class="w-full outline-none rounded-md border-2 border-neutral-400 resize-none px-4 py-3" name=""
                     id="" rows="4" placeholder="Your Message..."></textarea>
