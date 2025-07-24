@@ -1,4 +1,4 @@
-<x-layouts.layout>
+<x-layouts.app>
     <x-slot name="pageTitle">Pure Zen Essence | Login</x-slot>
     <x-slot name="pageDescription">...</x-slot>
 
@@ -20,4 +20,4 @@
             </x-forms.form>
         </x-section>
     </main>
-</x-layouts.layout>
+</x-layouts.app>
