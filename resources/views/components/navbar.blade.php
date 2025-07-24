@@ -1,5 +1,5 @@
 <nav
-    class="fixed shadow top-0 right-0 left-0 z-10 flex h-[var(--navbar-height)] items-center justify-between sm:bg-black/93 bg-black backdrop-blur-sm p-8 font-bold">
+    class="fixed shadow top-0 right-0 left-0 z-10 flex h-[var(--navbar-height)] items-center justify-between sm:bg-black/95 bg-black backdrop-blur-sm p-8">
     <div class="flex items-center gap-8">
         <x-brand-logo />
 
