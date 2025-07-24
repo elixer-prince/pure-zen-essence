@@ -11,13 +11,15 @@ Route::get("/", function () {
     ]);
 });
 
+// Login endpoints
 Route::get("/login", function () {
     return view("auth.login");
 });
 Route::post("/login", function () {
-    dd(["Logging in...", request()->name]);
+    dd(request()->all());
 });
 
+// Sign Up endpoints
 Route::get("/signup", function () {
     return view("auth.signup");
 });
