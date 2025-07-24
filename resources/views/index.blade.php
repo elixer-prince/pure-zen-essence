@@ -89,9 +89,23 @@
                 <span class="md:hidden">Contact Us</span>
                 <span class="hidden md:inline">Send us a message</span>
             </x-section-heading>
-            <div>
-                <x-forms.label for="name" />
-                <x-forms.input id="name" name="name" placeholder="Your Name" />
+
+            <div class="flex mb-2 flex-col gap-4">
+                <x-forms.field>
+                    <x-forms.label for="name">Full Name</x-forms.label>
+                    <x-forms.input id="name" name="name" placeholder="John Doe" />
+                </x-forms.field>
+
+                <x-forms.field>
+                    <x-forms.label for="email">Email</x-forms.label>
+                    <x-forms.input id="email" name="email" type="email" placeholder="john.doe@example.com" />
+                </x-forms.field>
+
+                <x-forms.field>
+                    <x-forms.label for="message">Message</x-forms.label>
+                    <x-forms.text-area id="message" name="messsage" id="message" rows="4"
+                        placeholder="Write your message here..."></x-forms.text-area>
+                </x-forms.field>
             </div>
 
             <x-button class="bg-brand-green-500 mx-auto text-brand-green-50 hover:bg-brand-green-600" type="button">
