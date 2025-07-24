@@ -25,3 +25,4 @@
             </x-navbar-link>
         </li>
     </ul>
+</nav>
