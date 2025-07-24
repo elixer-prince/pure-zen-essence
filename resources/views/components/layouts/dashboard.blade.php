@@ -6,6 +6,8 @@
         {{ $pageDescription }}
     </x-slot:page-description>
 
+    <x-sidebar />
+
     <main>
         {{ $slot }}
     </main>
