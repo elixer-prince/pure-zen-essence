@@ -13,21 +13,27 @@
                 New Product
             </x-section-heading>
 
-            <x-forms.form class="w-full" method="POST">
+            <x-forms.form class="w-full" action="/dashboard/products" method="POST">
                 <x-forms.field>
                     <x-forms.label for="title">Title</x-forms.label>
-                    <x-forms.input type="text" id="title" name="title" placeholder="Coconut Oil" required />
+                    <x-forms.input type="text" id="title" name="title" placeholder="Coconut Oil" />
+
+                    <x-forms.error-message for="title" />
                 </x-forms.field>
 
                 <x-forms.field>
                     <x-forms.label for="description">Description</x-forms.label>
                     <x-forms.text-area id="description" name="description" placeholder="Add a description..."
-                        rows="3" required></x-forms.text-area>
+                        rows="3"></x-forms.text-area>
+
+                    <x-forms.error-message for="description" />
                 </x-forms.field>
 
                 <x-forms.field>
                     <x-forms.label for="price">Price</x-forms.label>
                     <x-forms.input type="text" id="price" name="price" placeholder="$500 JMD" />
+
+                    <x-forms.error-message for="price" />
                 </x-forms.field>
 
                 <div>
