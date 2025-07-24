@@ -8,7 +8,7 @@
 
     <x-sidebar />
 
-    <main>
+    <main class="ml-[17.5rem]">
         {{ $slot }}
     </main>
 </x-layouts.app>
