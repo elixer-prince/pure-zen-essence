@@ -1,13 +1,7 @@
 <nav
     class="fixed shadow top-0 right-0 left-0 z-10 flex h-[var(--navbar-height)] items-center justify-between sm:bg-black/93 bg-black backdrop-blur-sm p-8 font-bold">
     <div class="flex items-center gap-8">
-        <a class="flex items-center gap-2" href="/">
-            <img class="w-12 animate-bounce" src="{{ asset('images/brand-icon.png') }}" alt="Brand Icon" />
-            <span
-                class="text-brand-green-50 hidden text-2xl transition-transform duration-500 hover:-translate-y-0.5 sm:flex">
-                Pure Zen Essence
-            </span>
-        </a>
+        <x-brand-logo />
 
         <ul
             class="border-brand-green-50 hidden items-center overflow-hidden rounded-md border-2 lg:flex [&>li:first-child>a]:pl-4 [&>li:last-child>a]:pr-4">
