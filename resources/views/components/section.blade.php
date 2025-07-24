@@ -1,9 +1,7 @@
 @php
-  $classes = 'flex scroll-mt-[var(--navbar-height)] flex-col items-center justify-center px-8 py-16 sm:px-12';
+    $classes = 'flex scroll-mt-[var(--navbar-height)] flex-col items-center justify-center';
 @endphp
 
-<section
-  {{ $attributes(['class' => $classes, 'id' => $id, 'aria-labelledby' => $ariaLabelledby]) }}
->
-  {{ $slot }}
+<section {{ $attributes(['class' => $classes, 'id', 'aria-labelledby']) }}>
+    {{ $slot }}
 </section>
