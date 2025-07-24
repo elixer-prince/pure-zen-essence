@@ -1,5 +1,5 @@
 <header
-    class="mt-[var(--navbar-height)] lg:items-center flex justify-center gap-16 px-8 pt-14 pb-38 sm:pt-24 md:px-16 lg:py-24 xl:py-32">
+    class="mt-[var(--navbar-height)] lg:items-center flex justify-center gap-16 px-8 pt-14 pb-38 sm:pt-24 md:px-16 lg:py-24 xl:pb-32">
     <x-navbar />
 
     <div class="flex flex-[1.5] flex-col items-center gap-12 text-center">
@@ -32,7 +32,8 @@
         </div>
     </div>
 
-    <div class="hidden overflow-hidden mr-20 max-w-90 lg:block rounded-lg h-full flex-1">
-        <img class="w-full h-full" src="{{ asset('images/placeholder-image.svg') }}" alt="A beautiful woman">
+    <div id="hero-image"
+        class="hidden overflow-hidden mr-20 hover:-translate-y-1 duration-1000 max-w-90 outline-3 lg:block outline-brand-blue-500 transition-all rounded-xl h-75 flex-1">
+        <img class="w-full h-full" src="https://picsum.photos/300/300" alt="A beautiful woman">
     </div>
 </header>
