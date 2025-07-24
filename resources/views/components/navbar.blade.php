@@ -14,10 +14,28 @@
     </div>
 
     <div class="flex items-center gap-4">
-        <a class="text-neutral-50 transition-colors duration-300 hover:text-brand-green-200" href="/login">Log In</a>
-        <x-button class="bg-brand-green-500 text-brand-green-50 hover:bg-brand-green-600" href="/signup">
-            <i class="fa-solid fa-user"></i>
-            Sign Up
-        </x-button>
+        @guest
+            <a class="text-neutral-50 font-bold transition-colors duration-300 hover:text-brand-green-200" href="/login"
+                wire:navigate>
+                Log In
+            </a>
+
+            <x-button class="bg-brand-green-500 text-brand-green-50 hover:bg-brand-green-600" href="/signup" wire:navigate>
+                <i class="fa-solid fa-user"></i>
+                Sign Up
+            </x-button>
+        @endguest
+
+        @auth
+            <button class="hover:underline">Log Out</button>
+
+            <x-button class="bg-blue-darkblue-900 text-brand-darkblue-50 hover:bg-brand-darkblue-950" href="/signup"
+                wire:navigate>
+                <i class="fa-solid fa-user"></i>
+                Dashboard
+            </x-button>
+
+            <div>profile img placelder</div>
+        @endauth
     </div>
 </nav>
