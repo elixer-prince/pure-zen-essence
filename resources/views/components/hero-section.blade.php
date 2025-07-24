@@ -10,9 +10,9 @@
             </h1>
             <p class="text-2xl cta-content">
                 Find your natural essence with
-                <span class="hover:text-brand-green-500 font-black transition-colors duration-500">Pure Zen
-                    Essence</span>
-                <span class="font-black">!</span>
+                <span class="hover:text-brand-green-500 font-black transition-colors duration-500">
+                    Pure Zen Essence
+                </span>
             </p>
         </div>
 
@@ -33,7 +33,7 @@
     </div>
 
     <div id="hero-image"
-        class="hidden overflow-hidden mr-20 hover:-translate-y-1 duration-1000 max-w-90 outline-3 lg:block outline-brand-blue-500 transition-all rounded-xl h-75 flex-1">
+        class="hidden overflow-hidden mr-20 hover:-translate-y-1 duration-1000 max-w-90 outline-4 lg:block outline-brand-green-500 transition-all rounded-lg aspect-square flex-1">
         <img class="w-full h-full" src="https://picsum.photos/300/300" alt="A beautiful woman">
     </div>
 </header>
