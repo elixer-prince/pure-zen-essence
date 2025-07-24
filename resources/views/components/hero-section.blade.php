@@ -1,5 +1,5 @@
 <header
-    class="mt-[var(--navbar-height)] lg:items-center flex justify-center gap-16 px-8 pt-14 pb-38 sm:pt-24 md:px-16 lg:py-24 xl:pb-32">
+    class="mt-[var(--navbar-height)] lg:items-center flex justify-center gap-16 px-8 pt-14 pb-38 sm:pt-24 md:px-16 lg:py-24">
     <x-navbar />
 
     <div class="flex flex-[1.5] flex-col items-center gap-12 text-center">
