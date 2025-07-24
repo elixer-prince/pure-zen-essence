@@ -27,15 +27,16 @@
         @endguest
 
         @auth
-            <button class="hover:underline">Log Out</button>
+            <button class="hover:text-red-300 text-red-50 transition-colors duration-300 font-bold">Log
+                Out</button>
 
-            <x-button class="bg-blue-darkblue-900 text-brand-darkblue-50 hover:bg-brand-darkblue-950" href="/signup"
+            <x-button class="bg-brand-darkblue-900 text-brand-darkblue-50 hover:bg-brand-darkblue-800" href="/signup"
                 wire:navigate>
-                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-user-tie"></i>
                 Dashboard
             </x-button>
 
-            <div>profile img placelder</div>
+            <div class="text-neutral-50">profile img</div>
         @endauth
     </div>
 </nav>
