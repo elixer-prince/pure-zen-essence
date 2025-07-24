@@ -36,18 +36,21 @@
     </x-section>
 
     <x-section id="products" class="bg-neutral-100 sm:px-16 py-16 px-8" aria-labelledby="products-header">
-        <x-section-heading id="products-header" class="border-b-brand-green-500 mb-8">Our Products</x-section-heading>
+        <x-section-heading id="products-header" class="border-b-brand-green-500 mb-8">
+            Our Products
+        </x-section-heading>
 
         <x-grid class="sm:grid-cols-2 justify-center lg:grid-cols-3">
             @foreach ($products as $product)
-                <livewire:product-card :key="$product['id']" :$product />
+                <livewire:product-card :key="$product->id" :$product />
             @endforeach
         </x-grid>
     </x-section>
 
     <x-section id="testimonials" class="py-16 md:px-16 px-8" aria-labelledby="testimonials-header">
-        <x-section-heading id="testimonials-header"
-            class="mb-8 border-b-brand-blue-500">Testimonials</x-section-heading>
+        <x-section-heading id="testimonials-header" class="mb-8 border-b-brand-blue-500">
+            Testimonials
+        </x-section-heading>
 
         <x-grid class="sm:grid-cols-2 lg:grid-cols-3">
             <x-cards.testimonial></x-cards.testimonial>
@@ -58,8 +61,9 @@
     </x-section>
 
     <x-section id="faqs" class="bg-brand-darkblue-950 sm:px-16 py-16 px-8" aria-labelledby="faqs-header">
-        <x-section-heading id="faqs-header"
-            class="border-b-brand-green-500 mb-8 text-brand-darkblue-50">FAQs</x-section-heading>
+        <x-section-heading id="faqs-header" class="border-b-brand-green-500 mb-8 text-brand-darkblue-50">
+            FAQs
+        </x-section-heading>
 
         <x-grid class="md:grid-cols-2">
             <div>
@@ -92,17 +96,23 @@
 
             <div class="flex mb-2 flex-col gap-4">
                 <x-forms.field>
-                    <x-forms.label for="name">Full Name</x-forms.label>
+                    <x-forms.label for="name">
+                        Full Name
+                    </x-forms.label>
                     <x-forms.input id="name" name="name" placeholder="John Doe" />
                 </x-forms.field>
 
                 <x-forms.field>
-                    <x-forms.label for="email">Email</x-forms.label>
+                    <x-forms.label for="email">
+                        Email
+                    </x-forms.label>
                     <x-forms.input id="email" name="email" type="email" placeholder="john.doe@example.com" />
                 </x-forms.field>
 
                 <x-forms.field>
-                    <x-forms.label for="message">Message</x-forms.label>
+                    <x-forms.label for="message">
+                        Message
+                    </x-forms.label>
                     <x-forms.text-area id="message" name="messsage" id="message" rows="4"
                         placeholder="Write your message here..."></x-forms.text-area>
                 </x-forms.field>
