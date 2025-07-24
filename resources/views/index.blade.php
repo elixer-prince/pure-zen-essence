@@ -8,13 +8,14 @@
         that promote overall health and wellness.
     </x-slot:page-description>
 
-    <x-section id="about" class="relative flex-row gap-16 bg-neutral-950 pt-34 lg:pt-20"
+    <x-section id="about" class="relative pb-16 sm:px-16 px-8 flex-row gap-16 bg-neutral-950 pt-34 lg:pt-20"
         aria-labelledby="about-header">
         <x-about-image />
 
         <div class="flex flex-2 flex-col items-center">
-            <x-section-heading id="about-header" class="text-neutral-50 border-b-brand-blue-500 mb-8">About
-                Us</x-section-heading>
+            <x-section-heading id="about-header" class="text-neutral-50 border-b-brand-blue-500 mb-8">
+                About Us
+            </x-section-heading>
 
             <div class="flex flex-col items-center gap-8">
                 <x-cards.about heading="Our Vision">
@@ -22,6 +23,7 @@
                     sustainable
                     farming practices, and makes a meaningful impact on both our community and the environment.
                 </x-cards.about>
+
                 <x-cards.about heading="Our Mission">
                     As a family-owned business, we are committed to cultivating high-quality products with care,
                     integrity, and
@@ -33,8 +35,8 @@
         </div>
     </x-section>
 
-    <x-section id="products" class="bg-neutral-100" aria-labelledby="products-header">
-        <x-section-heading id="products-header" class="border-b-brand-green-500">Our Products</x-section-heading>
+    <x-section id="products" class="bg-neutral-100 sm:px-16 py-16 px-8" aria-labelledby="products-header">
+        <x-section-heading id="products-header" class="border-b-brand-green-500 mb-8">Our Products</x-section-heading>
 
         <x-grid class="sm:grid-cols-2 justify-center lg:grid-cols-3">
             @foreach ($products as $product)
@@ -43,8 +45,9 @@
         </x-grid>
     </x-section>
 
-    <x-section id="testimonials" aria-labelledby="testimonials-header">
-        <x-section-heading id="testimonials-header">Testimonials</x-section-heading>
+    <x-section id="testimonials" class="py-16 md:px-16 px-8" aria-labelledby="testimonials-header">
+        <x-section-heading id="testimonials-header"
+            class="mb-8 border-b-brand-blue-500">Testimonials</x-section-heading>
 
         <x-grid class="sm:grid-cols-2 lg:grid-cols-3">
             <x-cards.testimonial></x-cards.testimonial>
@@ -54,9 +57,9 @@
         </x-grid>
     </x-section>
 
-    <x-section id="faqs" class="bg-brand-darkblue-950" aria-labelledby="faqs-header">
+    <x-section id="faqs" class="bg-brand-darkblue-950 sm:px-16 py-16 px-8" aria-labelledby="faqs-header">
         <x-section-heading id="faqs-header"
-            class="border-b-brand-green-500 text-brand-darkblue-50">FAQs</x-section-heading>
+            class="border-b-brand-green-500 mb-8 text-brand-darkblue-50">FAQs</x-section-heading>
 
         <x-grid class="md:grid-cols-2">
             <div>
@@ -80,29 +83,20 @@
         </x-grid>
     </x-section>
 
-    <x-section id="contact" aria-labelledby="contact-header">
-        <x-forms.form class="w-160 max-w-full p-12 border-3 border-neutral-400 rounded-lg md:p-20">
-            <x-section-heading id="contact-header" class="border-b-brand-blue-500 mx-auto">
-                <span>Contact <span class="hidden">Us</span></span>
-                <span class="hidden">Send us a message</span>
+    <x-section id="contact" class="py-16 px-8 sm:px-16" aria-labelledby="contact-header">
+        <x-forms.form class="w-160 max-w-full p-8 sm:p-12 border-3 border-neutral-400 rounded-lg md:p-20">
+            <x-section-heading id="contact-header" class="border-b-brand-blue-500 mb-4 mx-auto">
+                <span class="md:hidden">Contact Us</span>
+                <span class="hidden md:inline">Send us a message</span>
             </x-section-heading>
             <div>
                 <x-forms.label for="name" />
                 <x-forms.input id="name" name="name" placeholder="Your Name" />
             </div>
-            <div>
-                <x-forms.label for="email" />
-                <x-forms.input id="email" name="email" type="email" placeholder="Your Email" />
-            </div>
-            <div>
-                <x-forms.label for="message" />
-                <textarea id="message" name="messsage"
-                    class="w-full outline-none rounded-md border-2 border-neutral-400 resize-none px-4 py-3" name=""
-                    id="" rows="4" placeholder="Your Message..."></textarea>
-            </div>
+
             <x-button class="bg-brand-green-500 mx-auto text-brand-green-50 hover:bg-brand-green-600" type="button">
                 Send Email
-                <span class="hidden">
+                <span class="hidden text-xl sm:inline">
                     <i class="fa-regular fa-envelope"></i>
                 </span>
             </x-button>
