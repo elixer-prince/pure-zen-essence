@@ -68,20 +68,20 @@
         <x-grid class="md:grid-cols-2 w-full">
             <div>
                 <x-cards.faq>
-                    <x-slot name="question">Is the world flat?</x-slot>
-                    <x-slot name="answer">Yes it is</x-slot>
+                    <x-slot:question>Is the world flat?</x-slot>
+                    <x-slot:answer>Yes it is</x-slot>
                 </x-cards.faq>
             </div>
             <div>
                 <x-cards.faq>
-                    <x-slot name="question">Is the world flat?</x-slot>
-                    <x-slot name="answer">Yes it is</x-slot>
+                    <x-slot:question>Is the world flat?</x-slot:question>
+                    <x-slot:answer>Yes it is</x-slot:answer>
                 </x-cards.faq>
             </div>
             <div>
                 <x-cards.faq>
-                    <x-slot name="question">Is the world flat?</x-slot>
-                    <x-slot name="answer">Yes it is</x-slot>
+                    <x-slot:question>Is the world flat?</x-slot:question>
+                    <x-slot:answer>Yes it is</x-slot:answer>
                 </x-cards.faq>
             </div>
         </x-grid>
