@@ -111,9 +111,7 @@ Route::patch("/dashboard/product/{product}", function (Product $product) {
 Route::delete("/dashboard/product/{product}", function (Product $product) {
     // authorize the user (On hold...)
 
-    $product = Product::findOrFail($product);
-
-    $product->delete();
+    $product = Product::findOrFail($product)->delete();
 
     return redirect("/dashboard/products");
 });
