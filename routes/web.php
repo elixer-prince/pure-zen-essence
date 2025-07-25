@@ -97,8 +97,6 @@ Route::patch("/dashboard/product/{product}", function (Product $product) {
         "sizes" => [""],
     ]);
 
-    $product = Product::findOrFail($product->id);
-
     $product->update([
         "title" => request("title"),
         "description" => request("description"),
@@ -111,7 +109,7 @@ Route::patch("/dashboard/product/{product}", function (Product $product) {
 Route::delete("/dashboard/product/{product}", function (Product $product) {
     // authorize the user (On hold...)
 
-    $product = Product::findOrFail($product->id)->delete();
+    $product->delete();
 
     return redirect("/");
 });
