@@ -11,7 +11,7 @@ Route::get("/", function () {
     ]);
 });
 
-// Login endpoints
+//? Login endpoints
 Route::get("/login", function () {
     return view("auth.login");
 });
@@ -19,7 +19,7 @@ Route::post("/login", function () {
     dd(request()->all());
 });
 
-// Sign Up endpoints
+//? Sign Up endpoints
 Route::get("/signup", function () {
     return view("auth.signup");
 });
@@ -27,13 +27,13 @@ Route::post("/signup", function () {
     dd(request()->all());
 });
 
-// Products endpoints
+//? Products endpoints
 
-//=========================================================================
-//--------------------DANGER ABOVE-----------------------------------------
-//=========================================================================
+//!========================================================================
+//!----------------------DANGER ABOVE--------------------------------------
+//!========================================================================
 
-// Dashboard Endpoints
+//? Dashboard Endpoints
 
 // dashboard index
 Route::get("/dashboard", function () {
