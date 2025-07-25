@@ -4,19 +4,23 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function index() {}
+    public function index()
+    {
+        return view("dashboard.products.index");
+    }
 
     public function create()
     {
         return view("dashboard.products.create");
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        request()->validate([
+        $request->validate([
             "image" => ["required"],
             "title" => ["required"],
             "description" => ["required"],
@@ -40,9 +44,9 @@ class ProductController extends Controller
         ]);
     }
 
-    public function update(Product $product)
+    public function update(Product $product, Request $request)
     {
-        request()->validate([
+        $request->validate([
             "image" => ["required"],
             "title" => ["required"],
             "description" => ["required"],
