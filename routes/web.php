@@ -28,11 +28,4 @@ Route::get("/dashboard", function () {
     ]);
 });
 
-Route::controller(DashboardProductController::class)->group(function () {
-    Route::get("/dashboard/products", "index");
-    Route::get("/dashboard/products/create", "create");
-    Route::post("/dashboard/products", "store");
-    Route::get("/dashboard/product/{product}/edit", "edit");
-    Route::patch("/dashboard/product/{product}", "update");
-    Route::delete("/dashboard/product/{product}", "destroy");
-});
+Route::resource("dashboard/products", DashboardProductController::class);
