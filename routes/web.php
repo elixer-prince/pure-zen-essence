@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Dashboard\ProductController as DashboardProductController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
@@ -29,8 +30,6 @@ Route::post("/signup", function () {
     dd(request()->all());
 });
 
-//? Products endpoints
-
 //!========================================================================
 //!----------------------DANGER ABOVE--------------------------------------
 //!========================================================================
@@ -46,70 +45,11 @@ Route::get("/dashboard", function () {
     ]);
 });
 
-// dashboard products index
-Route::get("/dashboard/products", function () {
-    $products = Product::all();
-
-    return view("dashboard.products.index", [
-        "products" => $products,
-    ]);
-});
-
-// maybe I'll add a show endpoint
-
-// create product
-Route::get("/dashboard/products/create", function () {
-    return view("dashboard.products.create");
-});
-
-// post product
-Route::post("/dashboard/products", function () {
-    request()->validate([
-        "image" => ["required"],
-        "title" => ["required"],
-        "description" => ["required"],
-        "sizes" => ["required"],
-    ]);
-
-    Product::create([
-        "image" => "https://someurl.com/image/seed/{{ rand(1, 100000) }}",
-        "title" => request("title"),
-        "description" => request("description"),
-        "sizes" => ["name"],
-    ]);
-
-    return redirect("/dashboard");
-});
-
-// edit product
-Route::get("/dashboard/product/{product}/edit", function (Product $product) {
-    return view("dashboard.products.edit", [
-        "product" => $product,
-    ]);
-});
-
-// update product
-Route::patch("/dashboard/product/{product}", function (Product $product) {
-    request()->validate([
-        "image" => ["required"],
-        "title" => ["required"],
-        "description" => ["required"],
-        "sizes" => [""],
-    ]);
-
-    $product->update([
-        "title" => request("title"),
-        "description" => request("description"),
-    ]);
-
-    return redirect("/");
-});
-
-// destroy product
-Route::delete("/dashboard/product/{product}", function (Product $product) {
-    // authorize the user (On hold...)
-
-    $product->delete();
-
-    return redirect("/");
+Route::controller(DashboardProductController::class)->group(function () {
+    Route::get("/dashboard/products", "index");
+    Route::get("/dashboard/products/create", "create");
+    Route::post("/dashboard/products", "store");
+    Route::get("/dashboard/product/{product}/edit", "edit");
+    Route::patch("/dashboard/product/{product}", "update");
+    Route::delete("/dashboard/product/{product}", "destroy");
 });
