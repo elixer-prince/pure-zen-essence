@@ -68,7 +68,7 @@ Route::post("/dashboard/products", function () {
         "image" => ["required"],
         "title" => ["required"],
         "description" => ["required"],
-        "sizes" => [""],
+        "sizes" => ["required"],
     ]);
 
     Product::create([
@@ -97,21 +97,21 @@ Route::patch("/dashboard/product/{product}", function (Product $product) {
         "sizes" => [""],
     ]);
 
-    $product = Product::findOrFail($product);
+    $product = Product::findOrFail($product->id);
 
-    $product::update([
+    $product->update([
         "title" => request("title"),
         "description" => request("description"),
     ]);
 
-    return redirect("/dashboard/products");
+    return redirect("/");
 });
 
 // destroy product
 Route::delete("/dashboard/product/{product}", function (Product $product) {
     // authorize the user (On hold...)
 
-    $product = Product::findOrFail($product)->delete();
+    $product = Product::findOrFail($product->id)->delete();
 
-    return redirect("/dashboard/products");
+    return redirect("/");
 });
