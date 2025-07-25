@@ -40,9 +40,11 @@
             Our Products
         </x-section-heading>
 
+        <p class="text-center my-8 font-bold opacity-50">There are no products to display...</p>
+
         <x-grid class="sm:grid-cols-2 justify-center lg:grid-cols-3">
             @foreach ($products as $product)
-                <livewire:product-card :key="$product->id" :$product />
+                {{-- <livewire:product-card :key="$product->id" :$product /> --}}
             @endforeach
         </x-grid>
     </x-section>
