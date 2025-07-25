@@ -14,11 +14,15 @@ Route::get("/", function () {
     ]);
 });
 
-Route::get("/login", [SessionController::class, "create"]);
-Route::post("/login", [SessionController::class, "store"]);
+Route::controller(SessionController::class)->group(function () {
+    Route::get("/login", "create");
+    Route::post("/login", "store");
+});
 
-Route::get("/signup", [RegisterUserController::class, "create"]);
-Route::post("/signup", [RegisterUserController::class, "store"]);
+Route::controller(RegisteredUserController::class)->group(function () {
+    Route::get("/signup", "create");
+    Route::post("/signup", "store");
+});
 
 Route::get("/dashboard", function () {
     $products = Product::all();
