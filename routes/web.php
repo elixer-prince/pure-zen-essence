@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Dashboard\ProductController as DashboardProductController;
-use App\Http\Controllers\RegisterUserController;
+use App\Http\Controllers\RegisteredUserController;
 use App\Http\Controllers\SessionController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
