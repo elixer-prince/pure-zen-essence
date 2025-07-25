@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Dashboard\ProductController as DashboardProductController;
+use App\Http\Controllers\RegisterUserController;
+use App\Http\Controllers\SessionController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
@@ -12,31 +14,12 @@ Route::get("/", function () {
     ]);
 });
 
-//? Login endpoints
-Route::get("/login", function () {
-    return view("auth.login");
-});
+Route::get("/login", [SessionController::class, "create"]);
+Route::post("/login", [SessionController::class, "store"]);
 
-Route::post("/login", function () {
-    dd(request()->all());
-});
+Route::get("/signup", [RegisterUserController::class, "create"]);
+Route::post("/signup", [RegisterUserController::class, "store"]);
 
-//? Sign Up endpoints
-Route::get("/signup", function () {
-    return view("auth.signup");
-});
-
-Route::post("/signup", function () {
-    dd(request()->all());
-});
-
-//!========================================================================
-//!----------------------DANGER ABOVE--------------------------------------
-//!========================================================================
-
-//? Dashboard Endpoints
-
-// dashboard index
 Route::get("/dashboard", function () {
     $products = Product::all();
 
