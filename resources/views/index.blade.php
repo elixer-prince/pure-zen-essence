@@ -87,11 +87,12 @@
         </x-grid>
     </x-section>
 
-    <x-section id="contact" class="py-16 px-8 sm:px-16" aria-labelledby="contact-header">
+    <x-section id="contact" class="py-16 px-8 bg-[url('{{ asset('images/placeholder-image.svg') }}'))] sm:px-16"
+        aria-labelledby="contact-header">
         <x-forms.form class="w-160 max-w-full p-8 sm:p-12 border-3 border-neutral-400 rounded-lg md:p-20">
             <x-section-heading id="contact-header" class="border-b-brand-blue-500 mb-4 mx-auto">
-                <span class="md:hidden">Contact Us</span>
-                <span class="hidden md:inline">Send us a message</span>
+                <span class="md:hidden">Contact Us! 😊</span>
+                <span class="hidden md:inline">Send us a message! 😊</span>
             </x-section-heading>
 
             <div class="flex mb-2 flex-col gap-4">
