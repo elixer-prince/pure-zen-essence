@@ -49,5 +49,5 @@
 
 /* Temporary for layout debugging and alignment tests */
 * {
-    /* @apply outline outline-red-500/50; */
+    /* @apply outline-2 outline-red-500/50; */
 }
