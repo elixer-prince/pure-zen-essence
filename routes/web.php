@@ -15,6 +15,7 @@ Route::get("/", function () {
 Route::get("/login", function () {
     return view("auth.login");
 });
+
 Route::post("/login", function () {
     dd(request()->all());
 });
@@ -23,6 +24,7 @@ Route::post("/login", function () {
 Route::get("/signup", function () {
     return view("auth.signup");
 });
+
 Route::post("/signup", function () {
     dd(request()->all());
 });
@@ -95,25 +97,23 @@ Route::patch("/dashboard/product/{product}", function (Product $product) {
         "sizes" => [""],
     ]);
 
-    $product = Product::find($product);
+    $product = Product::findOrFail($product);
 
-    $product->title = request("title");
-    $product->description = request("description");
-    $product->save();
-
-    Product::update([
+    $product::update([
         "title" => request("title"),
         "description" => request("description"),
     ]);
 
-    redirect("/dashboard/products");
+    return redirect("/dashboard/products");
 });
 
 // destroy product
 Route::delete("/dashboard/product/{product}", function (Product $product) {
-    $product = Product::find($product);
+    // authorize the user (On hold...)
+
+    $product = Product::findOrFail($product);
 
     $product->delete();
 
-    redirect("/dashboard/products");
+    return redirect("/dashboard/products");
 });
