@@ -15,8 +15,15 @@
 
             <x-forms.form class="w-full" action="/dashboard/products" method="POST">
                 <x-forms.field>
+                    <x-forms.label for="image">Image</x-forms.label>
+                    <x-forms.input type="text" id="image" name="image" placeholder="..." required />
+
+                    <x-forms.error-message for="image" />
+                </x-forms.field>
+
+                <x-forms.field>
                     <x-forms.label for="title">Title</x-forms.label>
-                    <x-forms.input type="text" id="title" name="title" placeholder="Coconut Oil" />
+                    <x-forms.input type="text" id="title" name="title" placeholder="Coconut Oil" required />
 
                     <x-forms.error-message for="title" />
                 </x-forms.field>
@@ -24,16 +31,16 @@
                 <x-forms.field>
                     <x-forms.label for="description">Description</x-forms.label>
                     <x-forms.text-area id="description" name="description" placeholder="Add a description..."
-                        rows="3"></x-forms.text-area>
+                        rows="3" required></x-forms.text-area>
 
                     <x-forms.error-message for="description" />
                 </x-forms.field>
 
                 <x-forms.field>
-                    <x-forms.label for="price">Price</x-forms.label>
-                    <x-forms.input type="text" id="price" name="price" placeholder="$500 JMD" />
+                    <x-forms.label for="sizes">Sizes</x-forms.label>
+                    <x-forms.input type="text" id="sizes" name="sizes" placeholder="..." required />
 
-                    <x-forms.error-message for="price" />
+                    <x-forms.error-message for="sizes" />
                 </x-forms.field>
 
                 <div>

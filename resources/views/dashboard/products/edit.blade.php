@@ -12,6 +12,14 @@
 
             <x-forms.form class="my-8" action="/dashboard/product/{{ $product->id }}" method="PATCH">
                 <x-forms.field>
+                    <x-forms.label for="image">Image</x-forms.label>
+                    <x-forms.input type="text" id="image" name="image" placeholder="..."
+                        value="{{ $product->image }}" required />
+
+                    <x-forms.error-message for="image" />
+                </x-forms.field>
+
+                <x-forms.field>
                     <x-forms.label for="title">Title</x-forms.label>
                     <x-forms.input type="text" id="title" value="{{ $product->title }}" name="title"
                         placeholder="Coconut Oil" required />
@@ -21,11 +29,18 @@
 
                 <x-forms.field>
                     <x-forms.label for="description">Description</x-forms.label>
-                    <x-forms.text-area id="description" name="description"
-                        placeholder="Write a description for the product..."
-                        rows="4">{{ $product->description }}</x-forms.text-area>
+                    <x-forms.text-area id="description" name="description" placeholder="Add a description..."
+                        rows="3" required>{{ $product->description }}</x-forms.text-area>
 
-                    <x-forms.error-message for="title" />
+                    <x-forms.error-message for="description" />
+                </x-forms.field>
+
+                <x-forms.field>
+                    <x-forms.label for="sizes">Sizes</x-forms.label>
+                    <x-forms.text-area type="text" id="sizes" name="sizes" placeholder="..." required>@foreach ($product->sizes as $size) property @endforeach
+                    </x-forms.text-area>
+
+                    <x-forms.error-message for="sizes" />
                 </x-forms.field>
 
                 <div class="flex gap-4">
