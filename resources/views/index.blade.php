@@ -65,7 +65,7 @@
             FAQs
         </x-section-heading>
 
-        <x-grid class="md:grid-cols-2">
+        <x-grid class="md:grid-cols-2 w-full">
             <div>
                 <x-cards.faq>
                     <x-slot name="question">Is the world flat?</x-slot>
