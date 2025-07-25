@@ -88,10 +88,32 @@ Route::get("/dashboard/product/{product}/edit", function (Product $product) {
 
 // update product
 Route::patch("/dashboard/product/{product}", function (Product $product) {
-    dd("editing...");
+    request()->validate([
+        "image" => ["required"],
+        "title" => ["required"],
+        "description" => ["required"],
+        "sizes" => [""],
+    ]);
+
+    $product = Product::find($product);
+
+    $product->title = request("title");
+    $product->description = request("description");
+    $product->save();
+
+    Product::update([
+        "title" => request("title"),
+        "description" => request("description"),
+    ]);
+
+    redirect("/dashboard/products");
 });
 
 // destroy product
 Route::delete("/dashboard/product/{product}", function (Product $product) {
-    dd("deleting...");
+    $product = Product::find($product);
+
+    $product->delete();
+
+    redirect("/dashboard/products");
 });
