@@ -40,18 +40,21 @@
                 Log In
             </a>
 
-            <x-button class="bg-brand-green-500 text-brand-green-50 hover:bg-brand-green-600" href="/signup" wire:navigate>
+            <x-button class="bg-brand-green-500 text-brand-green-50 hover:bg-brand-green-600" href="/register"
+                wire:navigate>
                 <i class="fa-solid fa-user"></i>
-                Sign Up
+                Register
             </x-button>
         @endguest
 
         @auth
-            <button class="hover:text-red-300 text-red-50 transition-colors duration-300 font-bold">
-                Log Out
-            </button>
+            <x-forms.form action="/session" method="DELETE">
+                <button class="hover:text-red-300 cursor-pointer text-red-50 transition-colors duration-300 font-bold">
+                    Log Out
+                </button>
+            </x-forms.form>
 
-            <x-button class="bg-brand-darkblue-900 text-brand-darkblue-50 hover:bg-brand-darkblue-800" href="/signup"
+            <x-button class="bg-brand-darkblue-900 text-brand-darkblue-50 hover:bg-brand-darkblue-800" href="/dashboard"
                 wire:navigate>
                 <i class="fa-solid fa-user-tie"></i>
                 Dashboard
