@@ -10,7 +10,11 @@ class ProductController extends Controller
 {
     public function index()
     {
-        return view("dashboard.products.index");
+        $products = Product::all();
+
+        return view("dashboard.products.index", [
+            "products" => $products,
+        ]);
     }
 
     public function create()
@@ -54,6 +58,7 @@ class ProductController extends Controller
         ]);
 
         $product->update([
+            "image" => request("image"),
             "title" => request("title"),
             "description" => request("description"),
         ]);
