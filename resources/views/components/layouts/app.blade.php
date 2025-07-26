@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en-JM" class="not-motion-reduce:scroll-smooth">
 
