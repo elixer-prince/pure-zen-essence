@@ -1,4 +1,4 @@
-<x-layouts.normal>
+<x-layouts.landing>
     <x-slot:page-title>
         Pure Zen Essence | Beauty By Nature
     </x-slot:page-title>
@@ -44,7 +44,7 @@
 
         <x-grid class="sm:grid-cols-2 justify-center lg:grid-cols-3">
             @foreach ($products as $product)
-                {{-- <livewire:product-card :key="$product->id" :$product /> --}}
+                <livewire:product.card :key="$product->id" :$product />
             @endforeach
         </x-grid>
     </x-section>
