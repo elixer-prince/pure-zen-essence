@@ -8,9 +8,9 @@
         </x-section-heading>
 
         <div>
-            <livewire:product-card :$product />
+            <livewire:product.card :$product />
 
-            <x-forms.form class="my-8" action="/dashboard/product/{{ $product->id }}" method="PATCH">
+            <x-forms.form class="my-8" action="/dashboard/products/{{ $product->id }}" method="PATCH">
                 <x-forms.field>
                     <x-forms.label for="image">Image</x-forms.label>
                     <x-forms.input type="text" id="image" name="image" placeholder="..."
@@ -37,7 +37,10 @@
 
                 <x-forms.field>
                     <x-forms.label for="sizes">Sizes</x-forms.label>
-                    <x-forms.text-area type="text" id="sizes" name="sizes" placeholder="..." required>@foreach ($product->sizes as $size) property @endforeach
+                    <x-forms.text-area type="text" id="sizes" name="sizes" placeholder="..." required>
+                        @foreach ($product->sizes as $size)
+                            property
+                        @endforeach
                     </x-forms.text-area>
 
                     <x-forms.error-message for="sizes" />
