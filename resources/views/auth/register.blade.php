@@ -17,10 +17,17 @@
 
                 <div class="flex flex-col gap-4">
                     <x-forms.field>
-                        <x-forms.label for="name">Full Name</x-forms.label>
-                        <x-forms.input id="name" type="text" name="name" placeholder="John Doe" required />
+                        <x-forms.label for="first_name">First Name</x-forms.label>
+                        <x-forms.input id="first_name" type="text" name="first_name" placeholder="John" required />
 
-                        <x-forms.error-message for="name" />
+                        <x-forms.error-message for="first_name" />
+                    </x-forms.field>
+
+                    <x-forms.field>
+                        <x-forms.label for="last_name">Last Name</x-forms.label>
+                        <x-forms.input id="last_name" type="text" name="last_name" placeholder="Doe" required />
+
+                        <x-forms.error-message for="last_name" />
                     </x-forms.field>
 
                     <x-forms.field>
