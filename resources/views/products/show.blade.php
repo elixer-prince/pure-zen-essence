@@ -4,5 +4,5 @@
         Here is a list of all the products sold by Pure Zen Essence.
     </x-slot:page-description>
 
-    <p>View all products here...</p>
+    <p>View a specific product...</p>
 </x-layouts.normal>
