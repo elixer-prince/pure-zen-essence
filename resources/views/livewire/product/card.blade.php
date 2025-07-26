@@ -1,12 +1,14 @@
 <article x-data="{ flipped: false }"
     class="group/card hover:-translate-y-1 transition-transform duration-500 perspective-midrange md:w-90">
     <div :class="flipped && '-rotate-y-180'" class="transition-transform duration-500 relative transform-3d">
+        {{-- ? Front Face --}}
         <div
             class="border-brand-green-500 h-full flex flex-col overflow-hidden rounded-tl-4xl rounded-br-4xl border-2 bg-white backface-hidden">
             <a class="h-52 block overflow-hidden" href="{{ $product->image }}">
                 <img class="h-full w-full object-cover transition-transform duration-500 group-hover/card:scale-115"
-                    src="https://picsum.photos/seed/{{ rand(1, 100000) }}/350/350" alt="Product Image" />
+                    src="{{ $product->image }}" alt="{{ $product->title }}" />
             </a>
+
             <div class="p-8">
                 <div>
                     <h3 class="mb-3 text-2xl font-bold">{{ $product->title }}</h3>
@@ -22,16 +24,16 @@
                         </span>
                     </x-button>
 
-                    @unless (request()->is('dashboard/product/*/edit'))
-                        <x-button href="/dashboard/product/{{ $product->id }}/edit"
+                    @unless (request()->is('dashboard/products/*/edit'))
+                        <x-button href="/dashboard/products/{{ $product->id }}/edit"
                             class="bg-blue-950 group/button text-sm text-brand-darkblue-50 hover:bg-brand-darkblue-800"
                             wire:navigate>
                             Edit Card
                         </x-button>
                     @endunless
 
-                    @if (request()->is('dashboard/product/*/edit'))
-                        <x-forms.form action="/dashboard/product/{{ $product->id }}" method="DELETE">
+                    @if (request()->is('dashboard/products/*/edit'))
+                        <x-forms.form action="/dashboard/products/{{ $product->id }}" method="DELETE">
                             <button type="submit"
                                 class="border-2 px-4 py-2 rounded-md font-bold border-red-500 cursor-pointer group/button text-sm hover:text-red-50 text-red-500 hover:bg-red-500">
                                 Delete Card
@@ -42,6 +44,7 @@
             </div>
         </div>
 
+        {{-- ? Back Face --}}
         <div
             class="absolute bg-white p-4 rounded-tr-4xl flex flex-col rounded-bl-4xl border-brand-green-500 border-2 h-full top-0 w-full rotate-y-180 backface-hidden">
             <div @click="flipped = false"
@@ -55,7 +58,7 @@
                 </div>
                 <div class="flex gap-2 flex-wrap">
                     @foreach ($product->sizes as $size)
-                        <livewire:product-size-tag :key="$size['id']" :$product :$size :$price />
+                        <livewire:product.size-tag :key="$size["id"]" :$product :$size :$price />
                     @endforeach
                 </div>
                 <div>

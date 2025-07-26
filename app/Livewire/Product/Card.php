@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Product;
 
 use App\Models\Product;
 use Livewire\Attributes\On;
 use Livewire\Component;
 
-class ProductCard extends Component
+class Card extends Component
 {
     public Product $product;
     public int $price;
@@ -15,7 +15,7 @@ class ProductCard extends Component
     public function mount(Product $product): void
     {
         $this->product = $product;
-        $this->price = $product->sizes[0]["price"];
+        // $this->price = $product->sizes[0]["price"];
         // $this->selectedSizeId = $product->sizes[0]["id"];
     }
 
