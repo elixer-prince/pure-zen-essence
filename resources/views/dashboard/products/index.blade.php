@@ -20,7 +20,7 @@
 
         <x-grid class="sm:grid-cols-2">
             @foreach ($products as $product)
-                <livewire:product-card :key="$product->id" :$product />
+                <livewire:product.card :key="$product->id" :$product />
             @endforeach
         </x-grid>
     </x-section>

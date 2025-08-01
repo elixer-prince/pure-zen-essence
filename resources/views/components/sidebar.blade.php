@@ -8,21 +8,21 @@
 
     <ul class="flex flex-col">
         <li>
-            <x-navbar-link class="rounded-md" href="/">
+            <x-navbar.link class="rounded-md" href="/">
                 <i class="fa-solid rotate-270 fa-arrow-up-from-bracket"></i>
                 Landing Page
-            </x-navbar-link>
+            </x-navbar.link>
         </li>
 
         <li>
-            <x-navbar-link class="rounded-md" href="/dashboard" wire:navigate>
+            <x-navbar.link class="rounded-md" href="/dashboard" wire:navigate>
                 Overview
-            </x-navbar-link>
+            </x-navbar.link>
         </li>
         <li>
-            <x-navbar-link class="rounded-md" href="/dashboard/products" wire:navigate>
+            <x-navbar.link class="rounded-md" href="/dashboard/products" wire:navigate>
                 All Products
-            </x-navbar-link>
+            </x-navbar.link>
         </li>
     </ul>
 </nav>
