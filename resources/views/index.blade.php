@@ -1,12 +1,12 @@
-<x-layouts.landing>
-    <x-slot:page-title>
-        Pure Zen Essence | Beauty By Nature
-    </x-slot:page-title>
+<x-layouts.normal>
+    <x-slot:page-title>Pure Zen Essence | Beauty By Nature</x-slot:page-title>
     <x-slot:page-description>
         Welcome to Pure Zen Essence, a family-owned natural products business proudly rooted in the heart of Wakefield
         Savannah, St. Catherine, Jamaica. Founded by the Carty family, our mission is to provide 100% Natural products
         that promote overall health and wellness.
     </x-slot:page-description>
+
+    <x-hero-section />
 
     <x-section id="about" class="relative pb-16 sm:px-16 px-8 flex-row gap-16 bg-neutral-950 pt-34 lg:pt-20"
         aria-labelledby="about-header">
@@ -89,44 +89,44 @@
         </x-grid>
     </x-section>
 
-    <x-section id="contact" class="py-16 px-8 bg-[url('{{ asset('images/placeholder-image.svg') }}'))] sm:px-16"
-        aria-labelledby="contact-header">
-        <x-forms.form class="w-160 max-w-full p-8 sm:p-12 border-3 border-neutral-400 rounded-lg md:p-20">
+    <x-section id="contact" class="py-16 px-8 sm:px-16" aria-labelledby="contact-header">
+        <x-form class="w-160 max-w-full p-8 sm:p-12 border-3 border-neutral-400 rounded-lg md:p-20" method="POST"
+            action="/mail">
             <x-section-heading id="contact-header" class="border-b-brand-blue-500 mb-4 mx-auto">
                 <span class="md:hidden">Contact Us! 😊</span>
                 <span class="hidden md:inline">Send us a message! 😊</span>
             </x-section-heading>
 
             <div class="flex mb-2 flex-col gap-4">
-                <x-forms.field>
-                    <x-forms.label for="name">
+                <x-form.field>
+                    <x-form.label for="name">
                         Full Name
-                    </x-forms.label>
-                    <x-forms.input id="name" name="name" placeholder="John Doe" />
-                </x-forms.field>
+                    </x-form.label>
+                    <x-form.input id="name" name="name" placeholder="John Doe" />
+                </x-form.field>
 
-                <x-forms.field>
-                    <x-forms.label for="email">
+                <x-form.field>
+                    <x-form.label for="email">
                         Email
-                    </x-forms.label>
-                    <x-forms.input id="email" name="email" type="email" placeholder="john.doe@example.com" />
-                </x-forms.field>
+                    </x-form.label>
+                    <x-form.input id="email" name="email" type="email" placeholder="john.doe@example.com" />
+                </x-form.field>
 
-                <x-forms.field>
-                    <x-forms.label for="message">
+                <x-form.field>
+                    <x-form.label for="message">
                         Message
-                    </x-forms.label>
-                    <x-forms.text-area id="message" name="messsage" id="message" rows="4"
-                        placeholder="Write your message here..."></x-forms.text-area>
-                </x-forms.field>
+                    </x-form.label>
+                    <x-form.text-area id="message" name="messsage" id="message" rows="4"
+                        placeholder="Write your message here..."></x-form.text-area>
+                </x-form.field>
             </div>
 
-            <x-button class="bg-brand-green-500 mx-auto text-brand-green-50 hover:bg-brand-green-600" type="button">
+            <x-button class="bg-brand-green-500 mx-auto text-brand-green-50 hover:bg-brand-green-600" type="submit">
                 Send Email
                 <span class="hidden text-xl sm:inline">
                     <i class="fa-regular fa-envelope"></i>
                 </span>
             </x-button>
-        </x-forms.form>
+        </x-form>
     </x-section>
 </x-layouts.normal>
