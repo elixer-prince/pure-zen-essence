@@ -12,7 +12,7 @@
                 All Products
             </x-section-heading>
 
-            <x-button class="text-brand-green-50 hover:bg-brand-darkblue-900 bg-brand-darkblue-950"
+            <x-button as="a" class="text-brand-green-50 hover:bg-brand-darkblue-900 bg-brand-darkblue-950"
                 href="/dashboard/products/create" wire:navigate>
                 New Product
             </x-button>
