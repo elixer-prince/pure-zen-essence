@@ -10,41 +10,41 @@
         <div>
             <livewire:product.card :$product />
 
-            <x-forms.form class="my-8" action="/dashboard/products/{{ $product->id }}" method="PATCH">
-                <x-forms.field>
-                    <x-forms.label for="image">Image</x-forms.label>
-                    <x-forms.input type="text" id="image" name="image" placeholder="..."
+            <x-form class="my-8" action="/dashboard/products/{{ $product->id }}" method="PATCH">
+                <x-form.field>
+                    <x-form.label for="image">Image</x-form.label>
+                    <x-form.input type="text" id="image" name="image" placeholder="..."
                         value="{{ $product->image }}" required />
 
-                    <x-forms.error-message for="image" />
-                </x-forms.field>
+                    <x-form.error-message for="image" />
+                </x-form.field>
 
-                <x-forms.field>
-                    <x-forms.label for="title">Title</x-forms.label>
-                    <x-forms.input type="text" id="title" value="{{ $product->title }}" name="title"
+                <x-form.field>
+                    <x-form.label for="title">Title</x-form.label>
+                    <x-form.input type="text" id="title" value="{{ $product->title }}" name="title"
                         placeholder="Coconut Oil" required />
 
-                    <x-forms.error-message for="title" />
-                </x-forms.field>
+                    <x-form.error-message for="title" />
+                </x-form.field>
 
-                <x-forms.field>
-                    <x-forms.label for="description">Description</x-forms.label>
-                    <x-forms.text-area id="description" name="description" placeholder="Add a description..."
-                        rows="3" required>{{ $product->description }}</x-forms.text-area>
+                <x-form.field>
+                    <x-form.label for="description">Description</x-form.label>
+                    <x-form.text-area id="description" name="description" placeholder="Add a description..."
+                        rows="3" required>{{ $product->description }}</x-form.text-area>
 
-                    <x-forms.error-message for="description" />
-                </x-forms.field>
+                    <x-form.error-message for="description" />
+                </x-form.field>
 
-                <x-forms.field>
-                    <x-forms.label for="sizes">Sizes</x-forms.label>
-                    <x-forms.text-area type="text" id="sizes" name="sizes" placeholder="..." required>
+                <x-form.field>
+                    <x-form.label for="sizes">Sizes</x-form.label>
+                    <x-form.text-area type="text" id="sizes" name="sizes" placeholder="..." required>
                         @foreach ($product->sizes as $size)
                             property
                         @endforeach
-                    </x-forms.text-area>
+                    </x-form.text-area>
 
-                    <x-forms.error-message for="sizes" />
-                </x-forms.field>
+                    <x-form.error-message for="sizes" />
+                </x-form.field>
 
                 <div class="flex gap-4">
                     <button type="submit"
@@ -54,7 +54,7 @@
                     <x-button type="a" href="/"
                         class="border-neutral-500 border-2 transition-colors hover:bg-neutral-500 hover:text-neutral-50 font-bold text-neutral-500 rounded-md px-4 py-2">Cancel</x-button>
                 </div>
-            </x-forms.form>
+            </x-form>
         </div>
     </x-section>
 
