@@ -1,12 +1,12 @@
 <header
-    class="mt-[var(--navbar-height)] lg:items-center flex justify-center gap-16 px-8 pt-14 pb-38 sm:pt-24 md:px-16 lg:py-24">
+    class="mt-[var(--navbar-height)] lg:items-center flex justify-center gap-16 px-12 pt-14 pb-38 sm:pt-24 md:px-16 lg:py-24">
     <x-navbar />
 
     <div class="flex flex-[1.5] flex-col items-center gap-12 text-center">
         <div class="flex flex-col items-center gap-8">
             <h1 class="text-4xl cta-content font-bold uppercase xl:text-5xl">
                 Have you ever wanted to be effortlessly
-                <span class="bg-brand-green-500 bg-clip-text font-black text-transparent">beautiful</span>
+                <span class="bg-brand-green-500 bg-clip-text text-transparent">beautiful</span>
             </h1>
             <p class="text-2xl cta-content">
                 Find your natural essence with
