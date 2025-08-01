@@ -13,43 +13,50 @@
                 New Product
             </x-section-heading>
 
-            <x-forms.form class="w-full" action="/dashboard/products" method="POST">
-                <x-forms.field>
-                    <x-forms.label for="image">Image</x-forms.label>
-                    <x-forms.input type="text" id="image" name="image" placeholder="..." required />
+            <x-form class="w-full" action="/dashboard/products" method="POST">
+                <x-form.field>
+                    <x-form.label for="image">Image</x-form.label>
+                    <x-form.input type="text" id="image" name="image"
+                        placeholder="https://example.com/product-image" required />
 
-                    <x-forms.error-message for="image" />
-                </x-forms.field>
+                    <x-form.error-message for="image" />
+                </x-form.field>
 
-                <x-forms.field>
-                    <x-forms.label for="title">Title</x-forms.label>
-                    <x-forms.input type="text" id="title" name="title" placeholder="Coconut Oil" required />
+                <x-form.field>
+                    <x-form.label for="title">Title</x-form.label>
+                    <x-form.input type="text" id="title" name="title" placeholder="Coconut Oil" required />
 
-                    <x-forms.error-message for="title" />
-                </x-forms.field>
+                    <x-form.error-message for="title" />
+                </x-form.field>
 
-                <x-forms.field>
-                    <x-forms.label for="description">Description</x-forms.label>
-                    <x-forms.text-area id="description" name="description" placeholder="Add a description..."
-                        rows="3" required></x-forms.text-area>
+                <x-form.field>
+                    <x-form.label for="description">Description</x-form.label>
+                    <x-form.text-area id="description" name="description" placeholder="Add a description..."
+                        rows="3" required></x-form.text-area>
 
-                    <x-forms.error-message for="description" />
-                </x-forms.field>
+                    <x-form.error-message for="description" />
+                </x-form.field>
 
-                <x-forms.field>
-                    <x-forms.label for="sizes">Sizes</x-forms.label>
-                    <x-forms.input type="text" id="sizes" name="sizes" placeholder="..." required />
+                <x-form.field>
+                    <x-form.label for="sizes">Sizes</x-form.label>
+                    <x-form.input type="text" id="sizes" name="sizes" placeholder="..." required />
 
-                    <x-forms.error-message for="sizes" />
-                </x-forms.field>
+                    <x-form.error-message for="sizes" />
+                </x-form.field>
+
+                <x-form.field class="flex gap-4">
+                    <input type="checkbox" name="size" value="small">
+                    <input type="checkbox" name="size" value="medium">
+                    <input type="checkbox" name="size" value="large">
+                </x-form.field>
 
                 <div>
-                    <button type="submit"
-                        class="bg-brand-green-500 transition-colors duration-300 cursor-pointer hover:bg-brand-green-600 mt-4 text-brand-green-50 font-bold py-2 rounded-md px-4">
+                    <x-button type="submit"
+                        class="bg-brand-green-500 hover:bg-brand-green-600 mt-4 text-brand-green-50">
                         Create Product
-                    </button>
+                    </x-button>
                 </div>
-            </x-forms.form>
+            </x-form>
         </x-section>
     </div>
 </x-layouts.dashboard>
