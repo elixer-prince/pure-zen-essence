@@ -17,13 +17,14 @@
         </div>
 
         <div class="flex cta-content items-center gap-4">
-            <x-button class="hover:bg-neutral-800 bg-neutral-950 text-neutral-50" href="#about">
+            <x-button as="a" class="hover:bg-neutral-800 bg-neutral-950 text-neutral-50" href="#about">
                 Learn More
                 <span class="hidden sm:inline">
                     <i class="fa-solid fa-arrow-down"></i>
                 </span>
             </x-button>
-            <x-button class="bg-brand-green-500 text-brand-green-50 hover:bg-brand-green-600" href="#contact">
+            <x-button as="a" class="bg-brand-green-500 text-brand-green-50 hover:bg-brand-green-600"
+                href="#contact">
                 Contact Us
                 <span class="hidden sm:inline">
                     <i class="fa-solid fa-paper-plane"></i>
