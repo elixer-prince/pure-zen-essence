@@ -1,23 +1,34 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Session;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 
-class SessionController extends Controller
+/**
+ * Handles user session management, including login and logout.
+ */
+class UserController extends Controller
 {
+    /**
+     * Displays the login form.
+     */
     public function create()
     {
         return view("auth.login");
     }
 
+    /**
+     * Handles the login request.
+     */
     public function store(Request $request)
     {
+        // TODO: Research how to check if an email belongs to a user
         $validatedAttributes = $request->validate([
-            "email" => ["required", "email"],
-            "password" => ["required"],
+            "email" => "required|email",
+            "password" => "required",
         ]);
 
         if (!Auth::attempt($validatedAttributes)) {
@@ -31,6 +42,9 @@ class SessionController extends Controller
         return redirect("/products");
     }
 
+    /**
+     * Handles the logout request.
+     */
     public function destroy()
     {
         Auth::logout();
