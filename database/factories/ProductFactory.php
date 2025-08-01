@@ -17,22 +17,23 @@ class ProductFactory extends Factory
     public function definition(): array
     {
         return [
-            "image" => fake()->imageUrl(),
+            "image" =>
+                "https://picsum.photos/seed/" . rand(1, 100000) . "/300/300",
             "title" => fake()->sentence(2),
             "description" => fake()->paragraph(2),
             "sizes" => [
                 [
-                    "id" => "1",
+                    "id" => 1,
                     "name" => fake()->word(),
                     "price" => random_int(50, 150),
                 ],
                 [
-                    "id" => "2",
+                    "id" => 2,
                     "name" => fake()->word(),
                     "price" => random_int(50, 150),
                 ],
                 [
-                    "id" => "3",
+                    "id" => 3,
                     "name" => fake()->word(),
                     "price" => random_int(50, 150),
                 ],
