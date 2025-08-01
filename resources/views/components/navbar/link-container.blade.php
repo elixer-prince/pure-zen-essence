@@ -1,6 +1,10 @@
 @php
     $classes =
         'border-brand-green-50 hidden items-center overflow-hidden rounded-md border-2 lg:flex [&>li:first-child>a]:pl-4 [&>li:last-child>a]:pr-4';
+
+    if (request()->is('products')) {
+        $classes .= ' border-none!';
+    }
 @endphp
 
 {{-- Navbar Link Container --}}
@@ -15,8 +19,8 @@
     @endguest
 
     {{-- Authenticated User Links --}}
-    @auth
+    {{-- @auth
         <li><x-navbar.link>All Products</x-navbar.link></li>
         <li><x-navbar.link>Products</x-navbar.link></li>
-    @endauth
+    @endauth --}}
 </ul>
