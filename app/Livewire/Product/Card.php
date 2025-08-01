@@ -8,21 +8,43 @@ use Livewire\Component;
 
 class Card extends Component
 {
+    /**
+     * This is a product sold by Pure Zen Essence and all
+     * its properties.
+     */
     public Product $product;
+    /**
+     * This is the current price displayed by the card and
+     * updated by the size tag.
+     */
     public int $price;
-    public int $selectedSizeId = 0;
+    /**
+     * This keeps track of the currently selected size and is updated
+     * when a size tag is clicked.
+     */
+    public int $currentSizeId = 0;
+    /**
+     * This manages the selected state for each tag.
+     * */
+    public bool $selected = false;
 
     public function mount(Product $product): void
     {
         $this->product = $product;
         // $this->price = $product->sizes[0]["price"];
-        // $this->selectedSizeId = $product->sizes[0]["id"];
     }
 
     #[On("price-updated.{product.id}")]
-    public function updatePrice(int $price, int $size, bool $selected): void
+    public function updatePrice(int $price, int $sizeId)
     {
+        // By this point we already know that the size is not selected.
+        $this->selected = true;
+        $this->currentSizeId = $sizeId;
         $this->price = $price;
-        $this->selectedSizeId = $size;
+
+        // if ($this->currentSizeId === $sizeId) {
+        // dd("hi");
+        //     return;
+        // }
     }
 }
