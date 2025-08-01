@@ -25,7 +25,7 @@
                     </x-button>
 
                     @unless (request()->is('dashboard/products/*/edit'))
-                        <x-button href="/dashboard/products/{{ $product->id }}/edit"
+                        <x-button as="a" href="/dashboard/products/{{ $product->id }}/edit"
                             class="bg-blue-950 group/button text-sm text-brand-darkblue-50 hover:bg-brand-darkblue-800"
                             wire:navigate>
                             Edit Card
@@ -33,12 +33,12 @@
                     @endunless
 
                     @if (request()->is('dashboard/products/*/edit'))
-                        <x-forms.form action="/dashboard/products/{{ $product->id }}" method="DELETE">
+                        <x-form action="/dashboard/products/{{ $product->id }}" method="DELETE">
                             <button type="submit"
                                 class="border-2 px-4 py-2 rounded-md font-bold border-red-500 cursor-pointer group/button text-sm hover:text-red-50 text-red-500 hover:bg-red-500">
                                 Delete Card
                             </button>
-                        </x-forms.form>
+                        </x-form>
                     @endif
                 </div>
             </div>
@@ -53,12 +53,18 @@
             </div>
             <div class="mx-4 flex flex-col justify-center mt-4">
                 <div>
-                    <h3 class="text-2xl font-bold">{{ $product->title }}</h3>
-                    <div class="my-3 font-bold text-neutral-500">{{ $price }}</div>
+                    <h3 class="text-2xl font-bold">
+                        {{ $product->title }}
+                    </h3>
+                    <div class="my-3 font-bold text-neutral-500">
+                        {{ $price }} <br /> <span class="text-red-500!">DEBUG: currentSizeId:
+                            {{ $currentSizeId }}</span>
+                    </div>
                 </div>
                 <div class="flex gap-2 flex-wrap">
                     @foreach ($product->sizes as $size)
-                        <livewire:product.size-tag :key="$size["id"]" :$product :$size :$price />
+                        <livewire:product.size-tag :key="$size['id']" :$size :$product :$price :$selected
+                            :$currentSizeId />
                     @endforeach
                 </div>
                 <div>
