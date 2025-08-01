@@ -20,7 +20,8 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-roboto selection:bg-brand-green-900 selection:text-white min-h-screen text-neutral-950">
+<body x-data="{ navIsOpen: false }" :class="{ 'overflow-hidden': navIsOpen }"
+    class="font-roboto selection:bg-brand-green-900 selection:text-white min-h-screen text-neutral-950">
     {{ $slot }}
 </body>
 
