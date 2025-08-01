@@ -1,9 +1,10 @@
-<div :key="{{ $size['id'] }}"
-    wire:click="setPrice({{ $size['price'] }}, {{ $product->id }}, {{ $size['id'] }}, {{ $selected }});"
-    class="cursor-pointer text-xs not-first:border-2 not-first:border-brand-darkblue-950 transition-colors duration-500 first:bg-brand-darkblue-950 px-4 not-first:text-brand-darkblue-950 font-bold not-first:hover:bg-brand-darkblue-950/25 first:text-brand-darkblue-50 md:text-sm py-1 rounded-full">
-    {{ $size['name'] }} :
-
-    @if ($selected)
-        {{ $size['id'] }}
-    @endif
+<div :key="{{ $size['id'] }}" wire:click="setPrice({{ $sizeId }}, {{ $size['price'] }}, {{ $product }})"
+    :class="{
+        'bg-brand-darkblue-950 select-none text-brand-darkblue-50': $wire
+            .currentSizeId === {{ $sizeId }},
+        'text-brand-darkblue-950 cursor-pointer hover:bg-brand-darkblue-950/25': $wire.currentSizeId !==
+            {{ $sizeId }}
+    }"
+    class="text-xs transition-colors border-brand-darkblue-950 border-2 duration-500 px-4 font-bold md:text-sm py-1 rounded-full">
+    {{ $size['name'] }}
 </div>
