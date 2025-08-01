@@ -16,3 +16,6 @@
         </p>
     </div>
 </div>
+
+<!-- TODO: Improve the card styling -->
+<!-- TODO: maybe make a class that stores testimonials, although that would be extra work! -->

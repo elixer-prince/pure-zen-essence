@@ -12,3 +12,6 @@
         {{ $answer }}
     </p>
 </details>
+
+<!-- TODO: Add a circle arrow icon instead of this square one -->
+<!-- TODO: Research how to make it transition smoothly! -->
