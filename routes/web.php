@@ -4,6 +4,7 @@ use App\Http\Controllers\Dashboard\ProductController as DashboardProductControll
 use App\Http\Controllers\Mail\InquiryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisteredUserController;
+use App\Http\Controllers\Session\AdminController;
 use App\Http\Controllers\Session\UserController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
@@ -35,6 +36,10 @@ Route::middleware("guest")->group(function () {
         Route::get("/register", "create");
         Route::post("/register", "store");
     });
+
+    // Admin Login
+    Route::get("/admin/login", [AdminController::class, "create"]);
+    Route::post("/admin/login", [AdminController::class, "store"]);
 });
 // ->can("index"); // TODO: Change to admin perms or some other policy
 
@@ -52,12 +57,14 @@ Route::middleware("auth")->group(function () {
 Route::prefix("admin")
     ->middleware(["auth", "admin"])
     ->group(function () {
+        // Dashboard Index
         Route::get("/dashboard", function () {
             $products = Product::paginate(6);
 
             return view("dashboard.index", compact("products"));
         });
 
+        // Dashboard Products
         Route::resource(
             "/dashboard/products",
             DashboardProductController::class,
