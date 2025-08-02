@@ -9,6 +9,16 @@
             All Products
         </x-section-heading>
 
-        <p>View all products here...</p>
+        <x-grid class="grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            @foreach ($products as $product)
+                <livewire:product.card :key="$product->id" :$product />
+            @endforeach
+
+            @if ($products->isEmpty())
+                <div class="col-span-full text-center">
+                    <p class="text-lg font-semibold">No products available at the moment.</p>
+                </div>
+            @endif
+        </x-grid>
     </x-section>
 </x-layouts.normal>
