@@ -22,7 +22,7 @@ class Card extends Component
      * This keeps track of the currently selected size and is updated
      * when a size tag is clicked.
      */
-    public int $currentSizeId = 0;
+    public int $currentSizeId = 1;
     /**
      * This manages the selected state for each tag.
      * */
@@ -37,10 +37,13 @@ class Card extends Component
     #[On("price-updated.{product.id}")]
     public function updatePrice(int $price, int $sizeId)
     {
-        // By this point we already know that the size is not selected.
         $this->selected = true;
         $this->currentSizeId = $sizeId;
         $this->price = $price;
+
+        $product = $this->product;
+
+        $this->dispatch("current-size-changed.{$product->id}", $sizeId);
 
         // if ($this->currentSizeId === $sizeId) {
         // dd("hi");

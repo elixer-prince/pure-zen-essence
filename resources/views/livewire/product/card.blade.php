@@ -24,8 +24,8 @@
                         </span>
                     </x-button>
 
-                    @unless (request()->is('dashboard/products/*/edit'))
-                        <x-button as="a" href="/dashboard/products/{{ $product->id }}/edit"
+                    @unless (request()->is('/admin/dashboard/products/*/edit'))
+                        <x-button as="a" href="/admin/dashboard/products/{{ $product->id }}/edit"
                             class="bg-blue-950 group/button text-sm text-brand-darkblue-50 hover:bg-brand-darkblue-800"
                             wire:navigate>
                             Edit Card
@@ -57,8 +57,7 @@
                         {{ $product->title }}
                     </h3>
                     <div class="my-3 font-bold text-neutral-500">
-                        {{ $price }} <br /> <span class="text-red-500!">DEBUG: currentSizeId:
-                            {{ $currentSizeId }}</span>
+                        {{ $price }}
                     </div>
                 </div>
                 <div class="flex gap-2 flex-wrap">

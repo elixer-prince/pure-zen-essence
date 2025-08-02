@@ -3,6 +3,7 @@
 namespace App\Livewire\Product;
 
 use App\Models\Product;
+use Livewire\Attributes\On;
 use Livewire\Component;
 
 /**
@@ -49,12 +50,18 @@ class SizeTag extends Component
      * @param (Product) $product - The specific product that each
      * tag belongs to.
      */
-    public function setPrice(int $sizeId, int $price, Product $product)
+    public function setPrice(int $sizeId, int $price, Product $product): void
     {
         if ($this->currentSizeId === $sizeId) {
             return;
         }
 
         $this->dispatch("price-updated.{$product->id}", $price, $sizeId);
+    }
+
+    #[On("current-size-changed.{product.id}")]
+    public function changeCurrentSizeId(int $sizeId): void
+    {
+        $this->currentSizeId = $sizeId;
     }
 }
