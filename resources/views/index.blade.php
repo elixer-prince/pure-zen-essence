@@ -102,22 +102,23 @@
                     <x-form.label for="name">
                         Full Name
                     </x-form.label>
-                    <x-form.input id="name" name="name" placeholder="John Doe" />
+                    <x-form.input id="name" value="{{ old('name') }}" name="name" placeholder="John Doe" />
                 </x-form.field>
 
                 <x-form.field>
                     <x-form.label for="email">
                         Email
                     </x-form.label>
-                    <x-form.input id="email" name="email" type="email" placeholder="john.doe@example.com" />
+                    <x-form.input id="email" name="email" type="email" value="{{ old('email') }}"
+                        placeholder="john.doe@example.com" />
                 </x-form.field>
 
                 <x-form.field>
                     <x-form.label for="message">
                         Message
                     </x-form.label>
-                    <x-form.text-area id="message" name="messsage" id="message" rows="4"
-                        placeholder="Write your message here..."></x-form.text-area>
+                    <x-form.text-area id="message" name="message" value="{{ old('message') }}" id="message"
+                        rows="4" placeholder="Write your message here..."></x-form.text-area>
                 </x-form.field>
             </div>
 
