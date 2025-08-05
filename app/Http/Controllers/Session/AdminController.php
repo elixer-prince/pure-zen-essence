@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Session;
 
 use App\Http\Controllers\Controller;
-use App\Models\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
@@ -29,9 +28,9 @@ class AdminController extends Controller
             "password" => "required",
         ]);
 
-        if (!Auth::attempt($validatedAttributes)) {
+        if (!Auth::guard("admin")->attempt($validatedAttributes)) {
             throw ValidationException::withMessages([
-                "email" => "The provided credentials do not match.",
+                "email" => "The provided credentials do not match our records.",
             ]);
         }
 
@@ -40,10 +39,9 @@ class AdminController extends Controller
         return redirect("/admin/dashboard");
     }
 
-    public function destroy(Admin $admin)
+    public function destroy()
     {
-        // TODO: Check how to auth a specific class
-        Auth::logout();
+        Auth::guard("admin")->logout();
 
         return redirect("/");
     }
