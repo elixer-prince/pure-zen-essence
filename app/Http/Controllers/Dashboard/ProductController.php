@@ -38,7 +38,7 @@ class ProductController extends Controller
             "sizes" => ["name"],
         ]);
 
-        return redirect("/dashboard");
+        return redirect("/admin/dashboard/products");
     }
 
     public function edit(Product $product)
@@ -63,7 +63,7 @@ class ProductController extends Controller
             "description" => request("description"),
         ]);
 
-        return redirect("/");
+        return redirect("/admin/dashboard/products");
     }
 
     public function destroy(Product $product)
@@ -72,6 +72,6 @@ class ProductController extends Controller
 
         $product->delete();
 
-        return redirect("/");
+        return redirect("/admin/dashboard/products");
     }
 }
