@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
 class EnsureUserIsAdmin
@@ -15,14 +16,13 @@ class EnsureUserIsAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // Check if the user is an admin
-        if (true) {
-            return redirect("/products")->with(
-                "error",
-                "You do not have admin access.",
+        if (!Auth::guard("admin")->check()) {
+            return redirect("/admin/login")->with(
+                "message",
+                "You do not have admin access!",
             );
         }
 
-        // return $next($request);
+        return $next($request);
     }
 }
