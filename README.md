@@ -10,18 +10,18 @@
 
 </div>
 
-## Overview
+## 🧠 Overview
 
-Pure Zen Essence is a family-owned natural products business proudly rooted in the heart of Wakefield
-Savannah, St. Catherine, Jamaica. Founded by the Carty family, our mission is to provide 100% Natural products
+**Pure Zen Essence** is a *family-owned*, *natural* products business proudly rooted in the heart of Wakefield
+Savannah, St. Catherine, Jamaica. Founded by the Carty family, our mission is to provide **100% Natural** products
 that promote overall health and wellness.
 
-## Features
+## ✅ Features
 
-- A landing page to attract visitors.
-- Admin authentication to update the product listing.
-- Separate user and admin login.
-- Email delivery based on specific actions.
-- A secure admin dashboard.
+- ✨ A landing page to attract visitors.
+- 👮‍♂️ Admin authentication to update the product listing.
+- 👥 Separate user and admin login.
+- 📧 Email delivery based on specific actions.
+- 🔒 A secure admin dashboard.
 
 <p align="center">Copyright &copy; Elixer Enterprise</p>
