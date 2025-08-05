@@ -1,5 +1,5 @@
-<nav class="fixed p-8 top-0 left-0 w-70 justify-center bg-black text-white bottom-0">
-    <a class="font-bold flex text-2xl flex-col items-center" href="/dashboard">
+<nav class="fixed p-8 top-0 z-10 left-0 w-70 justify-center bg-black text-white bottom-0">
+    <a class="font-bold flex text-2xl flex-col items-center" href="/admin/dashboard">
         <x-brand-icon class="my-4" />
         My Dashboard
     </a>
@@ -15,12 +15,12 @@
         </li>
 
         <li>
-            <x-navbar.link class="rounded-md" href="/dashboard" wire:navigate>
+            <x-navbar.link class="rounded-md" href="/admin/dashboard" wire:navigate>
                 Overview
             </x-navbar.link>
         </li>
         <li>
-            <x-navbar.link class="rounded-md" href="/dashboard/products" wire:navigate>
+            <x-navbar.link class="rounded-md" href="/admin/dashboard/products" wire:navigate>
                 All Products
             </x-navbar.link>
         </li>
