@@ -62,7 +62,7 @@
         </x-grid>
     </x-section>
 
-    <x-section id="faqs" class="bg-brand-darkblue-950 sm:px-16 py-16 px-8" aria-labelledby="faqs-header">
+    <x-section id="faqs" class="bg-brand-darkblue-950 sm:px-16 py-16 px-0" aria-labelledby="faqs-header">
         <x-section-heading id="faqs-header" class="border-b-brand-green-500 mb-8 text-brand-darkblue-50">
             FAQs
         </x-section-heading>
@@ -90,44 +90,6 @@
     </x-section>
 
     <x-section id="contact" class="py-16 px-8 sm:px-16" aria-labelledby="contact-header">
-        <x-form class="w-160 max-w-full p-8 sm:p-12 border-3 border-neutral-400 rounded-lg md:p-20" method="POST"
-            action="/mail">
-            <x-section-heading id="contact-header" class="border-b-brand-blue-500 mb-4 mx-auto">
-                <span class="md:hidden">Contact Us! 😊</span>
-                <span class="hidden md:inline">Send us a message! 😊</span>
-            </x-section-heading>
-
-            <div class="flex mb-2 flex-col gap-4">
-                <x-form.field>
-                    <x-form.label for="name">
-                        Full Name
-                    </x-form.label>
-                    <x-form.input id="name" value="{{ old('name') }}" name="name" placeholder="John Doe" />
-                </x-form.field>
-
-                <x-form.field>
-                    <x-form.label for="email">
-                        Email
-                    </x-form.label>
-                    <x-form.input id="email" name="email" type="email" value="{{ old('email') }}"
-                        placeholder="john.doe@example.com" />
-                </x-form.field>
-
-                <x-form.field>
-                    <x-form.label for="message">
-                        Message
-                    </x-form.label>
-                    <x-form.text-area id="message" name="message" value="{{ old('message') }}" id="message"
-                        rows="4" placeholder="Write your message here..."></x-form.text-area>
-                </x-form.field>
-            </div>
-
-            <x-button class="bg-brand-green-500 mx-auto text-brand-green-50 hover:bg-brand-green-600" type="submit">
-                Send Email
-                <span class="hidden text-xl sm:inline">
-                    <i class="fa-regular fa-envelope"></i>
-                </span>
-            </x-button>
-        </x-form>
+        <x-forms.inquiry />
     </x-section>
 </x-layouts.normal>
