@@ -22,16 +22,19 @@
         {{-- inner right container --}}
         <div class="flex items-center gap-4">
             <div class="items-center gap-4 hidden sm:flex">
-                @guest
-                    <x-navbar.guest-auth-links />
+                @guest('web')
+                    @guest('admin')
+                        <x-navbar.guest-auth-links />
+                    @endguest
                 @endguest
 
-                @auth
+                @auth('web')
                     <x-navbar.logout-button />
+                @endauth
 
-                    @can('modify', 'Product')
-                        <x-navbar.view-dashboard-button />
-                    @endcan
+                @auth('admin')
+                    <x-navbar.admin.logout-button />
+                    <x-navbar.admin.view-dashboard-button />
                 @endauth
             </div>
 
@@ -46,7 +49,9 @@
 
     {{-- mobile navbar content --}}
     <div class="h-full">
-        <x-navbar.mobile-link-container />
+        @if (request()->is('/'))
+            <x-navbar.mobile-link-container />
+        @endif
 
         <x-navbar.footer />
     </div>
