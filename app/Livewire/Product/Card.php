@@ -31,7 +31,7 @@ class Card extends Component
     public function mount(Product $product): void
     {
         $this->product = $product;
-        // $this->price = $product->sizes[0]["price"];
+        $this->price = $product->sizes[0]["price"];
     }
 
     #[On("price-updated.{product.id}")]
@@ -44,10 +44,5 @@ class Card extends Component
         $product = $this->product;
 
         $this->dispatch("current-size-changed.{$product->id}", $sizeId);
-
-        // if ($this->currentSizeId === $sizeId) {
-        // dd("hi");
-        //     return;
-        // }
     }
 }
