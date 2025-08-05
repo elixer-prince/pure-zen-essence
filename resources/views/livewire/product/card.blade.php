@@ -1,5 +1,9 @@
-<article x-data="{ flipped: false }"
-    class="group/card hover:-translate-y-1 transition-transform duration-500 perspective-midrange md:w-90">
+@php
+    $classes =
+        'group/card hover:-translate-y-1 transition-transform duration-500 perspective-midrange md:w-90group/card hover:-translate-y-1 transition-transform duration-500 perspective-midrange md:w-90';
+@endphp
+
+<article x-data="{ flipped: false }" class="{{ $classes }}">
     <div :class="flipped && '-rotate-y-180'" class="transition-transform duration-500 relative transform-3d">
         {{-- ? Front Face --}}
         <div
@@ -14,31 +18,16 @@
                     <h3 class="mb-3 text-2xl font-bold">{{ $product->title }}</h3>
                     <p class="mb-5 text-black/75">{{ $product->description }}</p>
                 </div>
+
                 <div class="flex gap-4">
-                    <x-button @click="flipped = true"
-                        class="bg-neutral-950 group/button text-sm text-neutral-50 hover:bg-neutral-800" type="button">
-                        More Info
-                        <span
-                            class="hidden opacity-0 group-hover/button:opacity-100 group-hover/button:inline transition-all duration-500">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-                    </x-button>
+                    <x-cards.product.more-info-button />
 
                     @unless (request()->is('/admin/dashboard/products/*/edit'))
-                        <x-button as="a" href="/admin/dashboard/products/{{ $product->id }}/edit"
-                            class="bg-blue-950 group/button text-sm text-brand-darkblue-50 hover:bg-brand-darkblue-800"
-                            wire:navigate>
-                            Edit Card
-                        </x-button>
+                        <x-cards.product.edit-button :$product />
                     @endunless
 
-                    @if (request()->is('dashboard/products/*/edit'))
-                        <x-form action="/dashboard/products/{{ $product->id }}" method="DELETE">
-                            <button type="submit"
-                                class="border-2 px-4 py-2 rounded-md font-bold border-red-500 cursor-pointer group/button text-sm hover:text-red-50 text-red-500 hover:bg-red-500">
-                                Delete Card
-                            </button>
-                        </x-form>
+                    @if (request()->is('/admin/dashboard/products/*/edit'))
+                        <x-forms.product.delete :$product />
                     @endif
                 </div>
             </div>
