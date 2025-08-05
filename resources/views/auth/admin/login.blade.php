@@ -20,6 +20,8 @@
                         <x-form.label for="email">Email</x-form.label>
                         <x-form.input id="email" type="email" name="email" placeholder="Your Email"
                             value="{{ old('email') }}" required />
+
+                        <x-form.error-message for="email" />
                     </x-form.field>
 
                     <x-form.field>
@@ -27,10 +29,6 @@
                         <x-form.input id="password" type="password" name="password" placeholder="Your Password"
                             required />
                     </x-form.field>
-
-                    <a href="/register" class="text-sm text-neutral-700 -mt-1 font-bold hover:underline" wire:navigate>
-                        Don't have an account? Create one!
-                    </a>
                 </div>
 
                 <x-button class="bg-brand-green-500 text-brand-green-50 hover:bg-brand-green-600" type="submit">
