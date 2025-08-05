@@ -8,6 +8,20 @@
 ![](https://img.shields.io/badge/Laravel-red?style=for-the-badge&logo=laravel&logoColor=white)
 ![](https://img.shields.io/badge/Tailwind_CSS-blue?style=for-the-badge&logo=tailwindcss&logoColor=white)
 
-Content should go here...
+</div>
+
+## Overview
+
+Pure Zen Essence is a family-owned natural products business proudly rooted in the heart of Wakefield
+Savannah, St. Catherine, Jamaica. Founded by the Carty family, our mission is to provide 100% Natural products
+that promote overall health and wellness.
+
+## Features
+
+- A landing page to attract visitors.
+- Admin authentication to update the product listing.
+- Separate user and admin login.
+- Email delivery based on specific actions.
+- A secure admin dashboard.
 
 <p align="center">Copyright &copy; Elixer Enterprise</p>
