@@ -4,15 +4,10 @@ use App\Http\Controllers\Dashboard\ProductController as DashboardProductControll
 use App\Http\Controllers\Mail\InquiryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisteredUserController;
-use App\Http\Controllers\Session\AdminController;
-use App\Http\Controllers\Session\UserController;
+use App\Http\Controllers\Session\AdminController as AdminSessionController;
+use App\Http\Controllers\Session\UserController as UserSessionController;
 use App\Models\Product;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
-// TODO: 1. Research to see why suggested form test or initial text is tinier. It might be due to there being a pseudoclass.
-
-// FIXME: 2. Make it so that the mobile navbar only show the / link on the / page
 
 Route::post("/mail", InquiryController::class);
 
@@ -25,38 +20,53 @@ Route::middleware("guest")->group(function () {
         return view("index", compact("products"));
     });
 
-    // User Login
-    Route::controller(UserController::class)->group(function () {
-        Route::get("/login", "create")->name("login");
-        Route::post("/login", "store");
-    });
+    // Additional check for admin guest routes
+    Route::middleware("admin.guest")->group(function () {
+        // User Login
+        Route::controller(UserSessionController::class)->group(function () {
+            Route::get("/login", "create")->name("login");
+            Route::post("/login", "store");
 
-    // User Registration
-    Route::controller(RegisteredUserController::class)->group(function () {
-        Route::get("/register", "create");
-        Route::post("/register", "store");
-    });
+            // User Registration
+            Route::controller(RegisteredUserController::class)->group(
+                function () {
+                    Route::get("/register", "create");
+                    Route::post("/register", "store");
+                },
+            );
 
-    // Admin Login
-    Route::get("/admin/login", [AdminController::class, "create"]);
-    Route::post("/admin/login", [AdminController::class, "store"]);
+            // Admin Login
+            Route::get("/admin/login", [
+                AdminSessionController::class,
+                "create",
+            ]);
+            Route::post("/admin/login", [
+                AdminSessionController::class,
+                "store",
+            ]);
+        });
+    });
 });
-// ->can("index"); // TODO: Change to admin perms or some other policy
 
 /*** AUTHENTICATED USER ROUTES */
-Route::middleware("auth")->group(function () {
-    Route::delete("/session", [UserController::class, "destroy"]);
+Route::delete("/session", [
+    UserSessionController::class,
+    "destroy",
+])->middleware("auth");
 
-    Route::resource("products", ProductController::class)->only([
-        "index",
-        "show",
-    ]);
+Route::middleware("auth:web,admin")->group(function () {
+    Route::controller(ProductController::class)->group(function () {
+        Route::get("/products", "index")->name("home");
+        Route::get("/products/{product}", "show");
+    });
 });
 
-/*** ADMIN ROUTES */
+/*** ADMIN ONLY ROUTES */
 Route::prefix("admin")
-    ->middleware(["auth", "admin"])
+    ->middleware(["admin"])
     ->group(function () {
+        Route::delete("/session", [AdminSessionController::class, "destroy"]);
+
         // Dashboard Index
         Route::get("/dashboard", function () {
             $products = Product::paginate(6);
