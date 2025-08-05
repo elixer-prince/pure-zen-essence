@@ -51,8 +51,7 @@
                 </div>
                 <div class="flex gap-2 flex-wrap">
                     @foreach ($product->sizes as $size)
-                        <livewire:product.size-tag :key="$size['id']" :$size :$product :$price :$selected
-                            :$currentSizeId />
+                        <livewire:product.size-tag :key="$size['id']" :$size :$product :$currentSizeId />
                     @endforeach
                 </div>
                 <div>

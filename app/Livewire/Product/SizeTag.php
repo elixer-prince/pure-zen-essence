@@ -50,13 +50,13 @@ class SizeTag extends Component
      * @param (Product) $product - The specific product that each
      * tag belongs to.
      */
-    public function setPrice(int $sizeId, int $price, Product $product): void
+    public function setPrice(int $sizeId, int $price): void
     {
         if ($this->currentSizeId === $sizeId) {
             return;
         }
 
-        $this->dispatch("price-updated.{$product->id}", $price, $sizeId);
+        $this->dispatch("price-updated.{$this->product->id}", $price, $sizeId);
     }
 
     #[On("current-size-changed.{product.id}")]

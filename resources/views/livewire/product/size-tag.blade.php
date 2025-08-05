@@ -1,4 +1,4 @@
-<div :key="{{ $size['id'] }}" wire:click="setPrice({{ $sizeId }}, {{ $size['price'] }}, {{ $product }})"
+<div :key="{{ $size['id'] }}" wire:click="setPrice({{ $sizeId }}, {{ $size['price'] }})"
     :class="{
         'bg-brand-darkblue-950 select-none text-brand-darkblue-50': $wire
             .currentSizeId === {{ $sizeId }},
