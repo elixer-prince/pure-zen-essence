@@ -12,7 +12,7 @@
 
 </div>
 
-## 🧠 Overview
+## 💡 Overview
 
 **Pure Zen Essence** is a _family-owned_, _natural_ products business proudly rooted in the heart of Wakefield
 Savannah, St. Catherine, Jamaica. Founded by the Carty family, our mission is to provide **100% Natural** products
@@ -32,5 +32,7 @@ that promote overall health and wellness.
 - **Alpine JS**: A minimal, declarative JavaScript framework for adding interactivity to HTML.
 - **Laravel**: A robust PHP web framework for building modern server-side applications.
 - **Livewire**: A Laravel framework for building interactive interfaces with minimal JavaScript.
+
+---
 
 <p align="center">Copyright &copy; Elixer Enterprise</p>
