@@ -10,6 +10,7 @@
 [![](https://img.shields.io/badge/Laravel-red?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com/)
 [![](https://img.shields.io/badge/Livewire-hotpink?style=for-the-badge&logo=livewire&logoColor=white&textColor=white)](https://livewire.laravel.com/)
 
+<img src="./public/images/landing-page-screenshot.png" alt="Landing Page Screenshot">
 </div>
 
 ## 💡 Overview
