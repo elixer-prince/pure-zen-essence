@@ -1,7 +1,7 @@
 @php
-    $classes = 'flex gap-1 flex-col';
+    $classes = "flex flex-col gap-1";
 @endphp
 
-<div {{ $attributes(['class' => $classes]) }}>
+<div {{ $attributes(["class" => $classes]) }}>
     {{ $slot }}
 </div>

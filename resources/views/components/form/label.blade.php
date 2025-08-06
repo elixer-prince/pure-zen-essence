@@ -1,5 +1,7 @@
 @php
-    $classes = 'font-bold';
+    $classes = "font-bold";
 @endphp
 
-<label {{ $attributes(['class' => $classes, 'for' => $for]) }}>{{ $slot }}</label>
+<label {{ $attributes(["class" => $classes, "for" => $for]) }}>
+    {{ $slot }}
+</label>

@@ -1,6 +1,5 @@
 @php
-    $classes =
-        'fixed flex flex-col overflow-hidden shadow top-0 right-0 transition-all duration-500 select-none left-0 z-10  h-[var(--navbar-height)] sm:bg-black/95 bg-black backdrop-blur-sm p-8';
+    $classes = "fixed top-0 right-0 left-0 z-10 flex h-[var(--navbar-height)] flex-col overflow-hidden bg-black p-8 shadow backdrop-blur-sm transition-all duration-500 select-none sm:bg-black/95";
 @endphp
 
 {{--
@@ -9,9 +8,13 @@
 --}}
 
 {{-- Navbar --}}
-<nav :class="{ 'h-screen sm:h-[var(--navbar-height)]': navIsOpen }" class="{{ $classes }}" role="navigation">
+<nav
+    :class="{ 'h-screen sm:h-[var(--navbar-height)]': navIsOpen }"
+    class="{{ $classes }}"
+    role="navigation"
+>
     {{-- main container --}}
-    <div class="flex items-center self-start -mt-4.5 w-full justify-between">
+    <div class="-mt-4.5 flex w-full items-center justify-between self-start">
         {{-- inner left container --}}
         <div class="flex items-center gap-8">
             <x-brand-logo />
@@ -21,25 +24,25 @@
 
         {{-- inner right container --}}
         <div class="flex items-center gap-4">
-            <div class="items-center gap-4 hidden sm:flex">
-                @guest('web')
-                    @guest('admin')
+            <div class="hidden items-center gap-4 sm:flex">
+                @guest("web")
+                    @guest("admin")
                         <x-navbar.guest-auth-links />
                     @endguest
                 @endguest
 
-                @auth('web')
+                @auth("web")
                     <x-navbar.logout-button />
                 @endauth
 
-                @auth('admin')
+                @auth("admin")
                     <x-navbar.admin.logout-button />
                     <x-navbar.admin.view-dashboard-button />
                 @endauth
             </div>
 
             {{-- navbar toggle icons --}}
-            <div class="text-neutral-50 text-2xl sm:hidden cursor-pointer">
+            <div class="cursor-pointer text-2xl text-neutral-50 sm:hidden">
                 <x-navbar.open-button />
 
                 <x-navbar.close-button />
@@ -49,7 +52,7 @@
 
     {{-- mobile navbar content --}}
     <div class="h-full">
-        @if (request()->is('/'))
+        @if (request()->is("/"))
             <x-navbar.mobile-link-container />
         @endif
 

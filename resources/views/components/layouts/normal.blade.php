@@ -1,10 +1,10 @@
 <x-layouts.app>
-    <x-slot:page-title>
+    <x-slot name="pageTitle">
         {{ $pageTitle }}
-    </x-slot:page-title>
-    <x-slot:page-description>
+    </x-slot>
+    <x-slot name="pageDescription">
         {{ $pageDescription }}
-    </x-slot:page-description>
+    </x-slot>
 
     <x-navbar />
 

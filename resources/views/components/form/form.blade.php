@@ -1,11 +1,11 @@
-@props(['method' => 'POST'])
+@props(["method" => "POST"])
 
 @php
-    $classes = 'flex flex-col gap-4';
+    $classes = "flex flex-col gap-4";
     $method = strtoupper($method);
 @endphp
 
-<form {{ $attributes(['class' => $classes, 'method' => 'POST']) }}>
+<form {{ $attributes(["class" => $classes, "method" => "POST"]) }}>
     @csrf
 
     @if ($method)

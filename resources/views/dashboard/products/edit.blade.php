@@ -1,11 +1,18 @@
 <x-layouts.dashboard>
-    <x-slot:page-title>Edit | {{ $product->title }}</x-slot:page-title>
-    <x-slot:page-description>
+    <x-slot name="pageTitle">Edit | {{ $product->title }}</x-slot>
+    <x-slot name="pageDescription">
         Edit the {{ $product->title }} product on this page.
-    </x-slot:page-description>
+    </x-slot>
 
-    <x-section id="edit-card" class="p-16 flex!" aria-labelledby="edit-card-heaading">
-        <x-section-heading id="edit-card-heading" class="mb-8 border-brand-blue-500">
+    <x-section
+        id="edit-card"
+        class="flex! p-16"
+        aria-labelledby="edit-card-heaading"
+    >
+        <x-section-heading
+            id="edit-card-heading"
+            class="border-brand-blue-500 mb-8"
+        >
             Edit Product
         </x-section-heading>
 
@@ -15,5 +22,4 @@
             <x-forms.product.edit :$product />
         </div>
     </x-section>
-
 </x-layouts.dashboard>

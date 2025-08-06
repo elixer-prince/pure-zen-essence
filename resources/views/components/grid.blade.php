@@ -1,7 +1,7 @@
 @php
-    $classes = 'grid gap-10';
+    $classes = "grid gap-10";
 @endphp
 
-<div {{ $attributes(['class' => $classes]) }}>
+<div {{ $attributes(["class" => $classes]) }}>
     {{ $slot }}
 </div>
