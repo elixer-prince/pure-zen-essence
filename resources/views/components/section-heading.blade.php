@@ -1,5 +1,5 @@
 @php
-    $classes = "w-fit rounded-lg border-b-8 pb-2 text-center text-4xl font-bold";
+    $classes = "text-lg-h2/18 text-center font-bold";
 @endphp
 
 <header>
