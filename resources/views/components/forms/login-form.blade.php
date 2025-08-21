@@ -1,4 +1,4 @@
-<x-form
+<x-forms.auth-form
     class="border-t-brand-green-500 gap-12 rounded-3xl border-t-4 bg-black/75 px-12 py-18 text-neutral-50 backdrop-blur-xs transition-colors md:px-24 lg:px-28"
     action="/login"
     method="POST"
@@ -19,11 +19,14 @@
         >
             {{-- Form Fields Container --}}
             <div class="flex w-full flex-col gap-12">
-                <x-form.field>
-                    <x-form.label class="text-lg-paragraph" for="email">
+                <x-forms.auth-form.field>
+                    <x-forms.auth-form.label
+                        class="text-lg-paragraph"
+                        for="email"
+                    >
                         What's your email?
-                    </x-form.label>
-                    <x-form.input
+                    </x-forms.auth-form.label>
+                    <x-forms.auth-form.input
                         id="email"
                         class="placeholder:text-lg-paragraph text-lg-paragraph placeholder:text-neutral-50/70"
                         type="email"
@@ -33,14 +36,17 @@
                         required
                     />
 
-                    <x-form.error-message for="validation" />
-                </x-form.field>
+                    <x-forms.auth-form.error-message for="validation" />
+                </x-forms.auth-form.field>
 
-                <x-form.field>
-                    <x-form.label class="text-lg-paragraph" for="password">
+                <x-forms.auth-form.field>
+                    <x-forms.auth-form.label
+                        class="text-lg-paragraph"
+                        for="password"
+                    >
                         What's your password?
-                    </x-form.label>
-                    <x-form.input
+                    </x-forms.auth-form.label>
+                    <x-forms.auth-form.input
                         id="password"
                         class="placeholder:text-lg-paragraph text-lg-paragraph"
                         type="password"
@@ -48,7 +54,7 @@
                         placeholder="Enter password"
                         required
                     />
-                </x-form.field>
+                </x-forms.auth-form.field>
             </div>
 
             <div
@@ -85,4 +91,4 @@
             Login
         </x-button>
     </div>
-</x-form>
+</x-forms.auth-form>
