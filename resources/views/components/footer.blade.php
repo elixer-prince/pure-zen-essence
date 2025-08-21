@@ -1,11 +1,13 @@
 <footer
-    class="selection:bg-brand-blue-500! flex flex-col items-center gap-12 bg-neutral-950 px-3 py-16 text-neutral-50 lg:px-39"
+    class="selection:bg-brand-blue-500! flex flex-col items-center gap-12 bg-neutral-950 px-3 py-16 text-neutral-50 lg:px-24"
 >
     <div
         class="flex w-full flex-col items-center justify-between gap-12 lg:flex-row lg:items-start"
     >
-        <section id="contact" class="flex flex-col items-center gap-2 lg:gap-8">
-            <h2 id="contact-header" class="text-h3 font-bold">WhatsApp Us</h2>
+        <section id="contact" class="flex flex-col items-center gap-6">
+            <h2 id="contact-header" class="text-h3/10 text-center font-bold">
+                WhatsApp Us
+            </h2>
 
             <img
                 class="w-48"
@@ -14,16 +16,16 @@
             />
         </section>
 
-        <div class="flex flex-col gap-2 lg:gap-8">
-            <h2 class="text-h3 font-bold">Give us a call</h2>
+        <div class="flex flex-col gap-6">
+            <h2 class="text-h3/10 text-center font-bold">Give us a call</h2>
 
             <address class="font-regular text-subtitle text-center">
                 <p>+1(876) 791 - 4187</p>
             </address>
         </div>
 
-        <div class="flex flex-col items-center gap-2 lg:gap-8">
-            <h2 class="text-h3 text-center font-bold">Social Links</h2>
+        <div class="flex flex-col items-center gap-6">
+            <h2 class="text-h3/10 text-center font-bold">Social Links</h2>
 
             <ul
                 class="flex w-fit justify-center gap-8 transition-all duration-700 hover:gap-12"
