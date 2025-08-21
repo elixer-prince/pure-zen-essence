@@ -70,6 +70,7 @@ Route::prefix("admin")
         // Dashboard Index
         Route::get("/dashboard", function () {
             $products = Product::paginate(6);
+            $admin = auth()->guard("admin")->user();
 
             return view("dashboard.index", compact("products"));
         });
