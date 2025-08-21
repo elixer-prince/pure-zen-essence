@@ -15,9 +15,9 @@
         </p>
     @endif
 
-    <x-grid class="justify-center gap-3 md:grid-cols-2 lg:grid-cols-3">
+    <div class="grid justify-center gap-4 md:grid-cols-2 lg:grid-cols-3">
         @foreach ($products as $product)
             <livewire:product.card :key="$product->id" :$product />
         @endforeach
-    </x-grid>
+    </div>
 </x-section>
