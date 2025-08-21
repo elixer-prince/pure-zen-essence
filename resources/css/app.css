@@ -6,11 +6,30 @@
 @source "../**/*.js";
 
 :root {
-    --navbar-height: 6rem;
+    --navbar-height: 7rem;
 }
 
 @theme {
+    /* FONT FAMILTY */
     --font-roboto: "Roboto", sans-serif;
+
+    /* FONT SIZES */
+    --text-paragraph: 1rem;
+    --text-lg-paragraph: 1.25rem;
+    --text-subtitle: 1.5rem;
+    --text-lg-subtitle: 1.75rem;
+    --text-xl-subtitle: 2rem;
+    --text-h4: 2.25rem;
+    --text-h3: 2.5rem;
+    --text-lg-h3: 2.75rem;
+    --text-h2: 3rem;
+    --text-lg-h2: 3.25rem;
+    --text-xl-h2: 3.5rem;
+    --text-h1: 3.75rem;
+    --text-lg-h1: 4rem;
+    --text-xl-h1: 4.25rem;
+
+    /* COLOURS */
     --color-brand-green-50: #f6fbea;
     --color-brand-green-100: #eaf6d1;
     --color-brand-green-200: #d6eea8;
