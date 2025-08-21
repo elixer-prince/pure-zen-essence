@@ -16,5 +16,12 @@ class AdminSeeder extends Seeder
             "email" => "danielleith3@gmail.com",
             "password" => bcrypt("DanielLeith@876"),
         ]);
+
+        Admin::create([
+            "first_name" => "Yoshika",
+            "last_name" => "Leith",
+            "email" => "purezenessence@gmail.com",
+            "password" => bcrypt("Password@123"),
+        ]);
     }
 }
