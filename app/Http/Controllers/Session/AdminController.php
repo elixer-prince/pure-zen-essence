@@ -14,7 +14,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view("auth.admin.login");
+        return view("auth.admin-login");
     }
 
     /**
@@ -22,7 +22,6 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        // TODO: Research how to check if an email belongs to a user
         $validatedAttributes = $request->validate([
             "email" => "required|email",
             "password" => "required",
