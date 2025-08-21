@@ -1,17 +1,21 @@
 <x-section
     id="about"
-    class="relative flex-row gap-16 bg-neutral-950 px-8 pt-34 pb-16 sm:px-16 lg:pt-20"
+    class="bg-brand-green-950 relative flex-row items-center gap-16 px-6 pt-34 pb-16 sm:px-16 lg:pt-20"
     aria-labelledby="about-header"
 >
     <x-about-image />
 
-    <div class="flex flex-2 flex-col items-center">
-        <x-section-heading
+    <div class="flex flex-2 flex-col">
+        <header
             id="about-header"
-            class="border-b-brand-blue-500 mb-8 text-neutral-50"
+            class="text-lg-h2 mb-8 flex flex-col text-center font-bold text-neutral-50 lg:text-start"
         >
             About Us
-        </x-section-heading>
+
+            <div
+                class="bg-brand-green-500 h-3 w-20 self-center lg:self-start"
+            ></div>
+        </header>
 
         <div class="flex flex-col items-center gap-8">
             <x-cards.about heading="Our Vision">
