@@ -6,7 +6,7 @@
         {{ $pageDescription }}
     </x-slot>
 
-    <x-navbar />
+    <x-navigation.navbar />
 
     <main class="mt-[var(--navbar-height)]">
         {{ $slot }}
