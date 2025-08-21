@@ -1,7 +1,7 @@
 @props(["method" => "POST"])
 
 @php
-    $classes = "flex flex-col gap-4";
+    $classes = "flex flex-col w-full";
     $method = strtoupper($method);
 @endphp
 
