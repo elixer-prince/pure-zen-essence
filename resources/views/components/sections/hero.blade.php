@@ -1,58 +1,57 @@
 <header
-    class="mt-[var(--navbar-height)] flex justify-center gap-16 px-12 pt-14 pb-38 sm:pt-24 md:px-16 lg:items-center lg:py-24"
+    class="header relative mt-[var(--navbar-height)] bg-gradient-to-r bg-[url('https://images.unsplash.com/photo-1533038590840-1cde6e668a91?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] from-black to-black bg-cover bg-fixed bg-center bg-no-repeat px-3 pt-10 pb-32 bg-blend-multiply md:px-10 lg:px-39 lg:py-22"
 >
-    <x-navbar />
+    <div
+        class="header__gradient absolute inset-0 bg-gradient-to-r from-black/75 to-black/75"
+    ></div>
 
-    <div class="flex flex-[1.5] flex-col items-center gap-12 text-center">
-        <div class="flex flex-col items-center gap-8">
-            <h1 class="cta-content text-4xl font-bold uppercase xl:text-5xl">
-                Have you ever wanted to be effortlessly
-                <span class="bg-brand-green-500 bg-clip-text text-transparent">
-                    beautiful
-                </span>
-            </h1>
-            <p class="cta-content text-2xl">
-                Find your natural essence with
-                <span
-                    class="hover:text-brand-green-500 font-black transition-colors duration-500"
+    <div
+        class="header__left-container z-20 flex flex-col items-center gap-12 text-neutral-50 lg:items-start"
+    >
+        <div
+            class="header__cta-text text-h3 md:text-lg-h2/16 flex max-w-195 flex-col items-center gap-8 text-center font-bold lg:text-start"
+        >
+            <h1 class="cta-content">
+                Have you ever wanted to be
+                <em
+                    class="decoration-brand-green-500 underline decoration-8 underline-offset-8"
                 >
-                    Pure Zen Essence
-                </span>
+                    effortlessly
+                </em>
+                beautiful?
+            </h1>
+            <p class="cta-content">
+                Discover your natural essence with
+                <em class="text-brand-green-500 transition-colors duration-500">
+                    Pure Zen Essence!
+                </em>
             </p>
         </div>
 
         <div class="cta-content flex items-center gap-4">
             <x-button
                 as="a"
-                class="bg-neutral-950 text-neutral-50 hover:bg-neutral-800"
-                href="#about"
-            >
-                Learn More
-                <span class="hidden sm:inline">
-                    <i class="fa-solid fa-arrow-down"></i>
-                </span>
-            </x-button>
-            <x-button
-                as="a"
-                class="bg-brand-green-500 text-brand-green-50 hover:bg-brand-green-600"
+                class="bg-brand-green-400 text-brand-green-950 hover:bg-brand-green-600"
                 href="#contact"
             >
                 Contact Us
-                <span class="hidden sm:inline">
-                    <i class="fa-solid fa-paper-plane"></i>
-                </span>
+            </x-button>
+            <x-button
+                as="a"
+                class="border-2 bg-black/25 text-neutral-50 hover:bg-black/50"
+                href="#about"
+            >
+                About Us
             </x-button>
         </div>
     </div>
 
     <div
-        id="hero-image"
-        class="outline-brand-green-500 mr-20 hidden aspect-square max-w-90 flex-1 overflow-hidden rounded-lg outline-4 transition-all duration-1000 hover:-translate-y-1 lg:block"
+        class="header__product-image absolute right-33 -bottom-25 z-20 hidden lg:block"
     >
         <img
-            class="h-full w-full"
-            src="https://picsum.photos/300/300"
-            alt="A beautiful woman"
+            src="{{ asset("images/product-bottle-shot.png") }}"
+            alt="Flagship Product Image"
         />
     </div>
 </header>
