@@ -1,7 +1,8 @@
 @props(["type" => "text"])
 
 @php
-    $classes = "rounded-md border-2 border-neutral-400 px-4 py-3 outline-none";
+    $classes =
+        "text-lg-paragraph focus-visible:border-brand-green-500 rounded-lg border-2 bg-black/75 p-4 outline-none placeholder:text-neutral-50/75 placeholder:italic";
 @endphp
 
 <input
