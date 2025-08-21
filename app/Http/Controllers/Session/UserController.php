@@ -25,7 +25,6 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        // TODO: Research how to check if an email belongs to a user
         $validatedAttributes = $request->validate([
             "email" => "required|email",
             "password" => "required",
@@ -33,7 +32,7 @@ class UserController extends Controller
 
         if (!Auth::attempt($validatedAttributes)) {
             throw ValidationException::withMessages([
-                "email" => "The provided credentials do not match.",
+                "validation" => "The provided credentials do not match.",
             ]);
         }
 
