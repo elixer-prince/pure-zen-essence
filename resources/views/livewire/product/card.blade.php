@@ -1,6 +1,6 @@
 @php
     $classes =
-        "group/card md:w-90group/card transition-transform duration-500 perspective-midrange hover:-translate-y-1 md:w-90";
+        "group/card group/card max-w-full transition-transform duration-500 perspective-midrange hover:-translate-y-2";
 @endphp
 
 <article x-data="{ flipped: false }" class="{{ $classes }}">
@@ -10,19 +10,19 @@
     >
         {{-- ? Front Face --}}
         <div
-            class="border-brand-green-500 flex h-full flex-col overflow-hidden rounded-tl-4xl rounded-br-4xl border-2 bg-white backface-hidden"
+            class="border-brand-green-500 flex h-full flex-col overflow-hidden rounded-tl-4xl rounded-br-4xl border-3 bg-white shadow-md backface-hidden"
         >
             <a class="block h-52 overflow-hidden" href="{{ $product->image }}">
                 <img
                     class="h-full w-full object-cover transition-transform duration-500 group-hover/card:scale-115"
-                    src="{{ $product->image }}"
+                    src="{{ asset("images/placeholder-image.svg") }}"
                     alt="{{ $product->title }}"
                 />
             </a>
 
             <div class="p-8">
                 <div>
-                    <h3 class="mb-3 text-2xl font-bold">
+                    <h3 class="text-lg-subtitle/6 mb-3 font-bold">
                         {{ $product->title }}
                     </h3>
                     <p class="mb-5 text-black/75">
@@ -48,7 +48,7 @@
 
         {{-- ? Back Face --}}
         <div
-            class="border-brand-green-500 absolute top-0 flex h-full w-full rotate-y-180 flex-col rounded-tr-4xl rounded-bl-4xl border-2 bg-white p-4 backface-hidden"
+            class="border-brand-green-500 absolute top-0 flex h-full max-w-full rotate-y-180 flex-col rounded-tr-4xl rounded-bl-4xl border-3 bg-white p-4 shadow-md backface-hidden"
         >
             <div
                 @click="flipped = false"
