@@ -15,11 +15,5 @@
 
     <x-sections.testimonials />
 
-    <x-section
-        id="contact"
-        class="px-8 py-16 sm:px-16"
-        aria-labelledby="contact-header"
-    >
-        <x-forms.inquiry />
-    </x-section>
+    <x-sections.faqs />
 </x-layouts.normal>
