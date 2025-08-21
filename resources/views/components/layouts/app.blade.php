@@ -35,7 +35,7 @@
     <body
         x-data="{ navIsOpen: false }"
         :class="{ 'overflow-hidden': navIsOpen }"
-        class="font-roboto selection:bg-brand-green-900 min-h-screen text-neutral-950 selection:text-white"
+        class="font-roboto selection:bg-brand-green-900 selection:text-brand-green-50 text-neutral-950"
     >
         {{ $slot }}
     </body>
